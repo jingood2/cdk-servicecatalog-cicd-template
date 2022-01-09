@@ -87,6 +87,13 @@ export class CdkPipelinesStack extends cdk.Stack {
       },
     }));
 
+    pipeline.addStage(new DevStage(this, 'Prod', {
+      env: {
+        account: '037729278610',
+        region: 'ap-northeast-2',
+      },
+    }));
+
   }
 
   private getCodepipelineSource( sourceProps: CodepipelineSourceProps) : CodePipelineSource | undefined {
