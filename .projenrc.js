@@ -1,6 +1,6 @@
 const { AwsCdkTypeScriptApp } = require('projen');
 const project = new AwsCdkTypeScriptApp({
-  cdkVersion: '1.129.0',
+  cdkVersion: '1.138.0',
   defaultReleaseBranch: 'main',
   name: 'cdk-pipelines-template',
 
@@ -8,6 +8,9 @@ const project = new AwsCdkTypeScriptApp({
     '@aws-cdk/core',
     '@aws-cdk/pipelines',
     '@aws-cdk/aws-codecommit',
+    '@aws-cdk/aws-servicecatalog',
+    '@aws-cdk/aws-iam',
+    '@aws-cdk/aws-s3',
   ], /* Which AWS CDK modules (those that start with "@aws-cdk/") this app uses. */
   deps: [
     'chalk',

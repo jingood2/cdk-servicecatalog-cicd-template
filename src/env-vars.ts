@@ -1,11 +1,16 @@
 import * as chalk from 'chalk';
 
+export enum SCProductType {
+  CDK='cdk-sc-product',
+  CFN='cfn-sc-product'
+}
+
 export const envVars = {
   REGION: process.env.REGION || 'ap-northeast-2',
-  COMPANY_NAME: 'demo',
-  PROJECT_NAME: 'cdk-demo-app',
+  COMPANY_NAME: 'acme',
+  SC_PRODUCT_NAME: 'sc-demo-product',
   SOURCE_PROVIDER: 'GITHUB',
-  REPO: 'jingood2/cdk-infra-pipelines-template',
+  REPO: 'jingood2/cdk-servicecatalog-cicd-template',
   BRANCH: 'main',
   GITHUB_TOKEN: 'atcl/jingood2/github-token',
 };

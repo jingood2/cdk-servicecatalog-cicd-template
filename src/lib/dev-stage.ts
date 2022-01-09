@@ -1,6 +1,6 @@
 import * as cdk from '@aws-cdk/core';
-import { envVars } from '../env-vars';
-import { MyStack } from './my-stack';
+import { envVars, SCProductType } from '../env-vars';
+import { SCProductStack } from './sc-portfolio-stack';
 
 export interface DevStageProps extends cdk.StageProps{
 
@@ -10,7 +10,10 @@ export class DevStage extends cdk.Stage {
   constructor(scope: cdk.Construct, id: string, props: DevStageProps) {
     super(scope, id, props);
 
-    new MyStack(this, `${envVars.PROJECT_NAME}-stack`);
+    new SCProductStack(this, `${envVars.SC_PRODUCT_NAME}-stack`, {
+      portfolioname: 'NewPortfolio',
+      codeType: SCProductType.CDK,
+    });
 
   }
 }
