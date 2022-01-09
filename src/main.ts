@@ -12,5 +12,5 @@ const devEnv = {
 
 const app = new App();
 
-new CdkPipelinesStack(app, `${envVars.COMPANY_NAME}-${envVars.PROJECT_NAME}-pipelines`, { env: devEnv } );
+new CdkPipelinesStack(app, `${envVars.COMPANY_NAME}-${envVars.SC_PRODUCT_NAME}-pipelines`, { env: devEnv } );
 app.synth();
