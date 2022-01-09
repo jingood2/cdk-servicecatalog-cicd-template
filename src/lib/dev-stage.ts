@@ -13,6 +13,7 @@ export class DevStage extends cdk.Stage {
     new SCProductStack(this, `${envVars.SC_PRODUCT_NAME}-stack`, {
       portfolioname: 'NewPortfolio',
       codeType: SCProductType.CDK,
+      accessGroupName: envVars.SC_ACCESS_GROUP_NAME,
     });
 
   }

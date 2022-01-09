@@ -13,6 +13,7 @@ export const envVars = {
   REPO: 'jingood2/cdk-servicecatalog-cicd-template',
   BRANCH: 'main',
   GITHUB_TOKEN: 'atcl/jingood2/github-token',
+  SC_ACCESS_GROUP_NAME: 'AdminMasterAccountGroup',
 };
 
 export function validateEnvVariables() {

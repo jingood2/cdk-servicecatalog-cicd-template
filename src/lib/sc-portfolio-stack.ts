@@ -50,6 +50,19 @@ export class SCProductStack extends cdk.Stack {
       }
     }
 
+    const pdFactory = new servicecatalog.CloudFormationProduct(this, 'SCProductFactory', {
+      productName: 'SC Product Factory',
+      owner: 'AWS TF Team',
+      productVersions: [
+        {
+          productVersionName: 'v1',
+          cloudFormationTemplate: servicecatalog.CloudFormationTemplate.fromUrl(
+            'https://jingood0604-sc-template.s3.ap-northeast-2.amazonaws.com/SCProductFactory.yaml',
+          ),
+        },
+      ],
+    });
+
     const product = new servicecatalog.CloudFormationProduct(this, 'Product', {
       productName: envVars.SC_PRODUCT_NAME,
       owner: 'Product Owner',
@@ -63,5 +76,6 @@ export class SCProductStack extends cdk.Stack {
     });
 
     this.portfolio.addProduct(product);
+    this.portfolio.addProduct(pdFactory);
   }
 }
