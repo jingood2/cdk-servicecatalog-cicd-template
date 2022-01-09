@@ -1,3 +1,104 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot 1`] = `Object {}`;
+exports[`Snapshot 1`] = `
+Object {
+  "Parameters": Object {
+    "AssetParameters58e0e00b035fb14f4ab95d236f4122d167a080241addf18e3e95dd55855cfbe3ArtifactHash4CC747D4": Object {
+      "Description": "Artifact hash for asset \\"58e0e00b035fb14f4ab95d236f4122d167a080241addf18e3e95dd55855cfbe3\\"",
+      "Type": "String",
+    },
+    "AssetParameters58e0e00b035fb14f4ab95d236f4122d167a080241addf18e3e95dd55855cfbe3S3BucketFD0EF4E2": Object {
+      "Description": "S3 bucket for asset \\"58e0e00b035fb14f4ab95d236f4122d167a080241addf18e3e95dd55855cfbe3\\"",
+      "Type": "String",
+    },
+    "AssetParameters58e0e00b035fb14f4ab95d236f4122d167a080241addf18e3e95dd55855cfbe3S3VersionKey5FA7ACDA": Object {
+      "Description": "S3 key for asset version \\"58e0e00b035fb14f4ab95d236f4122d167a080241addf18e3e95dd55855cfbe3\\"",
+      "Type": "String",
+    },
+  },
+  "Resources": Object {
+    "MyFirstPortfolioF6211384": Object {
+      "Properties": Object {
+        "AcceptLanguage": "en",
+        "Description": "Portfolio for a project",
+        "DisplayName": "DemoPortfolio",
+        "ProviderName": "Cloud Infra Team",
+      },
+      "Type": "AWS::ServiceCatalog::Portfolio",
+    },
+    "MyFirstPortfolioPortfolioProductAssociation8a4513e27893B2951653": Object {
+      "Properties": Object {
+        "PortfolioId": Object {
+          "Ref": "MyFirstPortfolioF6211384",
+        },
+        "ProductId": Object {
+          "Ref": "Product896941B4",
+        },
+      },
+      "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
+    },
+    "Product896941B4": Object {
+      "Properties": Object {
+        "Description": "test2",
+        "Name": "sc-demo-product",
+        "Owner": "Product Owner",
+        "ProvisioningArtifactParameters": Array [
+          Object {
+            "DisableTemplateValidation": false,
+            "Info": Object {
+              "LoadTemplateFromURL": Object {
+                "Fn::Join": Array [
+                  "",
+                  Array [
+                    "https://s3.",
+                    Object {
+                      "Ref": "AWS::Region",
+                    },
+                    ".",
+                    Object {
+                      "Ref": "AWS::URLSuffix",
+                    },
+                    "/",
+                    Object {
+                      "Ref": "AssetParameters58e0e00b035fb14f4ab95d236f4122d167a080241addf18e3e95dd55855cfbe3S3BucketFD0EF4E2",
+                    },
+                    "/",
+                    Object {
+                      "Fn::Select": Array [
+                        0,
+                        Object {
+                          "Fn::Split": Array [
+                            "||",
+                            Object {
+                              "Ref": "AssetParameters58e0e00b035fb14f4ab95d236f4122d167a080241addf18e3e95dd55855cfbe3S3VersionKey5FA7ACDA",
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                    Object {
+                      "Fn::Select": Array [
+                        1,
+                        Object {
+                          "Fn::Split": Array [
+                            "||",
+                            Object {
+                              "Ref": "AssetParameters58e0e00b035fb14f4ab95d236f4122d167a080241addf18e3e95dd55855cfbe3S3VersionKey5FA7ACDA",
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  ],
+                ],
+              },
+            },
+            "Name": "v1",
+          },
+        ],
+      },
+      "Type": "AWS::ServiceCatalog::CloudFormationProduct",
+    },
+  },
+}
+`;
