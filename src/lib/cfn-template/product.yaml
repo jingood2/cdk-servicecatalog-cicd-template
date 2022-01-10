@@ -36,7 +36,7 @@ Metadata:
         Label:
           default: "Service Catalog Portfolio Id "
         Parameters:
-          - ServiceCatalogPortfolioStackName
+          - ServiceCatalogPortfolioId
       -
         Label:
           default: "Service Catalog Product Details"
@@ -98,7 +98,7 @@ Parameters:
     Default:        "Owner"
 
 # Service Catalog Portfolio Stack Name
-  ServiceCatalogPortfolioStackName:
+  ServiceCatalogPortfolioId:
     Description:    Please specify the Service Catalog Portfolio Id.
     Type:           String
     Default:        ""
@@ -205,15 +205,14 @@ Resources:
     Type: "AWS::ServiceCatalog::PortfolioProductAssociation"
     DependsOn: ServiceCatalogCloudFormationProduct
     Properties:
-      PortfolioId:
-          Fn::ImportValue: !Sub '${ServiceCatalogPortfolioStackName}'
+      PortfolioId: !Ref 'ServiceCatalogPortfolioId'
       ProductId: !Ref 'ServiceCatalogCloudFormationProduct'
 
   #ServiceCatalogCustomTagOptionsAssociation:
   #  Type: "AWS::ServiceCatalog::TagOptionAssociation"
   #  Properties:
   #    TagOptionId:
-  #        Fn::ImportValue: !Sub '${ServiceCatalogPortfolioStackName}-ServiceCatalogProductTagOptions'
+  #        Fn::ImportValue: !Sub '${ServiceCatalogPortfolioId}-ServiceCatalogProductTagOptions'
   #    ResourceId: !Ref 'ServiceCatalogCloudFormationProduct'
 
 
