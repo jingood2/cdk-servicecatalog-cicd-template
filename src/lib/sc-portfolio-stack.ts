@@ -2,7 +2,6 @@ import * as iam from '@aws-cdk/aws-iam';
 import * as servicecatalog from '@aws-cdk/aws-servicecatalog';
 import * as cdk from '@aws-cdk/core';
 import { envVars } from '../env-vars';
-import { ProductConstruct } from './sc-product-construct';
 
 export enum SCProductType {
   CDK='cdk-sc-product',
@@ -10,13 +9,6 @@ export enum SCProductType {
 }
 
 export interface SCPortfolioProductStackProps extends cdk.StackProps {
-  portfolioname: string;
-  portfolioArn?: string;
-  displayName?: string;
-  codeType: SCProductType;
-  accessUserName?: string;
-  accessGroupName?: string;
-  accessRoleArn?: string;
 }
 
 export class SCProductStack extends cdk.Stack {
@@ -26,31 +18,27 @@ export class SCProductStack extends cdk.Stack {
 
     // define resources here...
     // define resources here...
-    if (props.portfolioArn != undefined) {
-      this.portfolio = servicecatalog.Portfolio.fromPortfolioArn(this, 'MyImportedPortfolio', props.portfolioArn);
+    if (envVars.SC_PORTFOLIO_ARN != null) {
+      this.portfolio = servicecatalog.Portfolio.fromPortfolioArn(this, 'MyImportedPortfolio', envVars.SC_PORTFOLIO_ARN);
     } else {
-      this.portfolio = new servicecatalog.Portfolio(this, 'MyFirstPortfolio', {
-        displayName: props.displayName ?? 'DemoPortfolio',
+      this.portfolio = new servicecatalog.Portfolio(this, envVars.SC_PORTFOLIO_NAME, {
+        displayName: envVars.SC_PORTFOLIO_NAME ?? 'DemoPortfolio',
         providerName: 'Cloud Infra Team',
         description: 'Portfolio for a project',
         messageLanguage: servicecatalog.MessageLanguage.EN,
       });
 
-      if ( props.accessGroupName != undefined) {
-        const group = iam.Group.fromGroupName(this, 'SCGroup', props.accessGroupName);
+      if ( envVars.SC_ACCESS_GROUP_NAME != null) {
+        const group = iam.Group.fromGroupName(this, 'SCGroup', envVars.SC_ACCESS_GROUP_NAME);
         this.portfolio.giveAccessToGroup(group);
       }
-      if ( props.accessUserName != undefined) {
-        const user = iam.User.fromUserName(this, 'SCUser', props.accessUserName);
-        this.portfolio.giveAccessToUser(user);
-      }
-      if ( props.accessRoleArn != undefined) {
-        const role = iam.Role.fromRoleArn(this, 'SCRole', props.accessRoleArn);
+      if ( envVars.SC_ACCESS_ROLE_ARN != null) {
+        const role = iam.Role.fromRoleArn(this, 'SCRole', envVars.SC_ACCESS_ROLE_ARN);
         this.portfolio.giveAccessToRole(role);
       }
     }
 
-    const pdFactory = new servicecatalog.CloudFormationProduct(this, 'SCProductFactory', {
+    /* const pdFactory = new servicecatalog.CloudFormationProduct(this, 'SCProductFactory', {
       productName: 'SC Product Factory',
       owner: 'AWS TF Team',
       productVersions: [
@@ -61,9 +49,21 @@ export class SCProductStack extends cdk.Stack {
           ),
         },
       ],
+    }); */
+
+    const product = new servicecatalog.CloudFormationProduct(this, 'MyFirstProduct', {
+      productName: envVars.SC_PRODUCT_NAME,
+      owner: envVars.SC_PRODUCT_OWNER,
+      productVersions: [
+        {
+          productVersionName: 'v1',
+          cloudFormationTemplate: servicecatalog.CloudFormationTemplate.fromUrl(
+            'https://raw.githubusercontent.com/awslabs/aws-cloudformation-templates/master/aws/services/ServiceCatalog/Product.yaml'),
+        },
+      ],
     });
 
-    const product = new servicecatalog.CloudFormationProduct(this, 'Product', {
+    /* const product = new servicecatalog.CloudFormationProduct(this, 'Product', {
       productName: envVars.SC_PRODUCT_NAME,
       owner: 'Product Owner',
       description: 'test2',
@@ -73,9 +73,8 @@ export class SCProductStack extends cdk.Stack {
           cloudFormationTemplate: servicecatalog.CloudFormationTemplate.fromProductStack(new ProductConstruct(this, envVars.SC_PRODUCT_NAME)),
         },
       ],
-    });
+    }); */
 
     this.portfolio.addProduct(product);
-    this.portfolio.addProduct(pdFactory);
   }
 }
