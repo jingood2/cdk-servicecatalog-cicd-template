@@ -35,6 +35,12 @@ export class SCProductStack extends cdk.Stack {
       }
     }
 
+    const tagOptionsForPortfolio = new servicecatalog.TagOptions({
+      czStage: ['dev', 'qa', 'staging', 'production'],
+      czOwner: ['skmagic', 'skens', 'sknetworks', 'skb', 'skbio', 'skcamical'],
+    });
+    this.portfolio.associateTagOptions(tagOptionsForPortfolio);
+
     /* const pdFactory = new servicecatalog.CloudFormationProduct(this, 'SCProductFactory', {
       productName: 'SC Product Factory',
       owner: 'AWS TF Team',
