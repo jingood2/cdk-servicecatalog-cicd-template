@@ -8,17 +8,14 @@ export enum SCProductType {
   CFN='cfn-sc-product'
 }
 
-export interface SCPortfolioProductStackProps extends cdk.StackProps {
-}
-
 export class SCProductStack extends cdk.Stack {
   readonly portfolio: servicecatalog.IPortfolio;
-  constructor(scope: cdk.Construct, id: string, props: SCPortfolioProductStackProps) {
-    super(scope, id, props);
+  constructor(scope: cdk.Construct, id: string ) {
+    super(scope, id );
 
     // define resources here...
     // define resources here...
-    if (envVars.SC_PORTFOLIO_ARN != null) {
+    if (envVars.SC_PORTFOLIO_ARN != '') {
       this.portfolio = servicecatalog.Portfolio.fromPortfolioArn(this, 'MyImportedPortfolio', envVars.SC_PORTFOLIO_ARN);
     } else {
       this.portfolio = new servicecatalog.Portfolio(this, envVars.SC_PORTFOLIO_NAME, {
@@ -28,11 +25,11 @@ export class SCProductStack extends cdk.Stack {
         messageLanguage: servicecatalog.MessageLanguage.EN,
       });
 
-      if ( envVars.SC_ACCESS_GROUP_NAME != null) {
+      if ( envVars.SC_ACCESS_GROUP_NAME != '') {
         const group = iam.Group.fromGroupName(this, 'SCGroup', envVars.SC_ACCESS_GROUP_NAME);
         this.portfolio.giveAccessToGroup(group);
       }
-      if ( envVars.SC_ACCESS_ROLE_ARN != null) {
+      if ( envVars.SC_ACCESS_ROLE_ARN != '') {
         const role = iam.Role.fromRoleArn(this, 'SCRole', envVars.SC_ACCESS_ROLE_ARN);
         this.portfolio.giveAccessToRole(role);
       }

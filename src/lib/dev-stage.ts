@@ -10,6 +10,6 @@ export class DevStage extends cdk.Stage {
   constructor(scope: cdk.Construct, id: string, props: DevStageProps) {
     super(scope, id, props);
 
-    new SCProductStack(this, `${envVars.SC_PRODUCT_NAME}-stack`, { });
+    new SCProductStack(this, `${envVars.SC_PRODUCT_NAME}-stack`);
   }
 }
