@@ -1,6 +1,7 @@
 import * as iam from '@aws-cdk/aws-iam';
 import * as servicecatalog from '@aws-cdk/aws-servicecatalog';
 import * as cdk from '@aws-cdk/core';
+import * as path from 'path';
 import { envVars } from '../env-vars';
 
 export enum SCProductType {
@@ -60,8 +61,7 @@ export class SCProductStack extends cdk.Stack {
       productVersions: [
         {
           productVersionName: 'v1',
-          cloudFormationTemplate: servicecatalog.CloudFormationTemplate.fromUrl(
-            'https://raw.githubusercontent.com/awslabs/aws-cloudformation-templates/master/aws/services/ServiceCatalog/Product.yaml'),
+          cloudFormationTemplate: servicecatalog.CloudFormationTemplate.fromAsset(path.join(__dirname, ',', 'cfn-template/product.yaml')),
         },
       ],
     });
