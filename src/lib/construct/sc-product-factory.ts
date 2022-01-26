@@ -1,7 +1,7 @@
-import * as cdk from '@aws-cdk/core';
 import * as s3 from '@aws-cdk/aws-s3';
 import * as servicecatalog from '@aws-cdk/aws-servicecatalog';
 import * as cfn_inc from '@aws-cdk/cloudformation-include';
+import * as cdk from '@aws-cdk/core';
 
 export interface StackNameProps extends cdk.StackProps {
   filename : string;
@@ -15,6 +15,6 @@ export class SCProductFactory extends servicecatalog.ProductStack {
       templateFile: props.filename,
     });
 
-    
+
   }
 }
