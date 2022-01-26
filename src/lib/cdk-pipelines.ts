@@ -82,8 +82,8 @@ export class CdkPipelinesStack extends cdk.Stack {
     //pipeline.addStage(new MyStack(this, 'Dev'));
     pipeline.addStage(new DevStage(this, 'Dev', {
       env: {
-        account: process.env.CDK_DEPLOY_ACCOUNT,
-        region: process.env.CDK_DEPLOY_REGION,
+        account: '037729278610',
+        region: 'ap-northeast-2',
       },
     }));
 

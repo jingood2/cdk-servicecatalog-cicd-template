@@ -7,7 +7,7 @@ export enum SCProductType {
 
 export const envVars = {
   REGION: process.env.REGION || 'ap-northeast-2',
-  COMPANY_NAME: 'acme',
+  COMPANY_NAME: 'demo',
   SOURCE_PROVIDER: 'GITHUB',
   REPO: 'jingood2/cdk-servicecatalog-cicd-template',
   BRANCH: 'main',
