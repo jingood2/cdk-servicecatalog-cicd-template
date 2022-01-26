@@ -1,7 +1,7 @@
+import * as path from 'path';
 import * as iam from '@aws-cdk/aws-iam';
 import * as servicecatalog from '@aws-cdk/aws-servicecatalog';
 import * as cdk from '@aws-cdk/core';
-import * as path from 'path';
 import { envVars } from '../env-vars';
 
 export enum SCProductType {
@@ -14,8 +14,6 @@ export class SCProductStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string ) {
     super(scope, id );
 
-    // define resources here...
-    // define resources here...
     if (envVars.SC_PORTFOLIO_ARN != '') {
       this.portfolio = servicecatalog.Portfolio.fromPortfolioArn(this, 'MyImportedPortfolio', envVars.SC_PORTFOLIO_ARN);
     } else {
@@ -42,26 +40,13 @@ export class SCProductStack extends cdk.Stack {
     });
     this.portfolio.associateTagOptions(tagOptionsForPortfolio);
 
-    /* const pdFactory = new servicecatalog.CloudFormationProduct(this, 'SCProductFactory', {
-      productName: 'SC Product Factory',
-      owner: 'AWS TF Team',
-      productVersions: [
-        {
-          productVersionName: 'v1',
-          cloudFormationTemplate: servicecatalog.CloudFormationTemplate.fromUrl(
-            'https://jingood0604-sc-template.s3.ap-northeast-2.amazonaws.com/SCProductFactory.yaml',
-          ),
-        },
-      ],
-    }); */
-
-    const product = new servicecatalog.CloudFormationProduct(this, 'MyFirstProduct', {
-      productName: envVars.SC_PRODUCT_NAME,
+    const product = new servicecatalog.CloudFormationProduct(this, 'sc-ec2-linux-ra', {
+      productName: 'sc-ec2-linux-ra',
       owner: envVars.SC_PRODUCT_OWNER,
       productVersions: [
         {
           productVersionName: 'v1',
-          cloudFormationTemplate: servicecatalog.CloudFormationTemplate.fromAsset(path.join(__dirname, '.', 'cfn-template/product.yaml')),
+          cloudFormationTemplate: servicecatalog.CloudFormationTemplate.fromAsset(path.join(__dirname, '.', 'cfn-template/ec2/sc-ec2-linux-ra.json')),
         },
       ],
     });
