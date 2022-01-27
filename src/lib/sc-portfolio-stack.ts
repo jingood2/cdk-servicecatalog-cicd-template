@@ -3,6 +3,7 @@ import * as iam from '@aws-cdk/aws-iam';
 import * as servicecatalog from '@aws-cdk/aws-servicecatalog';
 import * as cdk from '@aws-cdk/core';
 import { envVars } from '../env-vars';
+import { SCProductFactory } from './construct/sc-product-factory';
 
 export enum SCProductType {
   CDK='cdk-sc-product',
@@ -51,18 +52,19 @@ export class SCProductStack extends cdk.Stack {
       ],
     });
 
-    /* const product = new servicecatalog.CloudFormationProduct(this, 'Product', {
-      productName: envVars.SC_PRODUCT_NAME,
+    const product2 = new servicecatalog.CloudFormationProduct(this, 'sc-product-codecommit', {
+      productName: 'sc-product-codecommit',
       owner: 'Product Owner',
       description: 'test2',
       productVersions: [
         {
           productVersionName: 'v1',
-          cloudFormationTemplate: servicecatalog.CloudFormationTemplate.fromProductStack(new ProductConstruct(this, envVars.SC_PRODUCT_NAME)),
+          cloudFormationTemplate: servicecatalog.CloudFormationTemplate.fromProductStack(new SCProductFactory(this, envVars.SC_PRODUCT_NAME)),
         },
       ],
-    }); */
+    });
 
     this.portfolio.addProduct(product);
+    this.portfolio.addProduct(product2);
   }
 }
