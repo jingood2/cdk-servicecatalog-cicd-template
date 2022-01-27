@@ -67,6 +67,9 @@ export class SCProductStack extends cdk.Stack {
 
     let product;
 
+    const adminRole: iam.IRole = iam.Role.fromRoleArn(this, 'Role',
+      `arn:aws:iam::${cdk.Stack.of(this).account}:role/AWSCloudFormationStackSetAdministrationRole`, { mutable: false });
+
     fs.readdirSync(dir).forEach((file) => {
 
       // builds full path of file
@@ -89,9 +92,7 @@ export class SCProductStack extends cdk.Stack {
       this.portfolio.deployWithStackSets(product, {
         accounts: ['856556794427'],
         regions: ['ap-northeast-2'],
-        adminRole: iam.Role.fromRoleArn(this, file+'Role', `arn:aws:iam::${cdk.Stack.of(this).account}:role/AWSCloudFormationStackSetAdministrationRole`, {
-          mutable: false,
-        }),
+        adminRole: adminRole,
         executionRoleName: 'AWSCloudFormationStackSetExecutionRole', // Name of role deployed in end users accounts.
         allowStackSetInstanceOperations: true,
       });
