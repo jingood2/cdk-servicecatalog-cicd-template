@@ -13,7 +13,7 @@ export class SCProductFactory extends servicecatalog.ProductStack {
     super(scope, id);
 
     new cfn_inc.CfnInclude(this, 'Template', {
-      templateFile: path.join(__dirname, '.', 'cfn-template/devops/sc-product-codecommit.template.yaml'),
+      templateFile: path.join(__dirname, '..', 'cfn-template/devops/sc-product-codecommit.template.yaml'),
     });
 
 
