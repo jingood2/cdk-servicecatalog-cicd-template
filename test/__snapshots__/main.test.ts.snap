@@ -3,16 +3,16 @@
 exports[`Snapshot 1`] = `
 Object {
   "Parameters": Object {
-    "AssetParameters378d96fc6f5756c072a44d959147bb3e758196ac1c9c5e8359b753d613e53396ArtifactHash0AE33507": Object {
-      "Description": "Artifact hash for asset \\"378d96fc6f5756c072a44d959147bb3e758196ac1c9c5e8359b753d613e53396\\"",
+    "AssetParametersaec755dad104d85a1b02acd23927a8207fb9d03879c352c2cdf6ffb01f377686ArtifactHash81D72EE7": Object {
+      "Description": "Artifact hash for asset \\"aec755dad104d85a1b02acd23927a8207fb9d03879c352c2cdf6ffb01f377686\\"",
       "Type": "String",
     },
-    "AssetParameters378d96fc6f5756c072a44d959147bb3e758196ac1c9c5e8359b753d613e53396S3Bucket80257382": Object {
-      "Description": "S3 bucket for asset \\"378d96fc6f5756c072a44d959147bb3e758196ac1c9c5e8359b753d613e53396\\"",
+    "AssetParametersaec755dad104d85a1b02acd23927a8207fb9d03879c352c2cdf6ffb01f377686S3Bucket2FE0D7D4": Object {
+      "Description": "S3 bucket for asset \\"aec755dad104d85a1b02acd23927a8207fb9d03879c352c2cdf6ffb01f377686\\"",
       "Type": "String",
     },
-    "AssetParameters378d96fc6f5756c072a44d959147bb3e758196ac1c9c5e8359b753d613e53396S3VersionKeyB14DFFDB": Object {
-      "Description": "S3 key for asset version \\"378d96fc6f5756c072a44d959147bb3e758196ac1c9c5e8359b753d613e53396\\"",
+    "AssetParametersaec755dad104d85a1b02acd23927a8207fb9d03879c352c2cdf6ffb01f377686S3VersionKeyBB591C70": Object {
+      "Description": "S3 key for asset version \\"aec755dad104d85a1b02acd23927a8207fb9d03879c352c2cdf6ffb01f377686\\"",
       "Type": "String",
     },
   },
@@ -106,13 +106,13 @@ Object {
       },
       "Type": "AWS::ServiceCatalog::Portfolio",
     },
-    "awstfportfolioPortfolioProductAssociation5c9b141e7931A015AFC6": Object {
+    "awstfportfolioPortfolioProductAssociation52599e1b17138A4EE39A": Object {
       "Properties": Object {
         "PortfolioId": Object {
           "Ref": "awstfportfolioC1A9E9F2",
         },
         "ProductId": Object {
-          "Ref": "scec2linuxra82B2C38E",
+          "Ref": "productfactory37431D86",
         },
       },
       "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
@@ -252,9 +252,9 @@ Object {
       },
       "Type": "AWS::ServiceCatalog::TagOptionAssociation",
     },
-    "scec2linuxra82B2C38E": Object {
+    "productfactory37431D86": Object {
       "Properties": Object {
-        "Name": "sc-ec2-linux-ra",
+        "Name": "sc-product-codecommit",
         "Owner": "SK CnC AWS TF Team",
         "ProvisioningArtifactParameters": Array [
           Object {
@@ -274,7 +274,7 @@ Object {
                     },
                     "/",
                     Object {
-                      "Ref": "AssetParameters378d96fc6f5756c072a44d959147bb3e758196ac1c9c5e8359b753d613e53396S3Bucket80257382",
+                      "Ref": "AssetParametersaec755dad104d85a1b02acd23927a8207fb9d03879c352c2cdf6ffb01f377686S3Bucket2FE0D7D4",
                     },
                     "/",
                     Object {
@@ -284,7 +284,7 @@ Object {
                           "Fn::Split": Array [
                             "||",
                             Object {
-                              "Ref": "AssetParameters378d96fc6f5756c072a44d959147bb3e758196ac1c9c5e8359b753d613e53396S3VersionKeyB14DFFDB",
+                              "Ref": "AssetParametersaec755dad104d85a1b02acd23927a8207fb9d03879c352c2cdf6ffb01f377686S3VersionKeyBB591C70",
                             },
                           ],
                         },
@@ -297,7 +297,7 @@ Object {
                           "Fn::Split": Array [
                             "||",
                             Object {
-                              "Ref": "AssetParameters378d96fc6f5756c072a44d959147bb3e758196ac1c9c5e8359b753d613e53396S3VersionKeyB14DFFDB",
+                              "Ref": "AssetParametersaec755dad104d85a1b02acd23927a8207fb9d03879c352c2cdf6ffb01f377686S3VersionKeyBB591C70",
                             },
                           ],
                         },

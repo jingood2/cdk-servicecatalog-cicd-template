@@ -47,7 +47,7 @@ export class SCProductStack extends cdk.Stack {
       productVersions: [
         {
           productVersionName: 'v1',
-          cloudFormationTemplate: servicecatalog.CloudFormationTemplate.fromAsset(path.join(__dirname, '.', 'cfn-template/devops/sc-product-codecommit.template.yaml')),
+          cloudFormationTemplate: servicecatalog.CloudFormationTemplate.fromAsset(path.join(__dirname, '.', 'cfn-template/devops/sc-product-codecommit.template.json')),
         },
       ],
     });
