@@ -17,18 +17,13 @@
                       "default": "S3 Bucket Configuration"
                   },
                   "Parameters": [
-                      "S3AccessCIDR",
-                      "BucketName"
+                      "S3AccessCIDR"
                   ]
               }
           ]
       }
   },
   "Parameters": {
-      "BucketName" : {
-          "Description": "S3 Bucket Name",
-          "Type": "String"
-      },
       "S3AccessCIDR": {
           "Description": "CIDR block to allow access to S3 bucket",
           "Type": "String",
@@ -46,9 +41,6 @@
           "Type": "AWS::S3::Bucket",
           "DeletionPolicy": "Delete",
           "Properties": {
-              "BucketName": {
-                "Ref": "BucketName"
-              },
               "AccessControl": "Private",
               "Tags": [
                   {
