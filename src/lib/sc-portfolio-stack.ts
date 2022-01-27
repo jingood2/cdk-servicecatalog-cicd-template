@@ -64,8 +64,6 @@ export class SCProductStack extends cdk.Stack {
       ],
     }); */
 
-    //this.portfolio.addProduct(product);
-    //this.portfolio.addProduct(product2);
   }
 
   private associateProductToPortfolioInDir(dir: string) : void {

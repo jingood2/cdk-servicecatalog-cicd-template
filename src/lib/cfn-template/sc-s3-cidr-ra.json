@@ -42,12 +42,12 @@
   },
   "Resources": {
       "S3Bucket": {
-          "BucketName": {
-            "Ref": "BucketName"
-          },
           "Type": "AWS::S3::Bucket",
           "DeletionPolicy": "Delete",
           "Properties": {
+              "BucketName": {
+                "Ref": "BucketName"
+              },
               "AccessControl": "Private",
               "Tags": [
                   {
