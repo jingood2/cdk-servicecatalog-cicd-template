@@ -49,7 +49,8 @@ export class SCProductStack extends cdk.Stack {
     this.portfolio.associateTagOptions(tagOptionsForPortfolio);
 
 
-    this.associateProductToPortfolioInDir(path.join(__dirname, '.', `cfn-template/${props.scope}`));
+    //this.associateProductToPortfolioInDir(path.join(__dirname, '.', `cfn-template/${props.scope}`));
+    this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template'));
 
     /* const product2 = new servicecatalog.CloudFormationProduct(this, 'sc-product-codecommit', {
       productName: 'sc-product-codecommit',

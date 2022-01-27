@@ -4,7 +4,7 @@ import { SecretValue } from '@aws-cdk/core';
 import { CodePipeline, CodePipelineSource, ShellStep } from '@aws-cdk/pipelines';
 import { envVars } from '../env-vars';
 import { EC2ProductStage } from './ec2-product-stage';
-import { S3ProductStage } from './s3-product-stage';
+//import { S3ProductStage } from './s3-product-stage';
 //import { DynamoDbCustomLoaderStack } from './infra/ddb-custom-loader-stack';
 
 export interface CodepipelineSourceProps {
@@ -90,12 +90,12 @@ export class CdkPipelinesStack extends cdk.Stack {
       },
     }));
 
-    scProductWave.addStage(new S3ProductStage(this, 'S3', {
+    /* scProductWave.addStage(new S3ProductStage(this, 'S3', {
       env: {
         account: '037729278610',
         region: 'ap-northeast-2',
       },
-    }));
+    })); */
 
   }
 
