@@ -3,7 +3,7 @@ import * as iam from '@aws-cdk/aws-iam';
 import * as servicecatalog from '@aws-cdk/aws-servicecatalog';
 import * as cdk from '@aws-cdk/core';
 import { envVars } from '../env-vars';
-import { SCProductFactory } from './construct/sc-product-factory';
+//import { SCProductFactory } from './construct/sc-product-factory';
 
 export enum SCProductType {
   CDK='cdk-sc-product',
@@ -41,18 +41,18 @@ export class SCProductStack extends cdk.Stack {
     });
     this.portfolio.associateTagOptions(tagOptionsForPortfolio);
 
-    const product = new servicecatalog.CloudFormationProduct(this, 'sc-ec2-linux-ra', {
-      productName: 'sc-ec2-linux-ra',
+    const product = new servicecatalog.CloudFormationProduct(this, 'product-factory', {
+      productName: 'sc-product-factory',
       owner: envVars.SC_PRODUCT_OWNER,
       productVersions: [
         {
           productVersionName: 'v1',
-          cloudFormationTemplate: servicecatalog.CloudFormationTemplate.fromAsset(path.join(__dirname, '.', 'cfn-template/ec2/sc-ec2-linux-ra.json')),
+          cloudFormationTemplate: servicecatalog.CloudFormationTemplate.fromAsset(path.join(__dirname, '.', 'cfn-template/ec2/product-factory.yaml')),
         },
       ],
     });
 
-    const product2 = new servicecatalog.CloudFormationProduct(this, 'sc-product-codecommit', {
+    /* const product2 = new servicecatalog.CloudFormationProduct(this, 'sc-product-codecommit', {
       productName: 'sc-product-codecommit',
       owner: 'Product Owner',
       description: 'test2',
@@ -62,9 +62,9 @@ export class SCProductStack extends cdk.Stack {
           cloudFormationTemplate: servicecatalog.CloudFormationTemplate.fromProductStack(new SCProductFactory(this, envVars.SC_PRODUCT_NAME)),
         },
       ],
-    });
+    }); */
 
     this.portfolio.addProduct(product);
-    this.portfolio.addProduct(product2);
+    //this.portfolio.addProduct(product2);
   }
 }
