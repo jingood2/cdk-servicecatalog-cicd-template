@@ -6,7 +6,7 @@ export interface S3StageProps extends cdk.StageProps{
 
 }
 
-export class S3Stage extends cdk.Stage {
+export class S3ProductStage extends cdk.Stage {
   constructor(scope: cdk.Construct, id: string, props: S3StageProps) {
     super(scope, id, props);
 
