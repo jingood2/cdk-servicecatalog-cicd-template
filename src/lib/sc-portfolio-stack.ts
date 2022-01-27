@@ -42,12 +42,12 @@ export class SCProductStack extends cdk.Stack {
     this.portfolio.associateTagOptions(tagOptionsForPortfolio);
 
     const product = new servicecatalog.CloudFormationProduct(this, 'product-factory', {
-      productName: 'sc-product-factory',
+      productName: 'sc-product-codecommit',
       owner: envVars.SC_PRODUCT_OWNER,
       productVersions: [
         {
           productVersionName: 'v1',
-          cloudFormationTemplate: servicecatalog.CloudFormationTemplate.fromAsset(path.join(__dirname, '.', 'cfn-template/product-factory.yaml')),
+          cloudFormationTemplate: servicecatalog.CloudFormationTemplate.fromAsset(path.join(__dirname, '.', 'cfn-template/devops/sc-product-codecommit.template.yaml')),
         },
       ],
     });
