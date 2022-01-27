@@ -3,7 +3,7 @@ import * as cdk from '@aws-cdk/core';
 import { SecretValue } from '@aws-cdk/core';
 import { CodePipeline, CodePipelineSource, ShellStep } from '@aws-cdk/pipelines';
 import { envVars } from '../env-vars';
-import { DevStage } from './dev-stage';
+//import { DevStage } from './dev-stage';
 //import { DynamoDbCustomLoaderStack } from './infra/ddb-custom-loader-stack';
 
 export interface CodepipelineSourceProps {
