@@ -3,7 +3,7 @@ import * as cdk from '@aws-cdk/core';
 import { SecretValue } from '@aws-cdk/core';
 import { CodePipeline, CodePipelineSource, ShellStep } from '@aws-cdk/pipelines';
 import { envVars } from '../env-vars';
-import { DevStage } from './dev-stage';
+import { EC2ProductStage } from './ec2-product-stage';
 //import { DynamoDbCustomLoaderStack } from './infra/ddb-custom-loader-stack';
 
 export interface CodepipelineSourceProps {
@@ -80,7 +80,7 @@ export class CdkPipelinesStack extends cdk.Stack {
 
     // ToDo: Add ApplicationStage
     //pipeline.addStage(new MyStack(this, 'Dev'));
-    pipeline.addStage(new DevStage(this, 'EC2', {
+    pipeline.addStage(new EC2ProductStage(this, 'EC2', {
       env: {
         account: '037729278610',
         region: 'ap-northeast-2',

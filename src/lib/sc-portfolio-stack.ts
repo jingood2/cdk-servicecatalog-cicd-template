@@ -7,6 +7,10 @@ import { envVars } from '../env-vars';
 
 //import { SCProductFactory } from './construct/sc-product-factory';
 
+export interface SCProductStackProps extends cdk.StackProps {
+  scope: string;
+}
+
 export enum SCProductType {
   CDK='cdk-sc-product',
   CFN='cfn-sc-product'
@@ -14,7 +18,7 @@ export enum SCProductType {
 
 export class SCProductStack extends cdk.Stack {
   readonly portfolio: servicecatalog.IPortfolio;
-  constructor(scope: cdk.Construct, id: string ) {
+  constructor(scope: cdk.Construct, id: string, props: SCProductStackProps ) {
     super(scope, id );
 
     if (envVars.SC_PORTFOLIO_ARN != '') {
@@ -33,7 +37,7 @@ export class SCProductStack extends cdk.Stack {
       } */
       if ( envVars.SC_ACCESS_ROLE_ARN != '') {
         //const role = iam.Role.fromRoleArn(this, 'SCRole', envVars.SC_ACCESS_ROLE_ARN);
-        const role = iam.Role.fromRoleArn(this, 'SCRole', 'arn:aws:iam::*:role/AssumableAdminRole');
+        const role = iam.Role.fromRoleArn(this, 'SCRole', `arn:aws:iam::${cdk.Stack.of(this).account}:role/AssumableAdminRole`);
         this.portfolio.giveAccessToRole(role);
       }
     }
@@ -45,7 +49,7 @@ export class SCProductStack extends cdk.Stack {
     this.portfolio.associateTagOptions(tagOptionsForPortfolio);
 
 
-    this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/ec2'));
+    this.associateProductToPortfolioInDir(path.join(__dirname, '.', `cfn-template/${props.scope}`));
 
     /* const product2 = new servicecatalog.CloudFormationProduct(this, 'sc-product-codecommit', {
       productName: 'sc-product-codecommit',
