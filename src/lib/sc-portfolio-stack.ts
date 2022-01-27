@@ -27,10 +27,10 @@ export class SCProductStack extends cdk.Stack {
         messageLanguage: servicecatalog.MessageLanguage.EN,
       });
 
-      if ( envVars.SC_ACCESS_GROUP_NAME != '') {
+      /* if ( envVars.SC_ACCESS_GROUP_NAME != '') {
         const group = iam.Group.fromGroupName(this, 'SCGroup', envVars.SC_ACCESS_GROUP_NAME);
         this.portfolio.giveAccessToGroup(group);
-      }
+      } */
       if ( envVars.SC_ACCESS_ROLE_ARN != '') {
         //const role = iam.Role.fromRoleArn(this, 'SCRole', envVars.SC_ACCESS_ROLE_ARN);
         const role = iam.Role.fromRoleArn(this, 'SCRole', 'arn:aws:iam::*:role/AssumableAdminRole');
