@@ -44,16 +44,6 @@ export class SCProductStack extends cdk.Stack {
     });
     this.portfolio.associateTagOptions(tagOptionsForPortfolio);
 
-    /* const product = new servicecatalog.CloudFormationProduct(this, 'ec2-linux-ra', {
-      productName: 'ec2-linux-ra',
-      owner: envVars.SC_PRODUCT_OWNER,
-      productVersions: [
-        {
-          productVersionName: 'v1',
-          cloudFormationTemplate: servicecatalog.CloudFormationTemplate.fromAsset(path.join(__dirname, '.', 'cfn-template/ec2/ec2-linux-ra.template.json')),
-        },
-      ],
-    }); */
 
     this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/ec2'));
 
@@ -95,6 +85,16 @@ export class SCProductStack extends cdk.Stack {
       });
 
       this.portfolio.addProduct(product);
+
+      this.portfolio.deployWithStackSets(product, {
+        accounts: ['856556794427'],
+        regions: ['ap-northeast-2'],
+        adminRole: iam.Role.fromRoleArn(this, 'Role', `arn:aws:iam::${cdk.Stack.of(this).account}:role/AWSCloudFormationStackSetAdministrationRole`, {
+          mutable: false,
+        }),
+        executionRoleName: 'AWSCloudFormationStackSetExecutionRole', // Name of role deployed in end users accounts.
+        allowStackSetInstanceOperations: true,
+      });
 
     });
 
