@@ -3,52 +3,16 @@
 exports[`Snapshot 1`] = `
 Object {
   "Parameters": Object {
-    "AssetParameters063856df84cbef6176baf3179efdcb8c6fe85fba60a84ac2138821614258c93fArtifactHashC20626D3": Object {
-      "Description": "Artifact hash for asset \\"063856df84cbef6176baf3179efdcb8c6fe85fba60a84ac2138821614258c93f\\"",
+    "AssetParametersaa5453c49b62a5584d797e3a60d0133541fb1e0fc6363fcf94c03ba49c3417bfArtifactHash7781280A": Object {
+      "Description": "Artifact hash for asset \\"aa5453c49b62a5584d797e3a60d0133541fb1e0fc6363fcf94c03ba49c3417bf\\"",
       "Type": "String",
     },
-    "AssetParameters063856df84cbef6176baf3179efdcb8c6fe85fba60a84ac2138821614258c93fS3BucketBEACFCCE": Object {
-      "Description": "S3 bucket for asset \\"063856df84cbef6176baf3179efdcb8c6fe85fba60a84ac2138821614258c93f\\"",
+    "AssetParametersaa5453c49b62a5584d797e3a60d0133541fb1e0fc6363fcf94c03ba49c3417bfS3BucketECE50864": Object {
+      "Description": "S3 bucket for asset \\"aa5453c49b62a5584d797e3a60d0133541fb1e0fc6363fcf94c03ba49c3417bf\\"",
       "Type": "String",
     },
-    "AssetParameters063856df84cbef6176baf3179efdcb8c6fe85fba60a84ac2138821614258c93fS3VersionKey01EB0338": Object {
-      "Description": "S3 key for asset version \\"063856df84cbef6176baf3179efdcb8c6fe85fba60a84ac2138821614258c93f\\"",
-      "Type": "String",
-    },
-    "AssetParameters378d96fc6f5756c072a44d959147bb3e758196ac1c9c5e8359b753d613e53396ArtifactHash0AE33507": Object {
-      "Description": "Artifact hash for asset \\"378d96fc6f5756c072a44d959147bb3e758196ac1c9c5e8359b753d613e53396\\"",
-      "Type": "String",
-    },
-    "AssetParameters378d96fc6f5756c072a44d959147bb3e758196ac1c9c5e8359b753d613e53396S3Bucket80257382": Object {
-      "Description": "S3 bucket for asset \\"378d96fc6f5756c072a44d959147bb3e758196ac1c9c5e8359b753d613e53396\\"",
-      "Type": "String",
-    },
-    "AssetParameters378d96fc6f5756c072a44d959147bb3e758196ac1c9c5e8359b753d613e53396S3VersionKeyB14DFFDB": Object {
-      "Description": "S3 key for asset version \\"378d96fc6f5756c072a44d959147bb3e758196ac1c9c5e8359b753d613e53396\\"",
-      "Type": "String",
-    },
-    "AssetParametersc2d6db4776d53a66510ef7ff276e287dbb1bdd0e4fc794d19225c24735eee693ArtifactHashF3DAF3DB": Object {
-      "Description": "Artifact hash for asset \\"c2d6db4776d53a66510ef7ff276e287dbb1bdd0e4fc794d19225c24735eee693\\"",
-      "Type": "String",
-    },
-    "AssetParametersc2d6db4776d53a66510ef7ff276e287dbb1bdd0e4fc794d19225c24735eee693S3BucketB0FF707B": Object {
-      "Description": "S3 bucket for asset \\"c2d6db4776d53a66510ef7ff276e287dbb1bdd0e4fc794d19225c24735eee693\\"",
-      "Type": "String",
-    },
-    "AssetParametersc2d6db4776d53a66510ef7ff276e287dbb1bdd0e4fc794d19225c24735eee693S3VersionKey699D32A6": Object {
-      "Description": "S3 key for asset version \\"c2d6db4776d53a66510ef7ff276e287dbb1bdd0e4fc794d19225c24735eee693\\"",
-      "Type": "String",
-    },
-    "AssetParametersc8edf8a7a81602c54713a11c442204989f10a35bf6441bcfaa96fc2ccd746683ArtifactHash614F0A8C": Object {
-      "Description": "Artifact hash for asset \\"c8edf8a7a81602c54713a11c442204989f10a35bf6441bcfaa96fc2ccd746683\\"",
-      "Type": "String",
-    },
-    "AssetParametersc8edf8a7a81602c54713a11c442204989f10a35bf6441bcfaa96fc2ccd746683S3Bucket7FDFF85B": Object {
-      "Description": "S3 bucket for asset \\"c8edf8a7a81602c54713a11c442204989f10a35bf6441bcfaa96fc2ccd746683\\"",
-      "Type": "String",
-    },
-    "AssetParametersc8edf8a7a81602c54713a11c442204989f10a35bf6441bcfaa96fc2ccd746683S3VersionKey96E85A2B": Object {
-      "Description": "S3 key for asset version \\"c8edf8a7a81602c54713a11c442204989f10a35bf6441bcfaa96fc2ccd746683\\"",
+    "AssetParametersaa5453c49b62a5584d797e3a60d0133541fb1e0fc6363fcf94c03ba49c3417bfS3VersionKey717C85FF": Object {
+      "Description": "S3 key for asset version \\"aa5453c49b62a5584d797e3a60d0133541fb1e0fc6363fcf94c03ba49c3417bf\\"",
       "Type": "String",
     },
   },
@@ -142,74 +106,51 @@ Object {
       },
       "Type": "AWS::ServiceCatalog::Portfolio",
     },
-    "awstfportfolioPortfolioProductAssociation0b601cf252531589A2D0": Object {
+    "awstfportfolioPortfolioProductAssociation73af09c5b19974CD742C": Object {
       "Properties": Object {
         "PortfolioId": Object {
           "Ref": "awstfportfolioC1A9E9F2",
         },
         "ProductId": Object {
-          "Ref": "linuxremoteaccessjson90ECE4F4",
+          "Ref": "scs3cidrrajson0D2692C7",
         },
       },
       "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
     },
-    "awstfportfolioPortfolioProductAssociationa47825888c2f4AB32A75": Object {
+    "awstfportfolioStackSetConstraint73af09c5b199565737CC": Object {
+      "DependsOn": Array [
+        "awstfportfolioPortfolioProductAssociation73af09c5b19974CD742C",
+      ],
       "Properties": Object {
-        "PortfolioId": Object {
-          "Ref": "awstfportfolioC1A9E9F2",
-        },
-        "ProductId": Object {
-          "Ref": "linuxnginxnokeypairjsonFAFF10AD",
-        },
-      },
-      "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
-    },
-    "awstfportfolioPortfolioProductAssociationa963cc00711c23502CA9": Object {
-      "Properties": Object {
-        "PortfolioId": Object {
-          "Ref": "awstfportfolioC1A9E9F2",
-        },
-        "ProductId": Object {
-          "Ref": "windowremoteaccsssjson5A45DF8D",
-        },
-      },
-      "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
-    },
-    "awstfportfolioPortfolioProductAssociationca9316e2def7F4551DC6": Object {
-      "Properties": Object {
-        "PortfolioId": Object {
-          "Ref": "awstfportfolioC1A9E9F2",
-        },
-        "ProductId": Object {
-          "Ref": "linuxnginxjson2CB8FE87",
-        },
-      },
-      "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
-    },
-    "awstfportfolioPortolioPrincipalAssociation06c99ff55d6bD74BD4E2": Object {
-      "Properties": Object {
-        "PortfolioId": Object {
-          "Ref": "awstfportfolioC1A9E9F2",
-        },
-        "PrincipalARN": Object {
+        "AccountList": Array [
+          "856556794427",
+        ],
+        "AdminRole": Object {
           "Fn::Join": Array [
             "",
             Array [
-              "arn:",
-              Object {
-                "Ref": "AWS::Partition",
-              },
-              ":iam::",
+              "arn:aws:iam::",
               Object {
                 "Ref": "AWS::AccountId",
               },
-              ":group/AdminMasterAccountGroup",
+              ":role/AWSCloudFormationStackSetAdministrationRole",
             ],
           ],
         },
-        "PrincipalType": "IAM",
+        "Description": "",
+        "ExecutionRole": "AWSCloudFormationStackSetExecutionRole",
+        "PortfolioId": Object {
+          "Ref": "awstfportfolioC1A9E9F2",
+        },
+        "ProductId": Object {
+          "Ref": "scs3cidrrajson0D2692C7",
+        },
+        "RegionList": Array [
+          "ap-northeast-2",
+        ],
+        "StackInstanceControl": "ALLOWED",
       },
-      "Type": "AWS::ServiceCatalog::PortfolioPrincipalAssociation",
+      "Type": "AWS::ServiceCatalog::StackSetConstraint",
     },
     "awstfportfolioTagOptionAssociation5cb7502c070a0D3DE9FF": Object {
       "Properties": Object {
@@ -321,9 +262,9 @@ Object {
       },
       "Type": "AWS::ServiceCatalog::TagOptionAssociation",
     },
-    "linuxnginxjson2CB8FE87": Object {
+    "scs3cidrrajson0D2692C7": Object {
       "Properties": Object {
-        "Name": "linux-nginx.json",
+        "Name": "sc-s3-cidr-ra.json",
         "Owner": "SK CnC AWS TF Team",
         "ProvisioningArtifactParameters": Array [
           Object {
@@ -343,7 +284,7 @@ Object {
                     },
                     "/",
                     Object {
-                      "Ref": "AssetParameters063856df84cbef6176baf3179efdcb8c6fe85fba60a84ac2138821614258c93fS3BucketBEACFCCE",
+                      "Ref": "AssetParametersaa5453c49b62a5584d797e3a60d0133541fb1e0fc6363fcf94c03ba49c3417bfS3BucketECE50864",
                     },
                     "/",
                     Object {
@@ -353,7 +294,7 @@ Object {
                           "Fn::Split": Array [
                             "||",
                             Object {
-                              "Ref": "AssetParameters063856df84cbef6176baf3179efdcb8c6fe85fba60a84ac2138821614258c93fS3VersionKey01EB0338",
+                              "Ref": "AssetParametersaa5453c49b62a5584d797e3a60d0133541fb1e0fc6363fcf94c03ba49c3417bfS3VersionKey717C85FF",
                             },
                           ],
                         },
@@ -366,190 +307,7 @@ Object {
                           "Fn::Split": Array [
                             "||",
                             Object {
-                              "Ref": "AssetParameters063856df84cbef6176baf3179efdcb8c6fe85fba60a84ac2138821614258c93fS3VersionKey01EB0338",
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                  ],
-                ],
-              },
-            },
-            "Name": "v1",
-          },
-        ],
-      },
-      "Type": "AWS::ServiceCatalog::CloudFormationProduct",
-    },
-    "linuxnginxnokeypairjsonFAFF10AD": Object {
-      "Properties": Object {
-        "Name": "linux-nginx-nokeypair.json",
-        "Owner": "SK CnC AWS TF Team",
-        "ProvisioningArtifactParameters": Array [
-          Object {
-            "DisableTemplateValidation": false,
-            "Info": Object {
-              "LoadTemplateFromURL": Object {
-                "Fn::Join": Array [
-                  "",
-                  Array [
-                    "https://s3.",
-                    Object {
-                      "Ref": "AWS::Region",
-                    },
-                    ".",
-                    Object {
-                      "Ref": "AWS::URLSuffix",
-                    },
-                    "/",
-                    Object {
-                      "Ref": "AssetParametersc8edf8a7a81602c54713a11c442204989f10a35bf6441bcfaa96fc2ccd746683S3Bucket7FDFF85B",
-                    },
-                    "/",
-                    Object {
-                      "Fn::Select": Array [
-                        0,
-                        Object {
-                          "Fn::Split": Array [
-                            "||",
-                            Object {
-                              "Ref": "AssetParametersc8edf8a7a81602c54713a11c442204989f10a35bf6441bcfaa96fc2ccd746683S3VersionKey96E85A2B",
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                    Object {
-                      "Fn::Select": Array [
-                        1,
-                        Object {
-                          "Fn::Split": Array [
-                            "||",
-                            Object {
-                              "Ref": "AssetParametersc8edf8a7a81602c54713a11c442204989f10a35bf6441bcfaa96fc2ccd746683S3VersionKey96E85A2B",
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                  ],
-                ],
-              },
-            },
-            "Name": "v1",
-          },
-        ],
-      },
-      "Type": "AWS::ServiceCatalog::CloudFormationProduct",
-    },
-    "linuxremoteaccessjson90ECE4F4": Object {
-      "Properties": Object {
-        "Name": "linux-remote-access.json",
-        "Owner": "SK CnC AWS TF Team",
-        "ProvisioningArtifactParameters": Array [
-          Object {
-            "DisableTemplateValidation": false,
-            "Info": Object {
-              "LoadTemplateFromURL": Object {
-                "Fn::Join": Array [
-                  "",
-                  Array [
-                    "https://s3.",
-                    Object {
-                      "Ref": "AWS::Region",
-                    },
-                    ".",
-                    Object {
-                      "Ref": "AWS::URLSuffix",
-                    },
-                    "/",
-                    Object {
-                      "Ref": "AssetParameters378d96fc6f5756c072a44d959147bb3e758196ac1c9c5e8359b753d613e53396S3Bucket80257382",
-                    },
-                    "/",
-                    Object {
-                      "Fn::Select": Array [
-                        0,
-                        Object {
-                          "Fn::Split": Array [
-                            "||",
-                            Object {
-                              "Ref": "AssetParameters378d96fc6f5756c072a44d959147bb3e758196ac1c9c5e8359b753d613e53396S3VersionKeyB14DFFDB",
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                    Object {
-                      "Fn::Select": Array [
-                        1,
-                        Object {
-                          "Fn::Split": Array [
-                            "||",
-                            Object {
-                              "Ref": "AssetParameters378d96fc6f5756c072a44d959147bb3e758196ac1c9c5e8359b753d613e53396S3VersionKeyB14DFFDB",
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                  ],
-                ],
-              },
-            },
-            "Name": "v1",
-          },
-        ],
-      },
-      "Type": "AWS::ServiceCatalog::CloudFormationProduct",
-    },
-    "windowremoteaccsssjson5A45DF8D": Object {
-      "Properties": Object {
-        "Name": "window-remote-accsss.json",
-        "Owner": "SK CnC AWS TF Team",
-        "ProvisioningArtifactParameters": Array [
-          Object {
-            "DisableTemplateValidation": false,
-            "Info": Object {
-              "LoadTemplateFromURL": Object {
-                "Fn::Join": Array [
-                  "",
-                  Array [
-                    "https://s3.",
-                    Object {
-                      "Ref": "AWS::Region",
-                    },
-                    ".",
-                    Object {
-                      "Ref": "AWS::URLSuffix",
-                    },
-                    "/",
-                    Object {
-                      "Ref": "AssetParametersc2d6db4776d53a66510ef7ff276e287dbb1bdd0e4fc794d19225c24735eee693S3BucketB0FF707B",
-                    },
-                    "/",
-                    Object {
-                      "Fn::Select": Array [
-                        0,
-                        Object {
-                          "Fn::Split": Array [
-                            "||",
-                            Object {
-                              "Ref": "AssetParametersc2d6db4776d53a66510ef7ff276e287dbb1bdd0e4fc794d19225c24735eee693S3VersionKey699D32A6",
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                    Object {
-                      "Fn::Select": Array [
-                        1,
-                        Object {
-                          "Fn::Split": Array [
-                            "||",
-                            Object {
-                              "Ref": "AssetParametersc2d6db4776d53a66510ef7ff276e287dbb1bdd0e4fc794d19225c24735eee693S3VersionKey699D32A6",
+                              "Ref": "AssetParametersaa5453c49b62a5584d797e3a60d0133541fb1e0fc6363fcf94c03ba49c3417bfS3VersionKey717C85FF",
                             },
                           ],
                         },

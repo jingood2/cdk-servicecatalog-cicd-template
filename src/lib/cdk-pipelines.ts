@@ -66,7 +66,7 @@ export class CdkPipelinesStack extends cdk.Stack {
     };
 
     const pipeline = new CodePipeline(this, 'Pipeline', {
-      selfMutation: false,
+      selfMutation: true,
       pipelineName: `${envVars.COMPANY_NAME}-${envVars.SC_PRODUCT_NAME}-pipeline`,
       synth: new ShellStep('Synth', {
         input: this.getCodepipelineSource(pipelinesProps),
@@ -78,9 +78,11 @@ export class CdkPipelinesStack extends cdk.Stack {
       }),
     });
 
+    const scProductWave = pipeline.addWave('SCProduct');
+
     // ToDo: Add ApplicationStage
     //pipeline.addStage(new MyStack(this, 'Dev'));
-    pipeline.addStage(new EC2ProductStage(this, 'EC2', {
+    scProductWave.addStage(new EC2ProductStage(this, 'EC2', {
       env: {
         account: '037729278610',
         region: 'ap-northeast-2',

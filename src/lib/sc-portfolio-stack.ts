@@ -19,7 +19,7 @@ export enum SCProductType {
 export class SCProductStack extends cdk.Stack {
   readonly portfolio: servicecatalog.IPortfolio;
   constructor(scope: cdk.Construct, id: string, props: SCProductStackProps ) {
-    super(scope, id );
+    super(scope, id, props );
 
     if (envVars.SC_PORTFOLIO_ARN != '') {
       this.portfolio = servicecatalog.Portfolio.fromPortfolioArn(this, 'MyImportedPortfolio', envVars.SC_PORTFOLIO_ARN);
