@@ -89,7 +89,7 @@ export class SCProductStack extends cdk.Stack {
       this.portfolio.deployWithStackSets(product, {
         accounts: ['856556794427'],
         regions: ['ap-northeast-2'],
-        adminRole: iam.Role.fromRoleArn(this, 'Role', `arn:aws:iam::${cdk.Stack.of(this).account}:role/AWSCloudFormationStackSetAdministrationRole`, {
+        adminRole: iam.Role.fromRoleArn(this, file+'Role', `arn:aws:iam::${cdk.Stack.of(this).account}:role/AWSCloudFormationStackSetAdministrationRole`, {
           mutable: false,
         }),
         executionRoleName: 'AWSCloudFormationStackSetExecutionRole', // Name of role deployed in end users accounts.
