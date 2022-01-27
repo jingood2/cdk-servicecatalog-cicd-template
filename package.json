@@ -45,7 +45,9 @@
     "@aws-cdk/cloudformation-include": "^1.138.0",
     "@aws-cdk/core": "^1.138.0",
     "@aws-cdk/pipelines": "^1.138.0",
-    "chalk": "^4.1.2"
+    "chalk": "^4.1.2",
+    "fs": "^0.0.2",
+    "path": "^0.12.7"
   },
   "bundledDependencies": [],
   "license": "Apache-2.0",

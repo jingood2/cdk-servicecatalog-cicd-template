@@ -80,7 +80,7 @@ export class CdkPipelinesStack extends cdk.Stack {
 
     // ToDo: Add ApplicationStage
     //pipeline.addStage(new MyStack(this, 'Dev'));
-    pipeline.addStage(new DevStage(this, 'Dev', {
+    pipeline.addStage(new DevStage(this, 'EC2', {
       env: {
         account: '037729278610',
         region: 'ap-northeast-2',
