@@ -24,10 +24,10 @@ export class SCProductStack extends cdk.Stack {
     if (envVars.SC_PORTFOLIO_ARN != '') {
       this.portfolio = servicecatalog.Portfolio.fromPortfolioArn(this, 'MyImportedPortfolio', envVars.SC_PORTFOLIO_ARN);
     } else {
-      this.portfolio = new servicecatalog.Portfolio(this, envVars.SC_PORTFOLIO_NAME, {
-        displayName: envVars.SC_PORTFOLIO_NAME ?? 'DemoPortfolio',
+      this.portfolio = new servicecatalog.Portfolio(this, 'Portfolio' + props.scope, {
+        displayName: envVars.SC_PORTFOLIO_NAME + props.scope ?? 'DemoPortfolio',
         providerName: 'Cloud Infra Team',
-        description: 'Service Catalog: EC2 Reference Architecture',
+        description: `Service Catalog: ${props.scope} Reference Architecture`,
         messageLanguage: servicecatalog.MessageLanguage.EN,
       });
 
