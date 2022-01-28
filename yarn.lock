@@ -5415,7 +5415,7 @@ cdk-assets@1.138.1:
     mime "^2.6.0"
     yargs "^16.2.0"
 
-cdk-nag@^1.138.0:
+cdk-nag@^1.4.35:
   version "1.4.35"
   resolved "https://registry.yarnpkg.com/cdk-nag/-/cdk-nag-1.4.35.tgz#bf636ac65863d428bb83f5fc98f907bb7ac1c5e3"
   integrity sha512-GITsoxDTT/s9ZAVKmVCxJ9oitiRS2SY4F+PmMs1hQzmqG1OLdh3+WWJx+yOij29jyJEaPmoY14TiwGoQBSLfYg==
