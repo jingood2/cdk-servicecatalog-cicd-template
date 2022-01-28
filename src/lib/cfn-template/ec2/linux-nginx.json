@@ -18,7 +18,7 @@
                   },
                   "Parameters": [
                       "KeyPair",
-                      "LinuxInstanceType",
+                      "InstanceType",
                       "LatestAmiId"
                   ]
               }
@@ -33,7 +33,7 @@
               "RemoteAccessCIDR": {
                   "default": "Remote Access CIDR Block"
               },
-              "LinuxInstanceType": {
+              "InstanceType": {
                   "default": "Linux Instance Type"
               },
               "LatestAmiId": {
