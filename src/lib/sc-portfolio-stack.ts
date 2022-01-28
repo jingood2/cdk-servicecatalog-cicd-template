@@ -72,11 +72,12 @@ export class SCProductStack extends cdk.Stack {
 
     let product;
 
-    fs.readdirSync(dir).filter(file => file.endsWith('json')).forEach((file) => {
+    fs.readdirSync(dir).forEach((file) => {
 
-      /* if (!(file.endsWith('json') || file.endsWith('yaml') || file.endsWith('yml' ))) {
-        continue;
-      } */
+      if (file.endsWith('json') === false) {
+        console.log('filename:', file);
+        return;
+      }
 
       // builds full path of file
       const fPath = path.resolve(dir, file);
