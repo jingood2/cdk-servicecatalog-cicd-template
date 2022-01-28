@@ -79,11 +79,12 @@ export class CdkPipelinesStack extends cdk.Stack {
       }),
     });
 
-    const scProductWave = pipeline.addWave('SCProduct');
+    //const scProductWave = pipeline.addWave('SCProduct');
 
     // ToDo: Add ApplicationStage
     //pipeline.addStage(new MyStack(this, 'Dev'));
-    scProductWave.addStage(new EC2ProductStage(this, 'EC2', {
+    //scProductWave.addStage(new EC2ProductStage(this, 'EC2', {
+    pipeline.addStage(new EC2ProductStage(this, 'EC2', {
       env: {
         account: '037729278610',
         region: 'ap-northeast-2',
