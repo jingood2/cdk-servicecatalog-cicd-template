@@ -74,15 +74,14 @@ export class SCProductStack extends cdk.Stack {
 
     fs.readdirSync(dir).forEach((file) => {
 
-      if (file.endsWith('json') === false) {
-        console.log('filename:', file);
-        return;
-      }
 
       // builds full path of file
       const fPath = path.resolve(dir, file);
-      console.log('fPath:', fPath);
 
+      if (fPath.endsWith('json') === false) {
+        console.log('fPath:', fPath);
+        return;
+      }
 
       product = new servicecatalog.CloudFormationProduct(this, file, {
         productName: file,
