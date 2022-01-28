@@ -1,4 +1,4 @@
-AWSTemplateFormatVersion: 2010-09-09
+AWSTemplateFormatVersion: "2010-09-09"
 Description: 'AWS CloudFormation Sample Template:
   Sample template which will create an s3 bucket with server side encryption
   enabled and a bucket policy to enable cross account acccess. The template
