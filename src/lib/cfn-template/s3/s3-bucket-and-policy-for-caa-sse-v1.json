@@ -2,10 +2,6 @@
     "AWSTemplateFormatVersion": "2010-09-09",
     "Description": "create an s3 bucket with server side encryption enabled and a bucket policy to enable cross account acccess. The template requires you to provide an AWS account ID to provide cross account access to, and a globally unique name for an s3 bucket",
     "Parameters": {
-        "BucketName": {
-            "Type": "String",
-            "Description": "The name of the S3 Bucket to create, make this unique"
-        },
         "PublisherAccountID": {
             "Type": "String",
             "Description": "The AWS account ID with whom you are sharing access"
@@ -15,9 +11,6 @@
         "S3BUCKET": {
             "Type": "AWS::S3::Bucket",
             "Properties": {
-                "BucketName": {
-                    "Ref": "BucketName"
-                },
                 "BucketEncryption": {
                     "ServerSideEncryptionConfiguration": [
                         {
