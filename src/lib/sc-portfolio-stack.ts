@@ -48,10 +48,12 @@ export class SCProductStack extends cdk.Stack {
     });
     this.portfolio.associateTagOptions(tagOptionsForPortfolio);
 
+    const adminRole: iam.IRole = iam.Role.fromRoleArn(this, 'Role',
+      `arn:aws:iam::${cdk.Stack.of(this).account}:role/AWSCloudFormationStackSetAdministrationRole`, { mutable: false });
 
-    //this.associateProductToPortfolioInDir(path.join(__dirname, '.', `cfn-template/${props.scope}`));
-    this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/ec2'));
-    this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/s3'));
+
+    this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/ec2'), adminRole);
+    this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/s3'), adminRole);
 
     /* const product2 = new servicecatalog.CloudFormationProduct(this, 'sc-product-codecommit', {
       productName: 'sc-product-codecommit',
@@ -67,12 +69,9 @@ export class SCProductStack extends cdk.Stack {
 
   }
 
-  private associateProductToPortfolioInDir(dir: string) : void {
+  private associateProductToPortfolioInDir(dir: string, adminRole: iam.IRole) : void {
 
     let product;
-
-    const adminRole: iam.IRole = iam.Role.fromRoleArn(this, 'Role',
-      `arn:aws:iam::${cdk.Stack.of(this).account}:role/AWSCloudFormationStackSetAdministrationRole`, { mutable: false });
 
     fs.readdirSync(dir).forEach((file) => {
 
