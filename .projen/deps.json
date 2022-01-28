@@ -114,6 +114,11 @@
       "type": "runtime"
     },
     {
+      "name": "cdk-nag",
+      "version": "^1.138.0",
+      "type": "runtime"
+    },
+    {
       "name": "chalk",
       "type": "runtime"
     },

@@ -12,7 +12,7 @@ const project = new AwsCdkTypeScriptApp({
     '@aws-cdk/aws-iam',
     '@aws-cdk/aws-s3',
     '@aws-cdk/cloudformation-include',
-
+    'cdk-nag',
   ], /* Which AWS CDK modules (those that start with "@aws-cdk/") this app uses. */
   deps: [
     'chalk',
