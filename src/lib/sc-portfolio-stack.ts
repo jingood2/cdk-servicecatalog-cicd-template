@@ -51,7 +51,7 @@ export class SCProductStack extends cdk.Stack {
       `arn:aws:iam::${cdk.Stack.of(this).account}:role/AWSCloudFormationStackSetAdministrationRole`, { mutable: false });
 
 
-    this.associateProductToPortfolioInDir(path.join(__dirname, '.', `cfn-template/${props.scope}`), adminRole);
+    this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template'), adminRole);
     //this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/s3'), adminRole);
 
     /* const product2 = new servicecatalog.CloudFormationProduct(this, 'sc-product-codecommit', {
@@ -74,9 +74,13 @@ export class SCProductStack extends cdk.Stack {
 
     fs.readdirSync(dir).forEach((file) => {
 
+      if (!(file.endsWith('json') || file.endsWith('yaml') || file.endsWith('yml' ))) {
+        return;
+      }
       // builds full path of file
       const fPath = path.resolve(dir, file);
       console.log('fPath:', fPath);
+
 
       product = new servicecatalog.CloudFormationProduct(this, file, {
         productName: file,
