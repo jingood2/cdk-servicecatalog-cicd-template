@@ -26,11 +26,10 @@ export class SCProductStack extends cdk.Stack {
     } else {
       this.portfolio = new servicecatalog.Portfolio(this, 'Portfolio' + props.scope, {
         displayName: envVars.SC_PORTFOLIO_NAME + props.scope ?? 'DemoPortfolio',
-        providerName: 'Cloud Infra Team',
+        providerName: 'Cloud Infra TF',
         description: `Service Catalog: ${props.scope} Reference Architecture`,
         messageLanguage: servicecatalog.MessageLanguage.EN,
       });
-
       /* if ( envVars.SC_ACCESS_GROUP_NAME != '') {
         const group = iam.Group.fromGroupName(this, 'SCGroup', envVars.SC_ACCESS_GROUP_NAME);
         this.portfolio.giveAccessToGroup(group);
