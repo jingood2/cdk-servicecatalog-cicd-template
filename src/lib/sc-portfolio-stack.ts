@@ -30,13 +30,13 @@ export class SCProductStack extends cdk.Stack {
         description: `Service Catalog: ${props.scope} Reference Architecture`,
         messageLanguage: servicecatalog.MessageLanguage.EN,
       });
-      /* if ( envVars.SC_ACCESS_GROUP_NAME != '') {
-        const group = iam.Group.fromGroupName(this, 'SCGroup', envVars.SC_ACCESS_GROUP_NAME);
+      if ( envVars.SC_ACCESS_GROUP_NAME != '') {
+        const group = iam.Group.fromGroupName(this, 'SCGroup', 'AdminMasterAccountGroup');
         this.portfolio.giveAccessToGroup(group);
-      } */
+      }
       if ( envVars.SC_ACCESS_ROLE_ARN != '') {
         //const role = iam.Role.fromRoleArn(this, 'SCRole', envVars.SC_ACCESS_ROLE_ARN);
-        const role = iam.Role.fromRoleArn(this, 'SCRole', `arn:aws:iam::${cdk.Stack.of(this).account}:role/AssumableAdminRole`);
+        const role = iam.Role.fromRoleArn(this, 'SCRole', 'arn:aws:iam::*:role/AssumableAdminRole');
         this.portfolio.giveAccessToRole(role);
       }
     }
@@ -74,7 +74,6 @@ export class SCProductStack extends cdk.Stack {
     let product;
 
     fs.readdirSync(dir).forEach((file) => {
-
 
       // builds full path of file
       const fPath = path.resolve(dir, file);
