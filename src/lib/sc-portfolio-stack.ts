@@ -51,7 +51,7 @@ export class SCProductStack extends cdk.Stack {
       `arn:aws:iam::${cdk.Stack.of(this).account}:role/AWSCloudFormationStackSetAdministrationRole`, { mutable: false });
 
 
-    this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/ec2'), adminRole);
+    this.associateProductToPortfolioInDir(path.join(__dirname, '.', `cfn-template/${props.scope}`), adminRole);
     //this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/s3'), adminRole);
 
     /* const product2 = new servicecatalog.CloudFormationProduct(this, 'sc-product-codecommit', {
