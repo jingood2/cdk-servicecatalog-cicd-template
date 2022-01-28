@@ -52,7 +52,7 @@ export class SCProductStack extends cdk.Stack {
 
 
     this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/ec2'), adminRole);
-    this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/s3'), adminRole);
+    //this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/s3'), adminRole);
 
     /* const product2 = new servicecatalog.CloudFormationProduct(this, 'sc-product-codecommit', {
       productName: 'sc-product-codecommit',
