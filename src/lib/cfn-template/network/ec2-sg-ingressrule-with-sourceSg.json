@@ -1,0 +1,69 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html",
+    "Parameters": {
+        "Description": {
+            "Type": "String",
+            "Description": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-description",
+            "Default": ""
+        },
+        "FromPort": {
+            "Type": "Number",
+            "Description": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-fromport",
+            "Default": 22
+        },
+        "ToPort": {
+            "Type": "Number",
+            "Description": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-toport",
+            "Default": 22
+        },
+        "GroupId": {
+            "Type": "AWS::EC2::SecurityGroup::Id",
+            "Description": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-groupid",
+            "Default": "sg-xxxxx"
+        },
+        "IpProtocol": {
+            "Type": "String",
+            "Description": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-ipprotocol"
+        },
+        "SourceSecurityGroupId": {
+            "Type": "AWS::EC2::SecurityGroup::Id",
+            "Description": "The list of SecurityGroupIds in your Virtual Private Cloud (VPC)",
+            "Default": ""
+        },
+        "SourceSecurityGroupOwnerId": {
+            "Type": "String",
+            "Description": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-sourcesecuritygroupownerid",
+            "Default": ""
+        }
+    },
+    "Resources": {
+        "Resource": {
+            "Type": "AWS::EC2::SecurityGroupIngress",
+            "Description": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html",
+            "Properties": {
+                "Description": {
+                    "Ref": "Description"
+                },
+                "FromPort": {
+                    "Ref": "FromPort"
+                },
+                "ToPort": {
+                    "Ref": "ToPort"
+                },
+                "GroupId": {
+                    "Ref": "GroupId"
+                },
+                "IpProtocol": {
+                    "Ref": "IpProtocol"
+                },
+                "SourceSecurityGroupId": {
+                    "Ref": "SourceSecurityGroupId"
+                },
+                "SourceSecurityGroupOwnerId": {
+                    "Ref": "SourceSecurityGroupOwnerId"
+                }
+            }
+        }
+    }
+}

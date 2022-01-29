@@ -5,10 +5,10 @@ Parameters:
     Type: String
     Description: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-cidrip
     Default: '' 
-  Description:
+  Description:  
     Type: String
-    Description: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-description
-    Default: ''
+    Description: "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-description"
+    Default: '' 
   FromPort:
     Type: Number
     Description: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-fromport
@@ -17,14 +17,10 @@ Parameters:
     Type: Number
     Description: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-toport
     Default: 22
-  GroupId:
+  SecurityGroupId:
     Type: AWS::EC2::SecurityGroup::Id
     Description: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-groupid
     Default: 'sg-xxxxx' 
-  GroupName:
-    Type: AWS::EC2::SecurityGroup::GroupName
-    Description: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-groupname
-    Default: 'security group name' 
   IpProtocol:
     Type: String
     Description: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-ipprotocol
@@ -32,31 +28,15 @@ Parameters:
     Type: String
     Description: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-securitygroupingress-sourceprefixlistid
     Default: ''
-  SourceSecurityGroupId:
-    Type: AWS::EC2::SecurityGroup::Id
-    Description: The list of SecurityGroupIds in your Virtual Private Cloud (VPC)
-    Default: ''
-  SourceSecurityGroupName:
-    Type: AWS::EC2::SecurityGroup::GroupName
-    Description: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-sourcesecuritygroupname
-    Default: ''
-  SourceSecurityGroupOwnerId:
-    Type: String
-    Description: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-sourcesecuritygroupownerid
-    Default: ''
 Resources:
   Resource:
     Type: AWS::EC2::SecurityGroupIngress
     Description: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html
     Properties:
+      Description: !Ref Description
       CidrIp: !Ref CidrIp
-      Description: !Ref 'Description'
       FromPort: !Ref FromPort
-      GroupId: !Ref 'GroupId'
-      GroupName: !Ref 'GroupName'
+      ToPort: !Ref ToPort
+      GroupId: !Ref 'SecurityGroupId'
       IpProtocol: !Ref 'IpProtocol'
       SourcePrefixListId: !Ref 'SourcePrefixListId'
-      SourceSecurityGroupId: !Ref 'SourceSecurityGroupId'
-      SourceSecurityGroupName: !Ref 'SourceSecurityGroupName'
-      SourceSecurityGroupOwnerId: !Ref 'SourceSecurityGroupOwnerId'
-      ToPort: !Ref ToPort
