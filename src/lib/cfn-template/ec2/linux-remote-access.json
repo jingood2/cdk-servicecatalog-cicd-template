@@ -22,7 +22,8 @@
                       "LinuxInstanceType",
                       "LinuxSubnet",
                       "LinuxSSHPort",
-                      "LatestAmiId"
+                      "LatestAmiId",
+                      "InstanceName"
                   ]
               }
           ],
@@ -47,6 +48,9 @@
               },
               "LatestAmiId": {
                   "default": "SSM key to the latest Amazon linux AMI"
+              },
+              "InstanceName": {
+                  "default": "EC2 Instance Name"
               }
           }
       }
@@ -56,6 +60,11 @@
           "Type": "AWS::EC2::VPC::Id",
           "Description": "Select the VPC where the EC2 instances will be created",
           "ConstraintDescription": "must be an existing VPC"
+      },
+      "InstanceName": {
+          "Type": "String",
+          "Description": "EC2 Instance Name",
+          "Default": "default"
       },
       "LinuxSubnet": {
           "Type": "AWS::EC2::Subnet::Id",
@@ -142,6 +151,7 @@
           "Type": "AWS::EC2::SecurityGroup",
           "Properties": {
               "GroupDescription": "Enables SSH Access to Linux EC2 Instance",
+              "GroupName" : {"Fn::Sub" : "SC-RA-Linux-${InstanceName}-sg"},
               "VpcId": {
                   "Ref": "VPC"
               },

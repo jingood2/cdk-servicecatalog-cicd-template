@@ -14,13 +14,13 @@ Parameters:
     Description: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-fromport
     Default: 22
   GroupId:
-    Type: String
+    Type: AWS::EC2::SecurityGroup::Id
     Description: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-groupid
-    Default: ''
+    Default: null 
   GroupName:
-    Type: String
+    Type: AWS::EC2::SecurityGroup::GroupName
     Description: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-groupname
-    Default: ''
+    Default: null
   IpProtocol:
     Type: String
     Description: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-ipprotocol
