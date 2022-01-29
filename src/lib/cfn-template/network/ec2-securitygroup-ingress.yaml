@@ -20,11 +20,11 @@ Parameters:
   GroupId:
     Type: AWS::EC2::SecurityGroup::Id
     Description: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-groupid
-    Default: null 
+    Default: 'sg-xxxxx' 
   GroupName:
     Type: AWS::EC2::SecurityGroup::GroupName
     Description: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-groupname
-    Default: null
+    Default: 'security group name' 
   IpProtocol:
     Type: String
     Description: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-ipprotocol
