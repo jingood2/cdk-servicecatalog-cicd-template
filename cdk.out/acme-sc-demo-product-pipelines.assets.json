@@ -1,0 +1,20 @@
+{
+  "version": "15.0.0",
+  "files": {
+    "30a0f375c6e35d96d753e41cf4b8131814cd87d2df8e3c00e61328b1114aedce": {
+      "source": {
+        "path": "acme-sc-demo-product-pipelines.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "037729278610-ap-northeast-2": {
+          "bucketName": "cdk-hnb659fds-assets-037729278610-ap-northeast-2",
+          "objectKey": "30a0f375c6e35d96d753e41cf4b8131814cd87d2df8e3c00e61328b1114aedce.json",
+          "region": "ap-northeast-2",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::037729278610:role/cdk-hnb659fds-file-publishing-role-037729278610-ap-northeast-2"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

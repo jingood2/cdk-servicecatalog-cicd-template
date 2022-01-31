@@ -1,0 +1,20 @@
+{
+  "version": "15.0.0",
+  "files": {
+    "123081f088ba938c5a7b253e4ca62799a08d74502ab5d69d204ebc53f40bd5ad": {
+      "source": {
+        "path": "sc-portfolios-pipelines.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "037729278610-ap-northeast-2": {
+          "bucketName": "cdk-hnb659fds-assets-037729278610-ap-northeast-2",
+          "objectKey": "123081f088ba938c5a7b253e4ca62799a08d74502ab5d69d204ebc53f40bd5ad.json",
+          "region": "ap-northeast-2",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::037729278610:role/cdk-hnb659fds-file-publishing-role-037729278610-ap-northeast-2"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

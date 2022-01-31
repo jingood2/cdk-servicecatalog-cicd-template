@@ -1,0 +1,146 @@
+{
+  "version": "14.0.0",
+  "artifacts": {
+    "CdkPipelinesDevMyStack630A9372.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "CdkPipelinesDevMyStack630A9372.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "CdkPipelinesDevMyStack630A9372": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://037729278610/ap-northeast-2",
+      "properties": {
+        "templateFile": "CdkPipelinesDevMyStack630A9372.template.json",
+        "validateOnSynth": true,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::037729278610:role/cdk-hnb659fds-deploy-role-037729278610-ap-northeast-2",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::037729278610:role/cdk-hnb659fds-cfn-exec-role-037729278610-ap-northeast-2",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-037729278610-ap-northeast-2/e58c25a40e0100762268bd769271f26117639af68d3e709a15dc7e8dc340376f.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "CdkPipelinesDevMyStack630A9372.assets"
+        ],
+        "stackName": "Dev-MyStack"
+      },
+      "dependencies": [
+        "CdkPipelinesDevMyStack630A9372.assets"
+      ],
+      "metadata": {
+        "/CdkPipelines/Dev/MyStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:22:24)",
+              "/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:166:5",
+              "visit (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "injectMetadataResources (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:157:3)",
+              "Object.synthesize (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "DevStage.synth (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "Object.pipelineSynth (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/pipelines/lib/private/construct-internals.ts:27:16)",
+              "Function.fromStage (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/pipelines/lib/blueprint/stage-deployment.ts:27:22)",
+              "Wave.addStage (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/pipelines/lib/blueprint/wave.ts:34:33)",
+              "CodePipeline.addStage (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:51:42)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/pipelines-template/src/lib/cdk-pipelines.ts:83:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/pipelines-template/src/main.ts:14:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1109:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1138:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:989:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:829:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "main (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1109:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)",
+              "Module.load (node:internal/modules/cjs/loader:989:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:829:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkPipelines/Dev/MyStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion",
+            "trace": [
+              "addBootstrapVersionRule (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/core/lib/stack-synthesizers/default-synthesizer.ts:458:17)",
+              "DefaultStackSynthesizer.synthesize (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/core/lib/stack-synthesizers/default-synthesizer.ts:284:7)",
+              "/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:184:29",
+              "visit (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "synthesizeTree (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:176:3)",
+              "Object.synthesize (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:39:3)",
+              "DevStage.synth (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "Object.pipelineSynth (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/pipelines/lib/private/construct-internals.ts:27:16)",
+              "Function.fromStage (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/pipelines/lib/blueprint/stage-deployment.ts:27:22)",
+              "Wave.addStage (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/pipelines/lib/blueprint/wave.ts:34:33)",
+              "CodePipeline.addStage (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:51:42)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/pipelines-template/src/lib/cdk-pipelines.ts:83:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/pipelines-template/src/main.ts:14:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1109:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1138:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:989:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:829:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "main (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1109:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)",
+              "Module.load (node:internal/modules/cjs/loader:989:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:829:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkPipelines/Dev/MyStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion",
+            "trace": [
+              "addBootstrapVersionRule (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/core/lib/stack-synthesizers/default-synthesizer.ts:468:3)",
+              "DefaultStackSynthesizer.synthesize (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/core/lib/stack-synthesizers/default-synthesizer.ts:284:7)",
+              "/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:184:29",
+              "visit (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "synthesizeTree (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:176:3)",
+              "Object.synthesize (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:39:3)",
+              "DevStage.synth (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "Object.pipelineSynth (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/pipelines/lib/private/construct-internals.ts:27:16)",
+              "Function.fromStage (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/pipelines/lib/blueprint/stage-deployment.ts:27:22)",
+              "Wave.addStage (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/pipelines/lib/blueprint/wave.ts:34:33)",
+              "CodePipeline.addStage (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:51:42)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/pipelines-template/src/lib/cdk-pipelines.ts:83:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/pipelines-template/src/main.ts:14:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1109:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1138:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:989:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:829:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "main (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/pipelines-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1109:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)",
+              "Module.load (node:internal/modules/cjs/loader:989:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:829:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ]
+      },
+      "displayName": "CdkPipelines/Dev/MyStack"
+    }
+  }
+}

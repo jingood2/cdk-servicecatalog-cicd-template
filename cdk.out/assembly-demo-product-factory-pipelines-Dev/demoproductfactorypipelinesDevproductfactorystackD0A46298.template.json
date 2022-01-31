@@ -1,0 +1,368 @@
+{
+  "Resources": {
+    "awstfportfolioC1A9E9F2": {
+      "Type": "AWS::ServiceCatalog::Portfolio",
+      "Properties": {
+        "DisplayName": "awstf-portfolio",
+        "ProviderName": "Cloud Infra Team",
+        "AcceptLanguage": "en",
+        "Description": "Portfolio for a project"
+      },
+      "Metadata": {
+        "aws:cdk:path": "demo-product-factory-pipelines/Dev/product-factory-stack/awstf-portfolio/Resource"
+      }
+    },
+    "awstfportfolioPortolioPrincipalAssociation06d91c22cba67410505F": {
+      "Type": "AWS::ServiceCatalog::PortfolioPrincipalAssociation",
+      "Properties": {
+        "PortfolioId": {
+          "Ref": "awstfportfolioC1A9E9F2"
+        },
+        "PrincipalARN": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":iam::037729278610:group/AdminMasterAccountGroup"
+            ]
+          ]
+        },
+        "PrincipalType": "IAM"
+      },
+      "Metadata": {
+        "aws:cdk:path": "demo-product-factory-pipelines/Dev/product-factory-stack/awstf-portfolio/PortolioPrincipalAssociation06d91c22cba6"
+      }
+    },
+    "awstfportfolioTagOptionAssociation6cd02c91bb7176027138": {
+      "Type": "AWS::ServiceCatalog::TagOptionAssociation",
+      "Properties": {
+        "ResourceId": {
+          "Ref": "awstfportfolioC1A9E9F2"
+        },
+        "TagOptionId": {
+          "Ref": "TagOption8043a285a694"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "demo-product-factory-pipelines/Dev/product-factory-stack/awstf-portfolio/TagOptionAssociation6cd02c91bb71"
+      }
+    },
+    "awstfportfolioTagOptionAssociation4cde49c4ac101D319676": {
+      "Type": "AWS::ServiceCatalog::TagOptionAssociation",
+      "Properties": {
+        "ResourceId": {
+          "Ref": "awstfportfolioC1A9E9F2"
+        },
+        "TagOptionId": {
+          "Ref": "TagOption147ef5dc53ca"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "demo-product-factory-pipelines/Dev/product-factory-stack/awstf-portfolio/TagOptionAssociation4cde49c4ac10"
+      }
+    },
+    "awstfportfolioTagOptionAssociation2698b123529eB3B3EAFA": {
+      "Type": "AWS::ServiceCatalog::TagOptionAssociation",
+      "Properties": {
+        "ResourceId": {
+          "Ref": "awstfportfolioC1A9E9F2"
+        },
+        "TagOptionId": {
+          "Ref": "TagOption14a2ff7c3312"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "demo-product-factory-pipelines/Dev/product-factory-stack/awstf-portfolio/TagOptionAssociation2698b123529e"
+      }
+    },
+    "awstfportfolioTagOptionAssociation2c9f983a8d3133D80BFE": {
+      "Type": "AWS::ServiceCatalog::TagOptionAssociation",
+      "Properties": {
+        "ResourceId": {
+          "Ref": "awstfportfolioC1A9E9F2"
+        },
+        "TagOptionId": {
+          "Ref": "TagOption57872dec1e7c"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "demo-product-factory-pipelines/Dev/product-factory-stack/awstf-portfolio/TagOptionAssociation2c9f983a8d31"
+      }
+    },
+    "awstfportfolioTagOptionAssociationfee03db7216cB95A1547": {
+      "Type": "AWS::ServiceCatalog::TagOptionAssociation",
+      "Properties": {
+        "ResourceId": {
+          "Ref": "awstfportfolioC1A9E9F2"
+        },
+        "TagOptionId": {
+          "Ref": "TagOption69e17a2080cd"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "demo-product-factory-pipelines/Dev/product-factory-stack/awstf-portfolio/TagOptionAssociationfee03db7216c"
+      }
+    },
+    "awstfportfolioTagOptionAssociation178a8ad005108064314F": {
+      "Type": "AWS::ServiceCatalog::TagOptionAssociation",
+      "Properties": {
+        "ResourceId": {
+          "Ref": "awstfportfolioC1A9E9F2"
+        },
+        "TagOptionId": {
+          "Ref": "TagOptione395aff41576"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "demo-product-factory-pipelines/Dev/product-factory-stack/awstf-portfolio/TagOptionAssociation178a8ad00510"
+      }
+    },
+    "awstfportfolioTagOptionAssociation32144f05aa128AEC7FA8": {
+      "Type": "AWS::ServiceCatalog::TagOptionAssociation",
+      "Properties": {
+        "ResourceId": {
+          "Ref": "awstfportfolioC1A9E9F2"
+        },
+        "TagOptionId": {
+          "Ref": "TagOption84eb32bd693b"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "demo-product-factory-pipelines/Dev/product-factory-stack/awstf-portfolio/TagOptionAssociation32144f05aa12"
+      }
+    },
+    "awstfportfolioTagOptionAssociation60b8bafe1d308A527E06": {
+      "Type": "AWS::ServiceCatalog::TagOptionAssociation",
+      "Properties": {
+        "ResourceId": {
+          "Ref": "awstfportfolioC1A9E9F2"
+        },
+        "TagOptionId": {
+          "Ref": "TagOption075216353081"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "demo-product-factory-pipelines/Dev/product-factory-stack/awstf-portfolio/TagOptionAssociation60b8bafe1d30"
+      }
+    },
+    "awstfportfolioTagOptionAssociationea116527c5358CCA9369": {
+      "Type": "AWS::ServiceCatalog::TagOptionAssociation",
+      "Properties": {
+        "ResourceId": {
+          "Ref": "awstfportfolioC1A9E9F2"
+        },
+        "TagOptionId": {
+          "Ref": "TagOptiond50cd4137dd0"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "demo-product-factory-pipelines/Dev/product-factory-stack/awstf-portfolio/TagOptionAssociationea116527c535"
+      }
+    },
+    "awstfportfolioTagOptionAssociation3c4478294559B1C69FBE": {
+      "Type": "AWS::ServiceCatalog::TagOptionAssociation",
+      "Properties": {
+        "ResourceId": {
+          "Ref": "awstfportfolioC1A9E9F2"
+        },
+        "TagOptionId": {
+          "Ref": "TagOption03433cdc2ede"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "demo-product-factory-pipelines/Dev/product-factory-stack/awstf-portfolio/TagOptionAssociation3c4478294559"
+      }
+    },
+    "awstfportfolioPortfolioProductAssociation0411cc9545fa6408510B": {
+      "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
+      "Properties": {
+        "PortfolioId": {
+          "Ref": "awstfportfolioC1A9E9F2"
+        },
+        "ProductId": {
+          "Ref": "productfactory37431D86"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "demo-product-factory-pipelines/Dev/product-factory-stack/awstf-portfolio/PortfolioProductAssociation0411cc9545fa"
+      }
+    },
+    "TagOption8043a285a694": {
+      "Type": "AWS::ServiceCatalog::TagOption",
+      "Properties": {
+        "Key": "czStage",
+        "Value": "dev",
+        "Active": true
+      },
+      "Metadata": {
+        "aws:cdk:path": "demo-product-factory-pipelines/Dev/product-factory-stack/TagOption8043a285a694"
+      }
+    },
+    "TagOption147ef5dc53ca": {
+      "Type": "AWS::ServiceCatalog::TagOption",
+      "Properties": {
+        "Key": "czStage",
+        "Value": "qa",
+        "Active": true
+      },
+      "Metadata": {
+        "aws:cdk:path": "demo-product-factory-pipelines/Dev/product-factory-stack/TagOption147ef5dc53ca"
+      }
+    },
+    "TagOption14a2ff7c3312": {
+      "Type": "AWS::ServiceCatalog::TagOption",
+      "Properties": {
+        "Key": "czStage",
+        "Value": "staging",
+        "Active": true
+      },
+      "Metadata": {
+        "aws:cdk:path": "demo-product-factory-pipelines/Dev/product-factory-stack/TagOption14a2ff7c3312"
+      }
+    },
+    "TagOption57872dec1e7c": {
+      "Type": "AWS::ServiceCatalog::TagOption",
+      "Properties": {
+        "Key": "czStage",
+        "Value": "production",
+        "Active": true
+      },
+      "Metadata": {
+        "aws:cdk:path": "demo-product-factory-pipelines/Dev/product-factory-stack/TagOption57872dec1e7c"
+      }
+    },
+    "TagOption69e17a2080cd": {
+      "Type": "AWS::ServiceCatalog::TagOption",
+      "Properties": {
+        "Key": "czOwner",
+        "Value": "skmagic",
+        "Active": true
+      },
+      "Metadata": {
+        "aws:cdk:path": "demo-product-factory-pipelines/Dev/product-factory-stack/TagOption69e17a2080cd"
+      }
+    },
+    "TagOptione395aff41576": {
+      "Type": "AWS::ServiceCatalog::TagOption",
+      "Properties": {
+        "Key": "czOwner",
+        "Value": "skens",
+        "Active": true
+      },
+      "Metadata": {
+        "aws:cdk:path": "demo-product-factory-pipelines/Dev/product-factory-stack/TagOptione395aff41576"
+      }
+    },
+    "TagOption84eb32bd693b": {
+      "Type": "AWS::ServiceCatalog::TagOption",
+      "Properties": {
+        "Key": "czOwner",
+        "Value": "sknetworks",
+        "Active": true
+      },
+      "Metadata": {
+        "aws:cdk:path": "demo-product-factory-pipelines/Dev/product-factory-stack/TagOption84eb32bd693b"
+      }
+    },
+    "TagOption075216353081": {
+      "Type": "AWS::ServiceCatalog::TagOption",
+      "Properties": {
+        "Key": "czOwner",
+        "Value": "skb",
+        "Active": true
+      },
+      "Metadata": {
+        "aws:cdk:path": "demo-product-factory-pipelines/Dev/product-factory-stack/TagOption075216353081"
+      }
+    },
+    "TagOptiond50cd4137dd0": {
+      "Type": "AWS::ServiceCatalog::TagOption",
+      "Properties": {
+        "Key": "czOwner",
+        "Value": "skbio",
+        "Active": true
+      },
+      "Metadata": {
+        "aws:cdk:path": "demo-product-factory-pipelines/Dev/product-factory-stack/TagOptiond50cd4137dd0"
+      }
+    },
+    "TagOption03433cdc2ede": {
+      "Type": "AWS::ServiceCatalog::TagOption",
+      "Properties": {
+        "Key": "czOwner",
+        "Value": "skcamical",
+        "Active": true
+      },
+      "Metadata": {
+        "aws:cdk:path": "demo-product-factory-pipelines/Dev/product-factory-stack/TagOption03433cdc2ede"
+      }
+    },
+    "productfactory37431D86": {
+      "Type": "AWS::ServiceCatalog::CloudFormationProduct",
+      "Properties": {
+        "Name": "sc-product-codecommit",
+        "Owner": "SK CnC AWS TF Team",
+        "ProvisioningArtifactParameters": [
+          {
+            "DisableTemplateValidation": false,
+            "Info": {
+              "LoadTemplateFromURL": {
+                "Fn::Sub": "https://s3.ap-northeast-2.${AWS::URLSuffix}/cdk-hnb659fds-assets-037729278610-ap-northeast-2/aec755dad104d85a1b02acd23927a8207fb9d03879c352c2cdf6ffb01f377686.yaml"
+              }
+            },
+            "Name": "v1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "demo-product-factory-pipelines/Dev/product-factory-stack/product-factory/Resource"
+      }
+    },
+    "CDKMetadata": {
+      "Type": "AWS::CDK::Metadata",
+      "Properties": {
+        "Analytics": "v2:deflate64:H4sIAAAAAAAA/3WQTU7DQAyFz9L9xFWohFhCI7FtVbiA5biRm3RcjT1lEeXuzBSQECor6/l9/m2h3TxBu3rGD2uoH9czaWKY3xxpDAc2zYk4vJixl9wgcQidRvOUyUN3jD/IEmqH2ThdhZjQcdIB5r0mP+okWtn7Yp8kklxwKkOUBF00VuAdh92lij/5X4Xaly3+KwvdpLl/1XS+ed90Re4aS7BNg/VOg9u5RcM208i+ReNlCVF7hpOtr+1j+Ro8rE4m0qQcXc4Mh6/4CaLsrJxRAQAA"
+      },
+      "Metadata": {
+        "aws:cdk:path": "demo-product-factory-pipelines/Dev/product-factory-stack/CDKMetadata/Default"
+      }
+    }
+  },
+  "Parameters": {
+    "BootstrapVersion": {
+      "Type": "AWS::SSM::Parameter::Value<String>",
+      "Default": "/cdk-bootstrap/hnb659fds/version",
+      "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
+    }
+  },
+  "Rules": {
+    "CheckBootstrapVersion": {
+      "Assertions": [
+        {
+          "Assert": {
+            "Fn::Not": [
+              {
+                "Fn::Contains": [
+                  [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                  ],
+                  {
+                    "Ref": "BootstrapVersion"
+                  }
+                ]
+              }
+            ]
+          },
+          "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI."
+        }
+      ]
+    }
+  }
+}

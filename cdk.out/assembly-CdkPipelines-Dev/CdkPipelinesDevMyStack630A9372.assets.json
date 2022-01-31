@@ -1,0 +1,20 @@
+{
+  "version": "14.0.0",
+  "files": {
+    "e58c25a40e0100762268bd769271f26117639af68d3e709a15dc7e8dc340376f": {
+      "source": {
+        "path": "CdkPipelinesDevMyStack630A9372.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "037729278610-ap-northeast-2": {
+          "bucketName": "cdk-hnb659fds-assets-037729278610-ap-northeast-2",
+          "objectKey": "e58c25a40e0100762268bd769271f26117639af68d3e709a15dc7e8dc340376f.json",
+          "region": "ap-northeast-2",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::037729278610:role/cdk-hnb659fds-file-publishing-role-037729278610-ap-northeast-2"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

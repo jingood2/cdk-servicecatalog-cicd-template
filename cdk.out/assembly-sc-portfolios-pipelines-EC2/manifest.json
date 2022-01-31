@@ -1,0 +1,1171 @@
+{
+  "version": "15.0.0",
+  "artifacts": {
+    "scportfoliospipelinesEC2scproduct47DB0E04.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "scportfoliospipelinesEC2scproduct47DB0E04.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "scportfoliospipelinesEC2scproduct47DB0E04": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://037729278610/ap-northeast-2",
+      "properties": {
+        "templateFile": "scportfoliospipelinesEC2scproduct47DB0E04.template.json",
+        "validateOnSynth": true,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::037729278610:role/cdk-hnb659fds-deploy-role-037729278610-ap-northeast-2",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::037729278610:role/cdk-hnb659fds-cfn-exec-role-037729278610-ap-northeast-2",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-037729278610-ap-northeast-2/71ff9550b41e6cf2c0b6db14f99f730952089c5ed54191f13187e37cb75c48dc.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "scportfoliospipelinesEC2scproduct47DB0E04.assets"
+        ],
+        "stackName": "EC2-sc-product"
+      },
+      "dependencies": [
+        "scportfoliospipelinesEC2scproduct47DB0E04.assets"
+      ],
+      "metadata": {
+        "/sc-portfolios-pipelines/EC2/sc-product/Portfolioec2/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Portfolioec28B26DC92",
+            "trace": [
+              "new Portfolio (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/portfolio.ts:220:22)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:27:24)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/Portfolioec2/TagOptionAssociationa610bf872505": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Portfolioec2TagOptionAssociationa610bf872505EE2BDEDB",
+            "trace": [
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:162:11",
+              "Array.forEach (<anonymous>)",
+              "Function.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:147:22)",
+              "Portfolio.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/portfolio.ts:109:24)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:48:20)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/Portfolioec2/TagOptionAssociation1a48349c9e9a": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Portfolioec2TagOptionAssociation1a48349c9e9a0A317848",
+            "trace": [
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:162:11",
+              "Array.forEach (<anonymous>)",
+              "Function.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:147:22)",
+              "Portfolio.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/portfolio.ts:109:24)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:48:20)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/Portfolioec2/TagOptionAssociation262fc4d4d385": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Portfolioec2TagOptionAssociation262fc4d4d385E31F3D9F",
+            "trace": [
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:162:11",
+              "Array.forEach (<anonymous>)",
+              "Function.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:147:22)",
+              "Portfolio.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/portfolio.ts:109:24)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:48:20)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/Portfolioec2/TagOptionAssociation6254be8a6d7e": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Portfolioec2TagOptionAssociation6254be8a6d7eCB49A07D",
+            "trace": [
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:162:11",
+              "Array.forEach (<anonymous>)",
+              "Function.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:147:22)",
+              "Portfolio.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/portfolio.ts:109:24)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:48:20)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/Portfolioec2/TagOptionAssociationd4743f39f107": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Portfolioec2TagOptionAssociationd4743f39f1078937F571",
+            "trace": [
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:162:11",
+              "Array.forEach (<anonymous>)",
+              "Function.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:147:22)",
+              "Portfolio.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/portfolio.ts:109:24)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:48:20)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/Portfolioec2/TagOptionAssociation4d5c9a3b7713": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Portfolioec2TagOptionAssociation4d5c9a3b7713AAB40BAB",
+            "trace": [
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:162:11",
+              "Array.forEach (<anonymous>)",
+              "Function.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:147:22)",
+              "Portfolio.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/portfolio.ts:109:24)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:48:20)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/Portfolioec2/TagOptionAssociation38dc388dd8a3": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Portfolioec2TagOptionAssociation38dc388dd8a331B6994A",
+            "trace": [
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:162:11",
+              "Array.forEach (<anonymous>)",
+              "Function.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:147:22)",
+              "Portfolio.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/portfolio.ts:109:24)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:48:20)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/Portfolioec2/TagOptionAssociationa02f398f251f": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Portfolioec2TagOptionAssociationa02f398f251f27E5B9BD",
+            "trace": [
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:162:11",
+              "Array.forEach (<anonymous>)",
+              "Function.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:147:22)",
+              "Portfolio.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/portfolio.ts:109:24)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:48:20)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/Portfolioec2/TagOptionAssociation807135aec7da": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Portfolioec2TagOptionAssociation807135aec7da88274965",
+            "trace": [
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:162:11",
+              "Array.forEach (<anonymous>)",
+              "Function.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:147:22)",
+              "Portfolio.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/portfolio.ts:109:24)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:48:20)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/Portfolioec2/TagOptionAssociationa5d0be1190e2": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Portfolioec2TagOptionAssociationa5d0be1190e27AC4A4D7",
+            "trace": [
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:162:11",
+              "Array.forEach (<anonymous>)",
+              "Function.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:147:22)",
+              "Portfolio.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/portfolio.ts:109:24)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:48:20)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/Portfolioec2/PortfolioProductAssociation1e44c02e1bc7": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Portfolioec2PortfolioProductAssociation1e44c02e1bc7B7A6AB0D",
+            "trace": [
+              "Function.associateProductWithPortfolio (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:28:9)",
+              "Portfolio.addProduct (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/portfolio.ts:95:24)",
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:92:22",
+              "Array.forEach (<anonymous>)",
+              "SCProductStack.associateProductToPortfolioInDir (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:75:25)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:54:10)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/Portfolioec2/StackSetConstraint1e44c02e1bc7": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Portfolioec2StackSetConstraint1e44c02e1bc73302D2E5",
+            "trace": [
+              "Function.deployWithStackSets (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:123:26)",
+              "Portfolio.deployWithStackSets (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/portfolio.ts:143:24)",
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:94:22",
+              "Array.forEach (<anonymous>)",
+              "SCProductStack.associateProductToPortfolioInDir (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:75:25)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:54:10)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/Portfolioec2/PortfolioProductAssociation60be0c242214": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Portfolioec2PortfolioProductAssociation60be0c24221446789A91",
+            "trace": [
+              "Function.associateProductWithPortfolio (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:28:9)",
+              "Portfolio.addProduct (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/portfolio.ts:95:24)",
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:92:22",
+              "Array.forEach (<anonymous>)",
+              "SCProductStack.associateProductToPortfolioInDir (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:75:25)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:54:10)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/Portfolioec2/StackSetConstraint60be0c242214": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Portfolioec2StackSetConstraint60be0c242214EB12BB0C",
+            "trace": [
+              "Function.deployWithStackSets (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:123:26)",
+              "Portfolio.deployWithStackSets (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/portfolio.ts:143:24)",
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:94:22",
+              "Array.forEach (<anonymous>)",
+              "SCProductStack.associateProductToPortfolioInDir (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:75:25)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:54:10)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/Portfolioec2/PortfolioProductAssociationf38a72bbac52": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Portfolioec2PortfolioProductAssociationf38a72bbac52291244D2",
+            "trace": [
+              "Function.associateProductWithPortfolio (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:28:9)",
+              "Portfolio.addProduct (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/portfolio.ts:95:24)",
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:92:22",
+              "Array.forEach (<anonymous>)",
+              "SCProductStack.associateProductToPortfolioInDir (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:75:25)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:54:10)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/Portfolioec2/StackSetConstraintf38a72bbac52": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Portfolioec2StackSetConstraintf38a72bbac52F774AD0B",
+            "trace": [
+              "Function.deployWithStackSets (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:123:26)",
+              "Portfolio.deployWithStackSets (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/portfolio.ts:143:24)",
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:94:22",
+              "Array.forEach (<anonymous>)",
+              "SCProductStack.associateProductToPortfolioInDir (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:75:25)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:54:10)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/Portfolioec2/PortfolioProductAssociation274012e87a95": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Portfolioec2PortfolioProductAssociation274012e87a95D1CAB19F",
+            "trace": [
+              "Function.associateProductWithPortfolio (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:28:9)",
+              "Portfolio.addProduct (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/portfolio.ts:95:24)",
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:92:22",
+              "Array.forEach (<anonymous>)",
+              "SCProductStack.associateProductToPortfolioInDir (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:75:25)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:54:10)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/Portfolioec2/StackSetConstraint274012e87a95": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Portfolioec2StackSetConstraint274012e87a955CE5DB64",
+            "trace": [
+              "Function.deployWithStackSets (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:123:26)",
+              "Portfolio.deployWithStackSets (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/portfolio.ts:143:24)",
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:94:22",
+              "Array.forEach (<anonymous>)",
+              "SCProductStack.associateProductToPortfolioInDir (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:75:25)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:54:10)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/TagOption0380ce444f57": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TagOption0380ce444f57",
+            "trace": [
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:153:26",
+              "Array.forEach (<anonymous>)",
+              "Function.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:147:22)",
+              "Portfolio.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/portfolio.ts:109:24)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:48:20)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/TagOptionca6965deca5b": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TagOptionca6965deca5b",
+            "trace": [
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:153:26",
+              "Array.forEach (<anonymous>)",
+              "Function.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:147:22)",
+              "Portfolio.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/portfolio.ts:109:24)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:48:20)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/TagOption7f57b04f53e5": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TagOption7f57b04f53e5",
+            "trace": [
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:153:26",
+              "Array.forEach (<anonymous>)",
+              "Function.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:147:22)",
+              "Portfolio.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/portfolio.ts:109:24)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:48:20)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/TagOptionbdd8161d9762": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TagOptionbdd8161d9762",
+            "trace": [
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:153:26",
+              "Array.forEach (<anonymous>)",
+              "Function.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:147:22)",
+              "Portfolio.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/portfolio.ts:109:24)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:48:20)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/TagOptionb8d2612f0f78": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TagOptionb8d2612f0f78",
+            "trace": [
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:153:26",
+              "Array.forEach (<anonymous>)",
+              "Function.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:147:22)",
+              "Portfolio.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/portfolio.ts:109:24)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:48:20)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/TagOption80abe885f015": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TagOption80abe885f015",
+            "trace": [
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:153:26",
+              "Array.forEach (<anonymous>)",
+              "Function.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:147:22)",
+              "Portfolio.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/portfolio.ts:109:24)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:48:20)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/TagOptionc79d5855af1c": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TagOptionc79d5855af1c",
+            "trace": [
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:153:26",
+              "Array.forEach (<anonymous>)",
+              "Function.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:147:22)",
+              "Portfolio.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/portfolio.ts:109:24)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:48:20)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/TagOption7964698d50aa": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TagOption7964698d50aa",
+            "trace": [
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:153:26",
+              "Array.forEach (<anonymous>)",
+              "Function.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:147:22)",
+              "Portfolio.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/portfolio.ts:109:24)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:48:20)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/TagOption93e2b05f988b": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TagOption93e2b05f988b",
+            "trace": [
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:153:26",
+              "Array.forEach (<anonymous>)",
+              "Function.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:147:22)",
+              "Portfolio.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/portfolio.ts:109:24)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:48:20)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/TagOption6c08e3f743e8": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TagOption6c08e3f743e8",
+            "trace": [
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:153:26",
+              "Array.forEach (<anonymous>)",
+              "Function.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/private/association-manager.ts:147:22)",
+              "Portfolio.associateTagOptions (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/portfolio.ts:109:24)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:48:20)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/linux-nginx-nokeypair.json/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "linuxnginxnokeypairjsonFAFF10AD",
+            "trace": [
+              "new CloudFormationProduct (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/product.ts:110:21)",
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:81:17",
+              "Array.forEach (<anonymous>)",
+              "SCProductStack.associateProductToPortfolioInDir (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:75:25)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:54:10)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/linux-nginx.json/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "linuxnginxjson2CB8FE87",
+            "trace": [
+              "new CloudFormationProduct (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/product.ts:110:21)",
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:81:17",
+              "Array.forEach (<anonymous>)",
+              "SCProductStack.associateProductToPortfolioInDir (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:75:25)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:54:10)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/linux-remote-access.json/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "linuxremoteaccessjson90ECE4F4",
+            "trace": [
+              "new CloudFormationProduct (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/product.ts:110:21)",
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:81:17",
+              "Array.forEach (<anonymous>)",
+              "SCProductStack.associateProductToPortfolioInDir (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:75:25)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:54:10)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/window-remote-accsss.json/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "windowremoteaccsssjson5A45DF8D",
+            "trace": [
+              "new CloudFormationProduct (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-servicecatalog/lib/product.ts:110:21)",
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:81:17",
+              "Array.forEach (<anonymous>)",
+              "SCProductStack.associateProductToPortfolioInDir (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:75:25)",
+              "new SCProductStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/sc-portfolio-stack.ts:54:10)",
+              "new EC2ProductStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/ec2-product-stage.ts:13:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:28)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:22:24)",
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:166:5",
+              "visit (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "injectMetadataResources (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:157:3)",
+              "Object.synthesize (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "EC2ProductStage.synth (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "Object.pipelineSynth (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/private/construct-internals.ts:27:16)",
+              "Function.fromStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/blueprint/stage-deployment.ts:27:22)",
+              "Wave.addStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/blueprint/wave.ts:34:33)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:19)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion",
+            "trace": [
+              "addBootstrapVersionRule (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/stack-synthesizers/default-synthesizer.ts:458:17)",
+              "DefaultStackSynthesizer.synthesize (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/stack-synthesizers/default-synthesizer.ts:284:7)",
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:184:29",
+              "visit (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "synthesizeTree (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:176:3)",
+              "Object.synthesize (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:39:3)",
+              "EC2ProductStage.synth (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "Object.pipelineSynth (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/private/construct-internals.ts:27:16)",
+              "Function.fromStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/blueprint/stage-deployment.ts:27:22)",
+              "Wave.addStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/blueprint/wave.ts:34:33)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:19)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolios-pipelines/EC2/sc-product/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion",
+            "trace": [
+              "addBootstrapVersionRule (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/stack-synthesizers/default-synthesizer.ts:468:3)",
+              "DefaultStackSynthesizer.synthesize (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/stack-synthesizers/default-synthesizer.ts:284:7)",
+              "/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:184:29",
+              "visit (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "synthesizeTree (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:176:3)",
+              "Object.synthesize (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:39:3)",
+              "EC2ProductStage.synth (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "Object.pipelineSynth (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/private/construct-internals.ts:27:16)",
+              "Function.fromStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/blueprint/stage-deployment.ts:27:22)",
+              "Wave.addStage (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/blueprint/wave.ts:34:33)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:87:19)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ]
+      },
+      "displayName": "sc-portfolios-pipelines/EC2/sc-product"
+    }
+  }
+}

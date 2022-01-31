@@ -1,0 +1,19 @@
+{
+  "version": "15.0.0",
+  "files": {
+    "0ca2fb073fba6e621b694525f87357cc3cb5f87fb977f2b669bae580d1f1e0f6": {
+      "source": {
+        "path": "acme-product-factory-pipelines.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "0ca2fb073fba6e621b694525f87357cc3cb5f87fb977f2b669bae580d1f1e0f6.json",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

@@ -1,0 +1,33 @@
+{
+  "Parameters": {
+    "BucketName": {
+      "Type": "String",
+      "Default": "jingood2SCDemoBucket",
+      "Description": "Test Bucket"
+    }
+  },
+  "Resources": {
+    "BucketProductC4A65436": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketName": {
+          "Ref": "BucketName"
+        }
+      },
+      "UpdateReplacePolicy": "Retain",
+      "DeletionPolicy": "Retain",
+      "Metadata": {
+        "aws:cdk:path": "acme-sc-demo-product-pipelines/Dev/sc-demo-product-stack/sc-demo-product/BucketProduct/Resource"
+      }
+    },
+    "CDKMetadata": {
+      "Type": "AWS::CDK::Metadata",
+      "Properties": {
+        "Analytics": "v2:deflate64:H4sIAAAAAAAA/yWLQQqDMBBFz+I+jg2B0mWpFxA9QRinJaYmMDOxi+Ddq7j6j897Fqx7gG2e/ictzrGrJ1Qh3gISevXf/IGB81xQJ/UYjTior4KR1PTvdNG+G8xMUI9n8OxXUmLT5yTKR3iKI0kujHSoKc8Ei3SbvYODW7NICC2XpGElGK/9A7jsgT2ZAAAA"
+      },
+      "Metadata": {
+        "aws:cdk:path": "acme-sc-demo-product-pipelines/Dev/sc-demo-product-stack/sc-demo-product/CDKMetadata/Default"
+      }
+    }
+  }
+}

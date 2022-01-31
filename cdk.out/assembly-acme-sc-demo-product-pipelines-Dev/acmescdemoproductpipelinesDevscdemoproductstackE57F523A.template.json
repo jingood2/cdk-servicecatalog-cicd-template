@@ -1,0 +1,95 @@
+{
+  "Resources": {
+    "MyFirstPortfolioF6211384": {
+      "Type": "AWS::ServiceCatalog::Portfolio",
+      "Properties": {
+        "DisplayName": "DemoPortfolio",
+        "ProviderName": "Cloud Infra Team",
+        "AcceptLanguage": "en",
+        "Description": "Portfolio for a project"
+      },
+      "Metadata": {
+        "aws:cdk:path": "acme-sc-demo-product-pipelines/Dev/sc-demo-product-stack/MyFirstPortfolio/Resource"
+      }
+    },
+    "MyFirstPortfolioPortfolioProductAssociation956d53f6660c84B72C0A": {
+      "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
+      "Properties": {
+        "PortfolioId": {
+          "Ref": "MyFirstPortfolioF6211384"
+        },
+        "ProductId": {
+          "Ref": "Product896941B4"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "acme-sc-demo-product-pipelines/Dev/sc-demo-product-stack/MyFirstPortfolio/PortfolioProductAssociation956d53f6660c"
+      }
+    },
+    "Product896941B4": {
+      "Type": "AWS::ServiceCatalog::CloudFormationProduct",
+      "Properties": {
+        "Name": "sc-demo-product",
+        "Owner": "Product Owner",
+        "ProvisioningArtifactParameters": [
+          {
+            "DisableTemplateValidation": false,
+            "Info": {
+              "LoadTemplateFromURL": {
+                "Fn::Sub": "https://s3.ap-northeast-2.${AWS::URLSuffix}/cdk-hnb659fds-assets-037729278610-ap-northeast-2/4652aa8ca6bf8e41fd81c0c474d86ead6e774c82755a49e61fb5f99adf22b7e4.json"
+              }
+            },
+            "Name": "v1"
+          }
+        ],
+        "Description": "test2"
+      },
+      "Metadata": {
+        "aws:cdk:path": "acme-sc-demo-product-pipelines/Dev/sc-demo-product-stack/Product/Resource"
+      }
+    },
+    "CDKMetadata": {
+      "Type": "AWS::CDK::Metadata",
+      "Properties": {
+        "Analytics": "v2:deflate64:H4sIAAAAAAAA/22MzQqDMBCEn8V7XBuE0mOL0LPYJwibWOJPFnY39iC+e2vbo6fhY74ZC7a+gC2u7iUl+rFakTjA+lCHo2koiXJGNU2fuiCUGcNmdlcCLxEDOnUTPWFtibWnKdKuHkPL5D9fNxHC6DRSMs1E2d+J5y/+hX10WGybSeQDDFIt9gw1nIpBYiw5J41zgO6XbzwqN6nUAAAA"
+      },
+      "Metadata": {
+        "aws:cdk:path": "acme-sc-demo-product-pipelines/Dev/sc-demo-product-stack/CDKMetadata/Default"
+      }
+    }
+  },
+  "Parameters": {
+    "BootstrapVersion": {
+      "Type": "AWS::SSM::Parameter::Value<String>",
+      "Default": "/cdk-bootstrap/hnb659fds/version",
+      "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
+    }
+  },
+  "Rules": {
+    "CheckBootstrapVersion": {
+      "Assertions": [
+        {
+          "Assert": {
+            "Fn::Not": [
+              {
+                "Fn::Contains": [
+                  [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                  ],
+                  {
+                    "Ref": "BootstrapVersion"
+                  }
+                ]
+              }
+            ]
+          },
+          "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI."
+        }
+      ]
+    }
+  }
+}
