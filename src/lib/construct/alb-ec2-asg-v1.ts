@@ -33,7 +33,7 @@ export class AlbEC2Asg extends servicecatalog.ProductStack {
   constructor(scope: cdk.Construct, id: string) {
     super(scope, id);
 
-    const vpcId = new cdk.CfnParameter(this, 'vpcId', {
+    new cdk.CfnParameter(this, 'vpcId', {
       type: 'AWS::EC2::VPC::Id',
       description: 'Select Vpc Id',
       default: 'vpc-0482fb87f861f62c5',
