@@ -104,7 +104,8 @@ export class AlbEC2Asg extends servicecatalog.ProductStack {
 
     // parameter vpcId
     const vpc = ec2.Vpc.fromLookup(this, 'VPC', {
-      vpcId: vpcId.valueAsString,
+      //vpcId: vpcId.valueAsString,
+      vpcId: 'vpc-0482fb87f861f62c5',
     });
 
     // parameter listenerArn, listenerPort
