@@ -1,0 +1,142 @@
+{
+  "Parameters": {
+    "vpcId": {
+      "Type": "AWS::EC2::VPC::Id",
+      "Description": "Select Vpc Id"
+    },
+    "Subnets": {
+      "Type": "List<AWS::EC2::Subnet::Id>",
+      "Description": "Select Public Subnet Id"
+    },
+    "CertificateArn": {
+      "Type": "String",
+      "Description": "ACM CertificateArn"
+    }
+  },
+  "Resources": {
+    "testApplicationLoadBalancerPublic788D0381": {
+      "Type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+      "Properties": {
+        "LoadBalancerAttributes": [
+          {
+            "Key": "deletion_protection.enabled",
+            "Value": "false"
+          }
+        ],
+        "Scheme": "internet-facing",
+        "SecurityGroups": [
+          {
+            "Fn::GetAtt": [
+              "testApplicationLoadBalancerPublicSecurityGroup27BCDD04",
+              "GroupId"
+            ]
+          }
+        ],
+        "Subnets": {  
+          "Ref" : "Subnets"
+        },
+        "Type": "application"
+      },
+      "Metadata": {
+        "aws:cdk:path": "my-stack-dev/test/ApplicationLoadBalancerPublic/Resource"
+      }
+    },
+    "testApplicationLoadBalancerPublicSecurityGroup27BCDD04": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "Automatically created Security Group for ELB mystackdevtestApplicationLoadBalancerPublicE0092CA1",
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "255.255.255.255/32",
+            "Description": "Disallow all traffic",
+            "FromPort": 252,
+            "IpProtocol": "icmp",
+            "ToPort": 86
+          }
+        ],
+        "SecurityGroupIngress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow from anyone on port 80",
+            "FromPort": 80,
+            "IpProtocol": "tcp",
+            "ToPort": 80
+          },
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow from anyone on port 443",
+            "FromPort": 443,
+            "IpProtocol": "tcp",
+            "ToPort": 443
+          }
+        ],
+        "VpcId": { "Ref": "vpcId" }
+      },
+      "Metadata": {
+        "aws:cdk:path": "my-stack-dev/test/ApplicationLoadBalancerPublic/SecurityGroup/Resource"
+      }
+    },
+    "testApplicationLoadBalancerPublicRedirect80To4430E4A0E02": {
+      "Type": "AWS::ElasticLoadBalancingV2::Listener",
+      "Properties": {
+        "DefaultActions": [
+          {
+            "RedirectConfig": {
+              "Port": "443",
+              "Protocol": "HTTPS",
+              "StatusCode": "HTTP_301"
+            },
+            "Type": "redirect"
+          }
+        ],
+        "LoadBalancerArn": {
+          "Ref": "testApplicationLoadBalancerPublic788D0381"
+        },
+        "Port": 80,
+        "Protocol": "HTTP"
+      },
+      "Metadata": {
+        "aws:cdk:path": "my-stack-dev/test/ApplicationLoadBalancerPublic/Redirect80To443/Resource"
+      }
+    },
+    "testApplicationLoadBalancerPublicALBListenerHttps18B2BCA5": {
+      "Type": "AWS::ElasticLoadBalancingV2::Listener",
+      "Properties": {
+        "DefaultActions": [
+          {
+            "FixedResponseConfig": {
+              "ContentType": "application/json",
+              "MessageBody": "{ message : 200 ok }",
+              "StatusCode": "200"
+            },
+            "Type": "fixed-response"
+          }
+        ],
+        "LoadBalancerArn": {
+          "Ref": "testApplicationLoadBalancerPublic788D0381"
+        },
+        "Certificates": [
+          {
+            "CertificateArn": {
+              "Ref": "CertificateArn"
+            }
+          }
+        ],
+        "Port": 443,
+        "Protocol": "HTTPS"
+      },
+      "Metadata": {
+        "aws:cdk:path": "my-stack-dev/test/ApplicationLoadBalancerPublic/ALBListenerHttps/Resource"
+      }
+    },
+    "CDKMetadata": {
+      "Type": "AWS::CDK::Metadata",
+      "Properties": {
+        "Analytics": "v2:deflate64:H4sIAAAAAAAA/1WMSw7CMAxEz8I+BFIQa6ALNiwQnMC4LjJtkypxQKjK3SF8JLryeN7oGW2WhZ5P1nAPU6ya2YDOkx5OAtiosrYH8NCRkFels0F8RFFHCi56pMx/OalsGKiFIIytg+oMLVhke7kVetj0fcsIws7uX2z7Zllaj///HQch+918c1KEL9uJMHqWx8672Gc+KlJKyrqK9DXMbmalzUIXk2tgnvpohTvSx899AqHpNTv9AAAA"
+      },
+      "Metadata": {
+        "aws:cdk:path": "my-stack-dev/CDKMetadata/Default"
+      }
+    }
+  }
+}

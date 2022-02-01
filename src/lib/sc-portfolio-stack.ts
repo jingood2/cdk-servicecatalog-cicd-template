@@ -4,7 +4,7 @@ import * as iam from '@aws-cdk/aws-iam';
 import * as servicecatalog from '@aws-cdk/aws-servicecatalog';
 import * as cdk from '@aws-cdk/core';
 import { envVars } from '../env-vars';
-import { AlbEC2Asg } from './construct/alb-ec2-asg-v1';
+//import { AlbEC2Asg } from './construct/alb-ec2-asg-v1';
 
 //import { SCProductFactory } from './construct/sc-product-factory';
 
@@ -58,8 +58,9 @@ export class SCProductStack extends cdk.Stack {
     this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/s3'), adminRole);
     this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/rds'), adminRole);
     this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/network'), adminRole);
+    this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/alb'), adminRole);
 
-    const product2 = new servicecatalog.CloudFormationProduct(this, 'alb-ec2-asg', {
+    /* const product2 = new servicecatalog.CloudFormationProduct(this, 'alb-ec2-asg', {
       productName: 'alb-ec2-asg',
       owner: 'Product Owner',
       description: 'The ALB Listener integrate EC2 with AutoScaling',
@@ -71,7 +72,7 @@ export class SCProductStack extends cdk.Stack {
       ],
     });
 
-    this.portfolio.addProduct(product2);
+    this.portfolio.addProduct(product2); */
 
   }
 
