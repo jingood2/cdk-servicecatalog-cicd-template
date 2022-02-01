@@ -38,7 +38,7 @@ export class AlbEC2Asg extends servicecatalog.ProductStack {
       description: 'Select Vpc Id',
     });
 
-    const instanceName = new cdk.CfnParameter(this, 'instanceName', {
+    new cdk.CfnParameter(this, 'instanceName', {
       type: 'String',
       description: 'EC2 Instance Name',
       default: 'default',
@@ -112,15 +112,16 @@ export class AlbEC2Asg extends servicecatalog.ProductStack {
       listenerPort: listenerPort.valueAsNumber,
     });
 
-    const role = new iam.Role(this, `${instanceName.valueAsString}-role`, {
+    /*
+    const role: iam.IRole = new iam.Role(this, `${instanceName.valueAsString}-role`, {
       assumedBy: new iam.ServicePrincipal('ec2.amazonaws.com'),
     });
-    role.addToPolicy(new iam.PolicyStatement({
+    role.addToPrincipalPolicy(new iam.PolicyStatement({
       resources: ['*'],
       actions: ['sts:AssumeRole'],
     }));
     role.addManagedPolicy(iam.ManagedPolicy.fromAwsManagedPolicyName('AmazonEC2RoleforSSM'));
-    role.addManagedPolicy(iam.ManagedPolicy.fromAwsManagedPolicyName('AmazonSSMFullAccess'));
+    role.addManagedPolicy(iam.ManagedPolicy.fromAwsManagedPolicyName('AmazonSSMFullAccess')); */
 
     // 1. ASG
     const asg = new autoscaling.AutoScalingGroup(this, 'AutoScalingGroup', {
@@ -142,9 +143,16 @@ export class AlbEC2Asg extends servicecatalog.ProductStack {
 
       allowAllOutbound: true,
       //role: iam.Role.fromRoleArn(this, 'IamRoleEc2Instance', props.instanceIAMRoleArn),
-      role: role,
+      //role: role,
       healthCheck: autoscaling.HealthCheck.ec2(),
     });
+
+    /* asg.role.addToPrincipalPolicy(new iam.PolicyStatement({
+      resources: ['*'],
+      actions: ['sts:AssumeRole'],
+    })); */
+    asg.role.addManagedPolicy(iam.ManagedPolicy.fromAwsManagedPolicyName('AmazonEC2RoleforSSM'));
+    asg.role.addManagedPolicy(iam.ManagedPolicy.fromAwsManagedPolicyName('AmazonSSMFullAccess'));
 
     asg.addUserData('sudo yum install -y https://s3.region.amazonaws.com/amazon-ssm-region/latest/linux_amd64/amazon-ssm-agent.rpm');
     asg.addUserData('sudo systemctl enable amazon-ssm-agent');

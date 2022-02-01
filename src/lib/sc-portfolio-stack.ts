@@ -42,9 +42,11 @@ export class SCProductStack extends cdk.Stack {
       }
     }
 
-    const tagOptionsForPortfolio = new servicecatalog.TagOptions({
-      czStage: ['dev', 'qa', 'staging', 'production'],
-      czOwner: ['skmagic', 'skens', 'sknetworks', 'skb', 'skbio', 'skcamical'],
+    const tagOptionsForPortfolio = new servicecatalog.TagOptions(this, 'OrgTagOptions', {
+      allowedValuesForTags: {
+        czStage: ['dev', 'qa', 'staging', 'production'],
+        czOwner: ['skmagic', 'skens', 'sknetworks', 'skb', 'skbio', 'skcamical'],
+      },
     });
     this.portfolio.associateTagOptions(tagOptionsForPortfolio);
 
