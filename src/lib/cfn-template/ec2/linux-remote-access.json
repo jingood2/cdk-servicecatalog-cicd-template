@@ -22,8 +22,7 @@
                       "LinuxInstanceType",
                       "LinuxSubnet",
                       "LinuxSSHPort",
-                      "LatestAmiId",
-                      "InstanceName"
+                      "LatestAmiId"
                   ]
               }
           ],
