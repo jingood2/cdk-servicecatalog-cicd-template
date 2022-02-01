@@ -10,6 +10,12 @@ export class EC2ProductStage extends cdk.Stage {
   constructor(scope: cdk.Construct, id: string, props: DevStageProps) {
     super(scope, id, props);
 
-    new SCProductStack(this, 'sc-product', { scope: 'ec2' });
+    new SCProductStack(this, 'sc-product', {
+      scope: 'ec2',
+      env: {
+        account: '037729278610',
+        region: 'ap-northeast-2', // or whatever region you use
+      },
+    });
   }
 }
