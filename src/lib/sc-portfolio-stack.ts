@@ -50,15 +50,15 @@ export class SCProductStack extends cdk.Stack {
     });
     this.portfolio.associateTagOptions(tagOptionsForPortfolio);
 
-    const adminRole: iam.IRole = iam.Role.fromRoleArn(this, 'Role',
+    /* const adminRole: iam.IRole = iam.Role.fromRoleArn(this, 'Role',
       `arn:aws:iam::${cdk.Stack.of(this).account}:role/AWSCloudFormationStackSetAdministrationRole`, { mutable: false });
+ */
 
-
-    this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/ec2'), adminRole);
-    this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/s3'), adminRole);
-    this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/rds'), adminRole);
-    this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/network'), adminRole);
-    this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/alb'), adminRole);
+    this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/ec2') );
+    this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/s3') );
+    this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/rds') );
+    this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/network') );
+    this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/alb') );
 
     /* const product2 = new servicecatalog.CloudFormationProduct(this, 'alb-ec2-asg', {
       productName: 'alb-ec2-asg',
@@ -76,9 +76,12 @@ export class SCProductStack extends cdk.Stack {
 
   }
 
-  private associateProductToPortfolioInDir(dir: string, adminRole: iam.IRole) : void {
+  private associateProductToPortfolioInDir(dir: string, adminRole?: iam.IRole) : void {
 
     let product;
+
+    const role = adminRole ?? '';
+    console.log('role', role);
 
     fs.readdirSync(dir).forEach((file) => {
 
