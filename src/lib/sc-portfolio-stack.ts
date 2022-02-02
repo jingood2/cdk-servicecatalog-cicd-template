@@ -103,13 +103,13 @@ export class SCProductStack extends cdk.Stack {
 
       this.portfolio.addProduct(product);
 
-      this.portfolio.deployWithStackSets(product, {
+      /*  this.portfolio.deployWithStackSets(product, {
         accounts: ['856556794427'],
         regions: ['ap-northeast-2'],
         adminRole: adminRole,
         executionRoleName: 'AWSCloudFormationStackSetExecutionRole', // Name of role deployed in end users accounts.
         allowStackSetInstanceOperations: true,
-      });
+      }); */
 
     });
 
