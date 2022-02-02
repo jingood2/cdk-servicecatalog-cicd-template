@@ -364,7 +364,7 @@
           }
         ],
         "TargetType": "instance",
-        "VpcId": "vpc-057721995ac326e7f"
+        "VpcId": { "Ref": "vpcId" }
       },
       "Metadata": {
         "aws:cdk:path": "asg-stack/AlbEc2Asg/demo-targetgroup/Resource"
