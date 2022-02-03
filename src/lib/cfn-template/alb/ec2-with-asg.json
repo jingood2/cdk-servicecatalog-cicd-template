@@ -100,18 +100,6 @@
           }
         ],
         "Conditions": [
-          {
-            "Field": "host-header",
-            "HostHeaderConfig": {
-              "Values": ["sso.skcnctf.tk"] 
-            }
-          },
-          {
-            "Field": "path-pattern",
-            "PathPatternConfig": {
-              "Values": ["/ok"]
-            }
-          }
         ],
         "ListenerArn": { "Ref": "ALBListenerArn"},
         "Priority": 123
