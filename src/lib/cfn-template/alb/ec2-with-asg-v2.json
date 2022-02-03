@@ -6,12 +6,12 @@
     },
     "ALBListenerArn": {
       "Type": "String",
-      "Default": "arn:aws:elasticloadbalancing:ap-northeast-2:xxxxxxxxxx:listener/app/SC-03-testA-3CN4DG6RSVA6/b90bb8094a3451cc/bbe0085c53180f85",
+      "Default": "arn:aws:elasticloadbalancing:ap-northeast-2:037729278610:listener/app/SC-03-testA-3CN4DG6RSVA6/b90bb8094a3451cc/bbe0085c53180f85",
       "Description": "ALB Listener ARN "
     },
     "instanceName": {
       "Type": "String",
-      "Default": "c2AsgDemo",
+      "Default": "ec2AsgDemo",
       "Description": "EC2 Instance Name"
     },
     "instanceType": {
@@ -36,12 +36,13 @@
     },
     "HostHeaders": {
       "Type": "CommaDelimitedList",
-      "Description": "ALB Listener Host Headers",
-      "Default": "sso"
+      "Description": "ALB Listener Host Headers"
     },
     "PathPatterns": {
       "Type": "CommaDelimitedList",
-      "Default": "/ok",
+      "Default": [
+        "/ok"
+      ],
       "Description": "ALB Listener Path Condition"
     },
     "MinCapacity": {
@@ -117,14 +118,14 @@
             }
           }
         ],
-        "ListenerArn": { "Ref": "ALBListenerArn"},
+        "ListenerArn": "arn:aws:elasticloadbalancing:ap-northeast-2:037729278610:listener/app/SC-03-testA-3CN4DG6RSVA6/b90bb8094a3451cc/bbe0085c53180f85",
         "Priority": 123
       },
       "Metadata": {
         "aws:cdk:path": "asg-stack/AlbEc2Asg/ALBListener/demo-add-tg/Resource"
       }
     },
-    "AlbEc2Asgdemorole673610FE": {
+    "AlbEc2AsginstanceroleF554A972": {
       "Type": "AWS::IAM::Role",
       "Properties": {
         "AssumeRolePolicyDocument": {
@@ -139,6 +140,10 @@
           ],
           "Version": "2012-10-17"
         },
+        "ManagedPolicyArns": [
+          "arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM",
+          "arn:aws:iam::aws:policy/AmazonSSMFullAccess"
+        ],
         "RoleName": {
           "Fn::Join": [
             "",
@@ -149,39 +154,13 @@
               "-ec2-role"
             ]
           ]
-        },
-        "ManagedPolicyArns": [
-          {
-            "Fn::Join": [
-              "",
-              [
-                "arn:",
-                {
-                  "Ref": "AWS::Partition"
-                },
-                ":iam::aws:policy/service-role/AmazonEC2RoleforSSM"
-              ]
-            ]
-          },
-          {
-            "Fn::Join": [
-              "",
-              [
-                "arn:",
-                {
-                  "Ref": "AWS::Partition"
-                },
-                ":iam::aws:policy/AmazonSSMFullAccess"
-              ]
-            ]
-          }
-        ]
+        }
       },
       "Metadata": {
-        "aws:cdk:path": "asg-stack/AlbEc2Asg/demo-role/Resource"
+        "aws:cdk:path": "asg-stack/AlbEc2Asg/instance-role/Resource"
       }
     },
-    "AlbEc2AsgdemoroleDefaultPolicy0075B334": {
+    "AlbEc2AsginstanceroleDefaultPolicyC9A54275": {
       "Type": "AWS::IAM::Policy",
       "Properties": {
         "PolicyDocument": {
@@ -194,15 +173,15 @@
           ],
           "Version": "2012-10-17"
         },
-        "PolicyName": "AlbEc2AsgdemoroleDefaultPolicy0075B334",
+        "PolicyName": "AlbEc2AsginstanceroleDefaultPolicyC9A54275",
         "Roles": [
           {
-            "Ref": "AlbEc2Asgdemorole673610FE"
+            "Ref": "AlbEc2AsginstanceroleF554A972"
           }
         ]
       },
       "Metadata": {
-        "aws:cdk:path": "asg-stack/AlbEc2Asg/demo-role/DefaultPolicy/Resource"
+        "aws:cdk:path": "asg-stack/AlbEc2Asg/instance-role/DefaultPolicy/Resource"
       }
     },
     "AlbEc2AsgAutoScalingGroupInstanceSecurityGroupBB0858FC": {
@@ -222,7 +201,7 @@
             "Value": "asg-stack/AlbEc2Asg/AutoScalingGroup"
           }
         ],
-        "VpcId": { "Ref": "vpcId" }
+        "VpcId": "vpc-057721995ac326e7f"
       },
       "Metadata": {
         "aws:cdk:path": "asg-stack/AlbEc2Asg/AutoScalingGroup/InstanceSecurityGroup/Resource"
@@ -256,7 +235,7 @@
       "Properties": {
         "Roles": [
           {
-            "Ref": "AlbEc2Asgdemorole673610FE"
+            "Ref": "AlbEc2AsginstanceroleF554A972"
           }
         ]
       },
@@ -289,8 +268,8 @@
         }
       },
       "DependsOn": [
-        "AlbEc2AsgdemoroleDefaultPolicy0075B334",
-        "AlbEc2Asgdemorole673610FE"
+        "AlbEc2AsginstanceroleDefaultPolicyC9A54275",
+        "AlbEc2AsginstanceroleF554A972"
       ],
       "Metadata": {
         "aws:cdk:path": "asg-stack/AlbEc2Asg/AutoScalingGroup/LaunchConfig"
@@ -363,7 +342,17 @@
         "Matcher": {
           "HttpCode": "200"
         },
-        "Name": "demo-targetgroup",
+        "Name": {
+          "Fn::Join": [
+            "",
+            [
+              {
+                "Ref": "instanceName"
+              },
+              "-targetgroup"
+            ]
+          ]
+        },
         "Port": {
           "Ref": "TargetListenerPort"
         },
@@ -375,7 +364,7 @@
           }
         ],
         "TargetType": "instance",
-        "VpcId": { "Ref": "vpcId" }
+        "VpcId": "vpc-057721995ac326e7f"
       },
       "Metadata": {
         "aws:cdk:path": "asg-stack/AlbEc2Asg/demo-targetgroup/Resource"
