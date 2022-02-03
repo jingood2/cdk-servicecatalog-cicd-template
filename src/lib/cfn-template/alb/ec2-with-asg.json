@@ -11,7 +11,7 @@
     },
     "instanceName": {
       "Type": "String",
-      "Default": "c2AsgDemo",
+      "Default": "Ec2AsgDemo",
       "Description": "EC2 Instance Name"
     },
     "instanceType": {
