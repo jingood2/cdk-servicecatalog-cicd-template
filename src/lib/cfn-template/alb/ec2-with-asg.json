@@ -336,7 +336,7 @@
               "Matcher": {
                   "HttpCode": "200"
               },
-              "Name": "demo-targetgroup",
+              "Name": {"Fn::Sub":"${instanceName}-target-group"},
               "Port": {
                   "Ref": "TargetListenerPort"
               },
