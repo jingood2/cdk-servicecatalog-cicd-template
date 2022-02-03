@@ -37,7 +37,7 @@
     "HostHeaders": {
       "Type": "CommaDelimitedList",
       "Description": "ALB Listener Host Headers",
-      "Default": "sso"
+      "Default": "sso.skcnctf.tk"
     },
     "PathPatterns": {
       "Type": "CommaDelimitedList",
@@ -103,17 +103,13 @@
           {
             "Field": "host-header",
             "HostHeaderConfig": {
-              "Values": {
-                "Ref": "HostHeaders"
-              }
+              "Values": ["sso.skcnctf.tk"] 
             }
           },
           {
             "Field": "path-pattern",
             "PathPatternConfig": {
-              "Values": {
-                "Ref": "PathPatterns"
-              }
+              "Values": ["/ok"]
             }
           }
         ],
