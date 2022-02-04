@@ -1,0 +1,44 @@
+{
+  "Parameters": {
+    "ALBArn": {
+      "Type": "String",
+      "Description": "Target ALB ARN"
+    },
+    "Route53HostedZone": {
+      "Type": "String",
+      "Default": "skcnctf.tk",
+      "Description": "Route53 Hosted Zone Name"
+    },
+    "HostDomainName": {
+      "Type": "String",
+      "Default": "hello2.skcnctf.tk",
+      "Description": "Host Domain Name"
+    }
+  },
+  "Resources": {
+    "Route53AliasAlbTargetAliasRecord9BC966BE": {
+      "Type": "AWS::Route53::RecordSet",
+      "Properties": {
+        "Name": { "Fn::Sub": "${HostDomainName}."},
+        "Type": "A",
+        "AliasTarget": {
+          "DNSName": "dualstack.integ-keycl-8pxgsabin7q5-1760377975.ap-northeast-2.elb.amazonaws.com",
+          "HostedZoneId": "Z10008191COSSLORKT6ZO"
+        },
+        "HostedZoneId": "Z10008191COSSLORKT6ZO"
+      },
+      "Metadata": {
+        "aws:cdk:path": "route53-alb-target/Route53AliasAlbTarget/AliasRecord/Resource"
+      }
+    },
+    "CDKMetadata": {
+      "Type": "AWS::CDK::Metadata",
+      "Properties": {
+        "Analytics": "v2:deflate64:H4sIAAAAAAAA/zWMQQrDIBBFz5K9mdSk7bolFwjmBKJTMCEKM2O7EO/eSujqP/iPp0FfR7h0D/vh3vl9KC4RQlnFul3Nr7hYsgcKkppTZKHsRBnklMlh+/9cVStQyoK3CcrT4C/kT6PRilKriskjbDy89R30BGO3cQg95SjhQDDnfgEU7bt0lAAAAA=="
+      },
+      "Metadata": {
+        "aws:cdk:path": "route53-alb-target/CDKMetadata/Default"
+      }
+    }
+  }
+}
