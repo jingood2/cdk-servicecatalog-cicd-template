@@ -25,7 +25,6 @@
     },
     "ALBListenerPort": {
       "Type": "Number",
-      "Default": 443,
       "Description": "ALB Listener Port"
     },
     "TargetListenerPort": {
@@ -39,9 +38,6 @@
     },
     "PathPatterns": {
       "Type": "CommaDelimitedList",
-      "Default": [
-        "/ok"
-      ],
       "Description": "ALB Listener Path Condition"
     },
     "MinCapacity": {
