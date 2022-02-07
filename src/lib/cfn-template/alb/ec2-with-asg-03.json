@@ -4,9 +4,9 @@
       "Type": "AWS::EC2::VPC::Id",
       "Description": "Select Vpc Id"
     },
-    "ALBListenerArn": {
-      "Type": "String",
-      "Description": "ALB Listener ARN "
+    "subnets": {
+      "Type": "List<AWS::EC2::Subnet::Id>",
+      "Description": "Select ASG Subnet Id"
     },
     "instanceName": {
       "Type": "String",
@@ -23,22 +23,10 @@
       ],
       "Description": "EC2 Instance Type"
     },
-    "ALBListenerPort": {
-      "Type": "Number",
-      "Description": "ALB Listener Port"
-    },
     "TargetListenerPort": {
       "Type": "Number",
       "Default": 80,
       "Description": "Target Listener Port"
-    },
-    "HostHeaders": {
-      "Type": "CommaDelimitedList",
-      "Description": "ALB Listener Host Headers"
-    },
-    "PathPatterns": {
-      "Type": "CommaDelimitedList",
-      "Description": "ALB Listener Path Condition"
     },
     "MinCapacity": {
       "Type": "Number",
@@ -61,63 +49,41 @@
     }
   },
   "Resources": {
-    "AlbEc2AsgALBListenerSecurityGroupsg0f10701c7113543fetoasgstackAlbEc2AsgAutoScalingGroupInstanceSecurityGroup9A02E9FFIndirectPort5EA84AF4": {
-      "Type": "AWS::EC2::SecurityGroupEgress",
+    "AlbEc2AsgSecurityGroup0349126C": {
+      "Type": "AWS::EC2::SecurityGroup",
       "Properties": {
-        "GroupId": "sg-0f10701c7113543fe",
-        "IpProtocol": "tcp",
-        "Description": "Load balancer to target",
-        "DestinationSecurityGroupId": {
-          "Fn::GetAtt": [
-            "AlbEc2AsgAutoScalingGroupInstanceSecurityGroupBB0858FC",
-            "GroupId"
+        "GroupDescription": "asg-stack/AlbEc2Asg/SecurityGroup",
+        "GroupName": {
+          "Fn::Join": [
+            "",
+            [
+              {
+                "Ref": "instanceName"
+              },
+              "-sg"
+            ]
           ]
         },
-        "FromPort": {
-          "Ref": "TargetListenerPort"
-        },
-        "ToPort": {
-          "Ref": "TargetListenerPort"
-        }
-      },
-      "Metadata": {
-        "aws:cdk:path": "asg-stack/AlbEc2Asg/ALBListener/SecurityGroup-sg-0f10701c7113543fe/to asgstackAlbEc2AsgAutoScalingGroupInstanceSecurityGroup9A02E9FF:{IndirectPort}"
-      }
-    },
-    "AlbEc2AsgALBListenerdemoaddtgF595BAC0": {
-      "Type": "AWS::ElasticLoadBalancingV2::ListenerRule",
-      "Properties": {
-        "Actions": [
+        "SecurityGroupEgress": [
           {
-            "TargetGroupArn": {
-              "Ref": "AlbEc2Asgdemotargetgroup2797BF02"
-            },
-            "Type": "forward"
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow all outbound traffic by default",
+            "IpProtocol": "-1"
           }
         ],
-        "Conditions": [
+        "SecurityGroupIngress": [
           {
-            "Field": "host-header",
-            "HostHeaderConfig": {
-              "Values": {
-                "Ref": "HostHeaders"
-              }
-            }
-          },
-          {
-            "Field": "path-pattern",
-            "PathPatternConfig": {
-              "Values": {
-                "Ref": "PathPatterns"
-              }
-            }
+            "CidrIp": "0.0.0.0/0",
+            "Description": "from 0.0.0.0/0:22",
+            "FromPort": 22,
+            "IpProtocol": "tcp",
+            "ToPort": 22
           }
         ],
-        "ListenerArn": { "Ref": "ALBListenerArn" },
-        "Priority": 123
+        "VpcId": { "Ref": "vpcId"}
       },
       "Metadata": {
-        "aws:cdk:path": "asg-stack/AlbEc2Asg/ALBListener/demo-add-tg/Resource"
+        "aws:cdk:path": "asg-stack/AlbEc2Asg/SecurityGroup/Resource"
       }
     },
     "AlbEc2AsginstanceroleF554A972": {
@@ -256,52 +222,6 @@
         "aws:cdk:path": "asg-stack/AlbEc2Asg/instance-role/DefaultPolicy/Resource"
       }
     },
-    "AlbEc2AsgAutoScalingGroupInstanceSecurityGroupBB0858FC": {
-      "Type": "AWS::EC2::SecurityGroup",
-      "Properties": {
-        "GroupDescription": "asg-stack/AlbEc2Asg/AutoScalingGroup/InstanceSecurityGroup",
-        "SecurityGroupEgress": [
-          {
-            "CidrIp": "0.0.0.0/0",
-            "Description": "Allow all outbound traffic by default",
-            "IpProtocol": "-1"
-          }
-        ],
-        "Tags": [
-          {
-            "Key": "Name",
-            "Value": "asg-stack/AlbEc2Asg/AutoScalingGroup"
-          }
-        ],
-        "VpcId": { "Ref": "vpcId"}
-      },
-      "Metadata": {
-        "aws:cdk:path": "asg-stack/AlbEc2Asg/AutoScalingGroup/InstanceSecurityGroup/Resource"
-      }
-    },
-    "AlbEc2AsgAutoScalingGroupInstanceSecurityGroupfromasgstackAlbEc2AsgALBListenerSecurityGroupsg0f10701c7113543fe1B736768IndirectPortE2133905": {
-      "Type": "AWS::EC2::SecurityGroupIngress",
-      "Properties": {
-        "IpProtocol": "tcp",
-        "Description": "Load balancer to target",
-        "FromPort": {
-          "Ref": "TargetListenerPort"
-        },
-        "GroupId": {
-          "Fn::GetAtt": [
-            "AlbEc2AsgAutoScalingGroupInstanceSecurityGroupBB0858FC",
-            "GroupId"
-          ]
-        },
-        "SourceSecurityGroupId": "sg-0f10701c7113543fe",
-        "ToPort": {
-          "Ref": "TargetListenerPort"
-        }
-      },
-      "Metadata": {
-        "aws:cdk:path": "asg-stack/AlbEc2Asg/AutoScalingGroup/InstanceSecurityGroup/from asgstackAlbEc2AsgALBListenerSecurityGroupsg0f10701c7113543fe1B736768:{IndirectPort}"
-      }
-    },
     "AlbEc2AsgAutoScalingGroupInstanceProfileEA9FBB6A": {
       "Type": "AWS::IAM::InstanceProfile",
       "Properties": {
@@ -330,7 +250,7 @@
         "SecurityGroups": [
           {
             "Fn::GetAtt": [
-              "AlbEc2AsgAutoScalingGroupInstanceSecurityGroupBB0858FC",
+              "AlbEc2AsgSecurityGroup0349126C",
               "GroupId"
             ]
           }
@@ -372,10 +292,7 @@
             "Ref": "AlbEc2Asgdemotargetgroup2797BF02"
           }
         ],
-        "VPCZoneIdentifier": [
-          "subnet-0bfa65ebf3115d818",
-          "subnet-01f1051991696d354"
-        ]
+        "VPCZoneIdentifier": { "Ref": "subnets" }
       },
       "UpdatePolicy": {
         "AutoScalingScheduledAction": {
@@ -436,7 +353,7 @@
           }
         ],
         "TargetType": "instance",
-        "VpcId": { "Ref": "vpcId" }
+        "VpcId": { "Ref": "vpcId"}
       },
       "Metadata": {
         "aws:cdk:path": "asg-stack/AlbEc2Asg/demo-targetgroup/Resource"
@@ -1335,7 +1252,7 @@
     "CDKMetadata": {
       "Type": "AWS::CDK::Metadata",
       "Properties": {
-        "Analytics": "v2:deflate64:H4sIAAAAAAAA/2VS227CMAz9Ft5DGDDtecCmCY0HVPiBLBgWSJPKSTqhKv8+NylQ4Mn2iS/Hxxnz8euUvwzexZ8byt1p1EiLwJuNF/LEFnuzFihK8IBsYY3zGKRnBTgbUEL7fvEjazs0ICe8IXgDMqDy5y+0ofo8IDjH7jD2mPQELE0qiwy0cF5JbcXuR2hhpDKHmsbMqkorKbyyZqWcBwNYBJ1Y3cW9vK3AA/jrvF4YmRIlbwqbGyS7tlR3TipcvSWJQBRgjXavdLt28NZJoYkUUaJgk4PrkJUIRv6Sent1CJhotPBTaiazRRKesO7pNvgOiEzaHeyg0vZMxwKsAXtrpv69MCd8pPQSzE2ABygyN+XNPMgT+LlwwLLbZnZeNjdW/TiTkrYslSclobJOeYvn/E0uEd2zpnmOMrpjtTbXVqoCWpL+37rzkvidH9mppLJvSB1bM9NKuLRs68QYmaEu/OhG9fiNj6d8Mjg6pYYYjFcl8CLbf2Iw4kH1AgAA"
+        "Analytics": "v2:deflate64:H4sIAAAAAAAA/2VS227CMAz9lr2HMGDa84BJ07Q9VMAPZK5hoWlS5dKpqvLvc5oCZXvysX3sY8dZ8MXTij8+vIgfN4OymvdgLPJ+7wVUbHvUhbCiRo+WbY123gbwbIfOBAuY8hccWerQIyypGCFY6bs3a0KTSHeByKSoeb8zKjdItjBKQjfoXdE7yQkNWFhzlCoJBG8cCCX1ifdrcvbZucp8iqDhm+Y8ylOwwkujU/gf9SDsCf3B0ooUG1M34btAZKiE8xKUEeWXUDQR5Vract00RBhUcsPrHBM3MjAlltgo06WHsS3aSeEw3sTNhNeBXqO+tfwTisyteL8JUKHfCIcsw8QcUTa3paZ+HgpMXUtPh8DGOOmN7fI9Lx5t3pKeI0YYTxXSGVJtIxukN6KPUoxouN2II6tqKvvAoWMyayWFG5ZNIMbINHXhZzdvF898seLLh7OTcmaD9rJGvsv2F+uaQ7WeAgAA"
       },
       "Metadata": {
         "aws:cdk:path": "asg-stack/CDKMetadata/Default"
