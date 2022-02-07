@@ -98,7 +98,7 @@ export class SCProductStack extends cdk.Stack {
         owner: envVars.SC_PRODUCT_OWNER,
         productVersions: [
           {
-            productVersionName: 'v1',
+            productVersionName: 'v2',
             cloudFormationTemplate: servicecatalog.CloudFormationTemplate.fromAsset(fPath),
           },
         ],

@@ -19,6 +19,9 @@ const project = new AwsCdkTypeScriptApp({
     '@aws-cdk/aws-certificatemanager',
     '@aws-cdk/aws-route53',
     '@aws-cdk/aws-route53-targets',
+    '@aws-cdk/aws-cloudfront',
+    '@aws-cdk/aws-cloudwatch',
+    '@aws-cdk/aws-s3-deployment',
   ], /* Which AWS CDK modules (those that start with "@aws-cdk/") this app uses. */
   deps: [
     'chalk',
