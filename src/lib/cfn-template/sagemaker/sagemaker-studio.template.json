@@ -83,14 +83,6 @@
           "SagemakerUser",
           "UserProfileArn"
         ]
-      },
-      "Export": {
-        "Name": {
-          "Fn::GetAtt": [
-            "userProfileArn",
-            "marketcaster-team"
-          ]
-        }
       }
     },
     "DomainIdSagemaker": {
