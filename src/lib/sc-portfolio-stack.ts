@@ -14,7 +14,7 @@ export class SCPortfolioStack extends cdk.Stack {
     super(scope, id, props );
 
     if (envVars.SC_PORTFOLIO_ARN != '') {
-      this.portfolio = servicecatalog.Portfolio.fromPortfolioArn(this, 'ImportedPortfolio', envVars.SC_PORTFOLIO_ARN);
+      this.portfolio = servicecatalog.Portfolio.fromPortfolioArn(this, 'ExistedPortfolio', envVars.SC_PORTFOLIO_ARN);
     } else {
       this.portfolio = new servicecatalog.Portfolio(this, 'Portfolio', {
         displayName: envVars.SC_PORTFOLIO_NAME ?? 'DemoPortfolio',
