@@ -4,31 +4,22 @@ import * as iam from '@aws-cdk/aws-iam';
 import * as servicecatalog from '@aws-cdk/aws-servicecatalog';
 import * as cdk from '@aws-cdk/core';
 import { envVars } from '../env-vars';
-//import { AlbEC2Asg } from './construct/alb-ec2-asg-v1';
 
-//import { SCProductFactory } from './construct/sc-product-factory';
-
-export interface SCProductStackProps extends cdk.StackProps {
-  scope: string;
+export interface ISCPortfolioStackProps extends cdk.StackProps {
 }
 
-export enum SCProductType {
-  CDK='cdk-sc-product',
-  CFN='cfn-sc-product'
-}
-
-export class SCProductStack extends cdk.Stack {
+export class SCPortfolioStack extends cdk.Stack {
   readonly portfolio: servicecatalog.IPortfolio;
-  constructor(scope: cdk.Construct, id: string, props: SCProductStackProps ) {
+  constructor(scope: cdk.Construct, id: string, props: ISCPortfolioStackProps ) {
     super(scope, id, props );
 
     if (envVars.SC_PORTFOLIO_ARN != '') {
       this.portfolio = servicecatalog.Portfolio.fromPortfolioArn(this, 'MyImportedPortfolio', envVars.SC_PORTFOLIO_ARN);
     } else {
-      this.portfolio = new servicecatalog.Portfolio(this, 'Portfolio' + props.scope, {
-        displayName: envVars.SC_PORTFOLIO_NAME + props.scope ?? 'DemoPortfolio',
-        providerName: 'Cloud Infra TF',
-        description: `Service Catalog: ${props.scope} Reference Architecture`,
+      this.portfolio = new servicecatalog.Portfolio(this, 'Portfolio', {
+        displayName: envVars.SC_PORTFOLIO_NAME ?? 'DemoPortfolio',
+        providerName: 'AWS TF',
+        description: 'Service Catalog: SKC&C AWS TF Reference Architecture',
         messageLanguage: servicecatalog.MessageLanguage.EN,
       });
       if ( envVars.SC_ACCESS_GROUP_NAME != '') {
@@ -42,7 +33,6 @@ export class SCProductStack extends cdk.Stack {
     const tagOptionsForPortfolio = new servicecatalog.TagOptions(this, 'OrgTagOptions', {
       allowedValuesForTags: {
         czStage: ['dev', 'qa', 'staging', 'production'],
-        czOwner: ['skmagic', 'skens', 'sknetworks', 'skb', 'skbio', 'skcamical'],
       },
     });
     this.portfolio.associateTagOptions(tagOptionsForPortfolio);
@@ -56,20 +46,6 @@ export class SCProductStack extends cdk.Stack {
     this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/rds') );
     this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/network') );
     this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/alb') );
-
-    /* const product2 = new servicecatalog.CloudFormationProduct(this, 'alb-ec2-asg', {
-      productName: 'alb-ec2-asg',
-      owner: 'Product Owner',
-      description: 'The ALB Listener integrate EC2 with AutoScaling',
-      productVersions: [
-        {
-          productVersionName: 'v1',
-          cloudFormationTemplate: servicecatalog.CloudFormationTemplate.fromProductStack(new AlbEC2Asg(this, 'alb-ec2-asg-product')),
-        },
-      ],
-    });
-
-    this.portfolio.addProduct(product2); */
 
   }
 

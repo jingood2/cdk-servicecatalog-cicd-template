@@ -3,7 +3,7 @@ import * as cdk from '@aws-cdk/core';
 import { SecretValue } from '@aws-cdk/core';
 import { CodePipeline, CodePipelineSource, ShellStep } from '@aws-cdk/pipelines';
 import { envVars } from '../env-vars';
-import { EC2ProductStage } from './ec2-product-stage';
+import { SCPortfolioStage } from './sc-portfolio-stage';
 //import { S3ProductStage } from './s3-product-stage';
 //import { DynamoDbCustomLoaderStack } from './infra/ddb-custom-loader-stack';
 
@@ -84,10 +84,10 @@ export class CdkPipelinesStack extends cdk.Stack {
     // ToDo: Add ApplicationStage
     //pipeline.addStage(new MyStack(this, 'Dev'));
     //scProductWave.addStage(new EC2ProductStage(this, 'EC2', {
-    pipeline.addStage(new EC2ProductStage(this, 'EC2', {
+    pipeline.addStage(new SCPortfolioStage(this, 'Portfolio', {
       env: {
-        account: '790830340641',
-        region: 'ap-northeast-2',
+        account: process.env.CDK_DEPLOY_ACCOUNT,
+        region: process.env.CDK_DEPLOY_REGION,
       },
     }));
 

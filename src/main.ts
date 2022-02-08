@@ -3,11 +3,11 @@ import { CdkPipelinesStack } from './lib/cdk-pipelines';
 
 // for development, use account/region from cdk cli
 const devEnv = {
-  account: '790830340641',
-  region: 'ap-northeast-2',
+  account: process.env.CDK_DEPLOY_ACCOUNT,
+  region: process.env.CDK_DEPLOY_REGION,
 };
 
 const app = new App();
 
-new CdkPipelinesStack(app, 'sc-portfolios-pipelines', { env: devEnv } );
+new CdkPipelinesStack(app, 'servicecatalog-pipelines', { env: devEnv } );
 app.synth();
