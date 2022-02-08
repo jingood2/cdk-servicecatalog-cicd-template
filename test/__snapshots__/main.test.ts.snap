@@ -221,30 +221,6 @@ Object {
     },
   },
   "Resources": Object {
-    "OrgTagOptions49f646b89a0eC66B3DD8": Object {
-      "Properties": Object {
-        "Active": true,
-        "Key": "czOwner",
-        "Value": "skbio",
-      },
-      "Type": "AWS::ServiceCatalog::TagOption",
-    },
-    "OrgTagOptions51b2f1f64978DAE2AAC2": Object {
-      "Properties": Object {
-        "Active": true,
-        "Key": "czOwner",
-        "Value": "skens",
-      },
-      "Type": "AWS::ServiceCatalog::TagOption",
-    },
-    "OrgTagOptions625bcd62d7fe2D2B1742": Object {
-      "Properties": Object {
-        "Active": true,
-        "Key": "czOwner",
-        "Value": "skb",
-      },
-      "Type": "AWS::ServiceCatalog::TagOption",
-    },
     "OrgTagOptions6cf948a80db4979AB439": Object {
       "Properties": Object {
         "Active": true,
@@ -261,35 +237,11 @@ Object {
       },
       "Type": "AWS::ServiceCatalog::TagOption",
     },
-    "OrgTagOptions70b42b2d547b532EF1C2": Object {
-      "Properties": Object {
-        "Active": true,
-        "Key": "czOwner",
-        "Value": "skmagic",
-      },
-      "Type": "AWS::ServiceCatalog::TagOption",
-    },
     "OrgTagOptionsa72190c3dc6512A7AFD1": Object {
       "Properties": Object {
         "Active": true,
         "Key": "czStage",
         "Value": "qa",
-      },
-      "Type": "AWS::ServiceCatalog::TagOption",
-    },
-    "OrgTagOptionsbc015b113f1cA84133CD": Object {
-      "Properties": Object {
-        "Active": true,
-        "Key": "czOwner",
-        "Value": "skcamical",
-      },
-      "Type": "AWS::ServiceCatalog::TagOption",
-    },
-    "OrgTagOptionsfb9d88bc3c0553150A70": Object {
-      "Properties": Object {
-        "Active": true,
-        "Key": "czOwner",
-        "Value": "sknetworks",
       },
       "Type": "AWS::ServiceCatalog::TagOption",
     },
@@ -301,162 +253,19 @@ Object {
       },
       "Type": "AWS::ServiceCatalog::TagOption",
     },
-    "Portfolios3C21F58D3": Object {
+    "Portfolio856A4190": Object {
       "Properties": Object {
         "AcceptLanguage": "en",
-        "Description": "Service Catalog: s3 Reference Architecture",
-        "DisplayName": "awstf-portfolios3",
-        "ProviderName": "Cloud Infra TF",
+        "Description": "Service Catalog: SKC&C AWS TF Reference Architecture",
+        "DisplayName": "SKCnC-MarketCaster",
+        "ProviderName": "AWS TF",
       },
       "Type": "AWS::ServiceCatalog::Portfolio",
     },
-    "Portfolios3PortfolioProductAssociation074002eaa98d3CD7DCD6": Object {
+    "PortfolioPortfolioProductAssociation096d97a9a7b8ABBA8F21": Object {
       "Properties": Object {
         "PortfolioId": Object {
-          "Ref": "Portfolios3C21F58D3",
-        },
-        "ProductId": Object {
-          "Ref": "rdsmysqlrajsonB319EE2B",
-        },
-      },
-      "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
-    },
-    "Portfolios3PortfolioProductAssociation1f7be181511c051C4758": Object {
-      "Properties": Object {
-        "PortfolioId": Object {
-          "Ref": "Portfolios3C21F58D3",
-        },
-        "ProductId": Object {
-          "Ref": "linuxnginxnokeypairjsonFAFF10AD",
-        },
-      },
-      "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
-    },
-    "Portfolios3PortfolioProductAssociation260d1c6ff02c64684E20": Object {
-      "Properties": Object {
-        "PortfolioId": Object {
-          "Ref": "Portfolios3C21F58D3",
-        },
-        "ProductId": Object {
-          "Ref": "albwithacm01json58E28268",
-        },
-      },
-      "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
-    },
-    "Portfolios3PortfolioProductAssociation33ac84b23202419FDB21": Object {
-      "Properties": Object {
-        "PortfolioId": Object {
-          "Ref": "Portfolios3C21F58D3",
-        },
-        "ProductId": Object {
-          "Ref": "linuxnginxjson2CB8FE87",
-        },
-      },
-      "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
-    },
-    "Portfolios3PortfolioProductAssociation33e373d885fcD0996A4E": Object {
-      "Properties": Object {
-        "PortfolioId": Object {
-          "Ref": "Portfolios3C21F58D3",
-        },
-        "ProductId": Object {
-          "Ref": "rdsmariarajson9B558A30",
-        },
-      },
-      "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
-    },
-    "Portfolios3PortfolioProductAssociation39ec0ec91d56C595DECF": Object {
-      "Properties": Object {
-        "PortfolioId": Object {
-          "Ref": "Portfolios3C21F58D3",
-        },
-        "ProductId": Object {
-          "Ref": "ec2sgingressrulewithsourceSgjsonB468272E",
-        },
-      },
-      "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
-    },
-    "Portfolios3PortfolioProductAssociation3dc39e35cc1c09F8CE7B": Object {
-      "Properties": Object {
-        "PortfolioId": Object {
-          "Ref": "Portfolios3C21F58D3",
-        },
-        "ProductId": Object {
-          "Ref": "s3bucketandpolicyforcaassev1jsonFE91BE5E",
-        },
-      },
-      "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
-    },
-    "Portfolios3PortfolioProductAssociation434ac6c2a8035B6FAD53": Object {
-      "Properties": Object {
-        "PortfolioId": Object {
-          "Ref": "Portfolios3C21F58D3",
-        },
-        "ProductId": Object {
-          "Ref": "windowremoteaccsssjson5A45DF8D",
-        },
-      },
-      "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
-    },
-    "Portfolios3PortfolioProductAssociation6779bed6002f61562984": Object {
-      "Properties": Object {
-        "PortfolioId": Object {
-          "Ref": "Portfolios3C21F58D3",
-        },
-        "ProductId": Object {
-          "Ref": "rdsmssqlrajson19A807E9",
-        },
-      },
-      "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
-    },
-    "Portfolios3PortfolioProductAssociation72631bc49b351813C69B": Object {
-      "Properties": Object {
-        "PortfolioId": Object {
-          "Ref": "Portfolios3C21F58D3",
-        },
-        "ProductId": Object {
-          "Ref": "linuxremoteaccessjson90ECE4F4",
-        },
-      },
-      "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
-    },
-    "Portfolios3PortfolioProductAssociation92ea51a6a7faD4CEB5B3": Object {
-      "Properties": Object {
-        "PortfolioId": Object {
-          "Ref": "Portfolios3C21F58D3",
-        },
-        "ProductId": Object {
-          "Ref": "rdspostgresqlrajson918D3102",
-        },
-      },
-      "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
-    },
-    "Portfolios3PortfolioProductAssociationa01d014e7fd96FA0467C": Object {
-      "Properties": Object {
-        "PortfolioId": Object {
-          "Ref": "Portfolios3C21F58D3",
-        },
-        "ProductId": Object {
-          "Ref": "vpcrajson67EDC260",
-        },
-      },
-      "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
-    },
-    "Portfolios3PortfolioProductAssociationadec3ac5207684814BD5": Object {
-      "Properties": Object {
-        "PortfolioId": Object {
-          "Ref": "Portfolios3C21F58D3",
-        },
-        "ProductId": Object {
-          "Ref": "ec2sgingresswithipportyamlC572096D",
-        },
-      },
-      "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
-    },
-    "Portfolios3PortfolioProductAssociationbf3823887851C980513F": Object {
-      "Properties": Object {
-        "PortfolioId": Object {
-          "Ref": "Portfolios3C21F58D3",
+          "Ref": "Portfolio856A4190",
         },
         "ProductId": Object {
           "Ref": "scs3transitionrajsonCC00FE9C",
@@ -464,21 +273,21 @@ Object {
       },
       "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
     },
-    "Portfolios3PortfolioProductAssociationdafcb8c077f9A0CA6E2C": Object {
+    "PortfolioPortfolioProductAssociation106edc92ab58D1CA196E": Object {
       "Properties": Object {
         "PortfolioId": Object {
-          "Ref": "Portfolios3C21F58D3",
+          "Ref": "Portfolio856A4190",
         },
         "ProductId": Object {
-          "Ref": "route53albtarget02json7C005EFA",
+          "Ref": "ec2sgingresswithipportyamlC572096D",
         },
       },
       "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
     },
-    "Portfolios3PortfolioProductAssociationde048b649e7354FBF357": Object {
+    "PortfolioPortfolioProductAssociation2084e072b1543EEBC2F0": Object {
       "Properties": Object {
         "PortfolioId": Object {
-          "Ref": "Portfolios3C21F58D3",
+          "Ref": "Portfolio856A4190",
         },
         "ProductId": Object {
           "Ref": "vpcpubprivatedbsubnetrajson8CA9C54C",
@@ -486,10 +295,10 @@ Object {
       },
       "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
     },
-    "Portfolios3PortfolioProductAssociationde97aa17980e22C85895": Object {
+    "PortfolioPortfolioProductAssociation3c01c7241cd90B01105D": Object {
       "Properties": Object {
         "PortfolioId": Object {
-          "Ref": "Portfolios3C21F58D3",
+          "Ref": "Portfolio856A4190",
         },
         "ProductId": Object {
           "Ref": "ec2withasg03json84BF5128",
@@ -497,10 +306,65 @@ Object {
       },
       "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
     },
-    "Portfolios3PortfolioProductAssociatione7143f2733e46E806814": Object {
+    "PortfolioPortfolioProductAssociation56c1a7f02392A56AB7D2": Object {
       "Properties": Object {
         "PortfolioId": Object {
-          "Ref": "Portfolios3C21F58D3",
+          "Ref": "Portfolio856A4190",
+        },
+        "ProductId": Object {
+          "Ref": "rdspostgresqlrajson918D3102",
+        },
+      },
+      "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
+    },
+    "PortfolioPortfolioProductAssociation5c3533998a011D6279C8": Object {
+      "Properties": Object {
+        "PortfolioId": Object {
+          "Ref": "Portfolio856A4190",
+        },
+        "ProductId": Object {
+          "Ref": "rdsmysqlrajsonB319EE2B",
+        },
+      },
+      "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
+    },
+    "PortfolioPortfolioProductAssociation5e650fb4925cC2F9EE1D": Object {
+      "Properties": Object {
+        "PortfolioId": Object {
+          "Ref": "Portfolio856A4190",
+        },
+        "ProductId": Object {
+          "Ref": "rdsmssqlrajson19A807E9",
+        },
+      },
+      "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
+    },
+    "PortfolioPortfolioProductAssociation66461baeaaecFA85B7B8": Object {
+      "Properties": Object {
+        "PortfolioId": Object {
+          "Ref": "Portfolio856A4190",
+        },
+        "ProductId": Object {
+          "Ref": "s3bucketandpolicyforcaassev1jsonFE91BE5E",
+        },
+      },
+      "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
+    },
+    "PortfolioPortfolioProductAssociation6d4f6ae23d0564FB4A4B": Object {
+      "Properties": Object {
+        "PortfolioId": Object {
+          "Ref": "Portfolio856A4190",
+        },
+        "ProductId": Object {
+          "Ref": "route53albtarget02json7C005EFA",
+        },
+      },
+      "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
+    },
+    "PortfolioPortfolioProductAssociation799ae2b0ce56E766E95F": Object {
+      "Properties": Object {
+        "PortfolioId": Object {
+          "Ref": "Portfolio856A4190",
         },
         "ProductId": Object {
           "Ref": "rdsaurorarajsonEE2D8B0F",
@@ -508,10 +372,98 @@ Object {
       },
       "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
     },
-    "Portfolios3PortolioPrincipalAssociationfcedee3b78faDE6A74E2": Object {
+    "PortfolioPortfolioProductAssociation7c06a1ac5cec9043A2D0": Object {
       "Properties": Object {
         "PortfolioId": Object {
-          "Ref": "Portfolios3C21F58D3",
+          "Ref": "Portfolio856A4190",
+        },
+        "ProductId": Object {
+          "Ref": "albwithacm01json58E28268",
+        },
+      },
+      "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
+    },
+    "PortfolioPortfolioProductAssociation7fb781b1120a15140BE4": Object {
+      "Properties": Object {
+        "PortfolioId": Object {
+          "Ref": "Portfolio856A4190",
+        },
+        "ProductId": Object {
+          "Ref": "vpcrajson67EDC260",
+        },
+      },
+      "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
+    },
+    "PortfolioPortfolioProductAssociation97d87008b146C4EFCA0A": Object {
+      "Properties": Object {
+        "PortfolioId": Object {
+          "Ref": "Portfolio856A4190",
+        },
+        "ProductId": Object {
+          "Ref": "linuxnginxjson2CB8FE87",
+        },
+      },
+      "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
+    },
+    "PortfolioPortfolioProductAssociationa4f51286ed02391EE5BA": Object {
+      "Properties": Object {
+        "PortfolioId": Object {
+          "Ref": "Portfolio856A4190",
+        },
+        "ProductId": Object {
+          "Ref": "linuxremoteaccessjson90ECE4F4",
+        },
+      },
+      "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
+    },
+    "PortfolioPortfolioProductAssociationa53ba3c2f30180AC2C29": Object {
+      "Properties": Object {
+        "PortfolioId": Object {
+          "Ref": "Portfolio856A4190",
+        },
+        "ProductId": Object {
+          "Ref": "ec2sgingressrulewithsourceSgjsonB468272E",
+        },
+      },
+      "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
+    },
+    "PortfolioPortfolioProductAssociatione409b3e56df805BA43EE": Object {
+      "Properties": Object {
+        "PortfolioId": Object {
+          "Ref": "Portfolio856A4190",
+        },
+        "ProductId": Object {
+          "Ref": "windowremoteaccsssjson5A45DF8D",
+        },
+      },
+      "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
+    },
+    "PortfolioPortfolioProductAssociationf0998cca951e1927AEFD": Object {
+      "Properties": Object {
+        "PortfolioId": Object {
+          "Ref": "Portfolio856A4190",
+        },
+        "ProductId": Object {
+          "Ref": "linuxnginxnokeypairjsonFAFF10AD",
+        },
+      },
+      "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
+    },
+    "PortfolioPortfolioProductAssociationffa577ca5f9b43ECFC18": Object {
+      "Properties": Object {
+        "PortfolioId": Object {
+          "Ref": "Portfolio856A4190",
+        },
+        "ProductId": Object {
+          "Ref": "rdsmariarajson9B558A30",
+        },
+      },
+      "Type": "AWS::ServiceCatalog::PortfolioProductAssociation",
+    },
+    "PortfolioPortolioPrincipalAssociation0ea09c6577c6DCC8B1D9": Object {
+      "Properties": Object {
+        "PortfolioId": Object {
+          "Ref": "Portfolio856A4190",
         },
         "PrincipalARN": Object {
           "Fn::Join": Array [
@@ -533,65 +485,10 @@ Object {
       },
       "Type": "AWS::ServiceCatalog::PortfolioPrincipalAssociation",
     },
-    "Portfolios3TagOptionAssociation3eaa5b048498C1AC6AC1": Object {
+    "PortfolioTagOptionAssociation18e63998c5022E55850A": Object {
       "Properties": Object {
         "ResourceId": Object {
-          "Ref": "Portfolios3C21F58D3",
-        },
-        "TagOptionId": Object {
-          "Ref": "OrgTagOptionsfeef446aa485710619C2",
-        },
-      },
-      "Type": "AWS::ServiceCatalog::TagOptionAssociation",
-    },
-    "Portfolios3TagOptionAssociation4429e9703575EC1BB3FF": Object {
-      "Properties": Object {
-        "ResourceId": Object {
-          "Ref": "Portfolios3C21F58D3",
-        },
-        "TagOptionId": Object {
-          "Ref": "OrgTagOptions49f646b89a0eC66B3DD8",
-        },
-      },
-      "Type": "AWS::ServiceCatalog::TagOptionAssociation",
-    },
-    "Portfolios3TagOptionAssociation44f38caaadbe78A0D531": Object {
-      "Properties": Object {
-        "ResourceId": Object {
-          "Ref": "Portfolios3C21F58D3",
-        },
-        "TagOptionId": Object {
-          "Ref": "OrgTagOptionsa72190c3dc6512A7AFD1",
-        },
-      },
-      "Type": "AWS::ServiceCatalog::TagOptionAssociation",
-    },
-    "Portfolios3TagOptionAssociation4832aa8413e5746E0232": Object {
-      "Properties": Object {
-        "ResourceId": Object {
-          "Ref": "Portfolios3C21F58D3",
-        },
-        "TagOptionId": Object {
-          "Ref": "OrgTagOptions51b2f1f64978DAE2AAC2",
-        },
-      },
-      "Type": "AWS::ServiceCatalog::TagOptionAssociation",
-    },
-    "Portfolios3TagOptionAssociation4fc88847a5808502ED43": Object {
-      "Properties": Object {
-        "ResourceId": Object {
-          "Ref": "Portfolios3C21F58D3",
-        },
-        "TagOptionId": Object {
-          "Ref": "OrgTagOptions625bcd62d7fe2D2B1742",
-        },
-      },
-      "Type": "AWS::ServiceCatalog::TagOptionAssociation",
-    },
-    "Portfolios3TagOptionAssociation683878eded9dCB7FE618": Object {
-      "Properties": Object {
-        "ResourceId": Object {
-          "Ref": "Portfolios3C21F58D3",
+          "Ref": "Portfolio856A4190",
         },
         "TagOptionId": Object {
           "Ref": "OrgTagOptions6dc16e3cebc657ECA4C8",
@@ -599,46 +496,35 @@ Object {
       },
       "Type": "AWS::ServiceCatalog::TagOptionAssociation",
     },
-    "Portfolios3TagOptionAssociation826063e4626f8AF15CFD": Object {
+    "PortfolioTagOptionAssociation4db6991ed940639EE1E3": Object {
       "Properties": Object {
         "ResourceId": Object {
-          "Ref": "Portfolios3C21F58D3",
-        },
-        "TagOptionId": Object {
-          "Ref": "OrgTagOptionsbc015b113f1cA84133CD",
-        },
-      },
-      "Type": "AWS::ServiceCatalog::TagOptionAssociation",
-    },
-    "Portfolios3TagOptionAssociation9af08a1fa27a5B78836D": Object {
-      "Properties": Object {
-        "ResourceId": Object {
-          "Ref": "Portfolios3C21F58D3",
-        },
-        "TagOptionId": Object {
-          "Ref": "OrgTagOptions70b42b2d547b532EF1C2",
-        },
-      },
-      "Type": "AWS::ServiceCatalog::TagOptionAssociation",
-    },
-    "Portfolios3TagOptionAssociationc6d43c506f7a0D7707E6": Object {
-      "Properties": Object {
-        "ResourceId": Object {
-          "Ref": "Portfolios3C21F58D3",
-        },
-        "TagOptionId": Object {
-          "Ref": "OrgTagOptionsfb9d88bc3c0553150A70",
-        },
-      },
-      "Type": "AWS::ServiceCatalog::TagOptionAssociation",
-    },
-    "Portfolios3TagOptionAssociationfb0f35002140D42E3038": Object {
-      "Properties": Object {
-        "ResourceId": Object {
-          "Ref": "Portfolios3C21F58D3",
+          "Ref": "Portfolio856A4190",
         },
         "TagOptionId": Object {
           "Ref": "OrgTagOptions6cf948a80db4979AB439",
+        },
+      },
+      "Type": "AWS::ServiceCatalog::TagOptionAssociation",
+    },
+    "PortfolioTagOptionAssociation6a5015c48dc62B517674": Object {
+      "Properties": Object {
+        "ResourceId": Object {
+          "Ref": "Portfolio856A4190",
+        },
+        "TagOptionId": Object {
+          "Ref": "OrgTagOptionsfeef446aa485710619C2",
+        },
+      },
+      "Type": "AWS::ServiceCatalog::TagOptionAssociation",
+    },
+    "PortfolioTagOptionAssociation7d214ef8cdbdEFE0B23D": Object {
+      "Properties": Object {
+        "ResourceId": Object {
+          "Ref": "Portfolio856A4190",
+        },
+        "TagOptionId": Object {
+          "Ref": "OrgTagOptionsa72190c3dc6512A7AFD1",
         },
       },
       "Type": "AWS::ServiceCatalog::TagOptionAssociation",
