@@ -16,7 +16,7 @@ export const envVars = {
   SC_PORTFOLIO_NAME: 'SKCnC-MarketCaster',
   SC_PRODUCT_NAME: 'product-factory',
   SC_PRODUCT_OWNER: 'SK CnC AWS TF Team',
-  SC_ACCESS_GROUP_NAME: 'AdminMasterAccountGroup',
+  SC_ACCESS_GROUP_NAME: 'Administrators',
   SC_ACCESS_ROLE_ARN: '',
 };
 
