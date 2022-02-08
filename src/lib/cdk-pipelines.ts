@@ -86,7 +86,7 @@ export class CdkPipelinesStack extends cdk.Stack {
     //scProductWave.addStage(new EC2ProductStage(this, 'EC2', {
     pipeline.addStage(new EC2ProductStage(this, 'EC2', {
       env: {
-        account: '037729278610',
+        account: '790830340641',
         region: 'ap-northeast-2',
       },
     }));

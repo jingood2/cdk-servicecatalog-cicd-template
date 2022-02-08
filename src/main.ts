@@ -3,7 +3,7 @@ import { CdkPipelinesStack } from './lib/cdk-pipelines';
 
 // for development, use account/region from cdk cli
 const devEnv = {
-  account: '037729278610',
+  account: '790830340641',
   region: 'ap-northeast-2',
 };
 
