@@ -47,6 +47,7 @@ export class SCPortfolioStack extends cdk.Stack {
     this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/network') );
     this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/alb') );
     this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/sagemaker') );
+    this.associateProductToPortfolioInDir(path.join(__dirname, '.', 'cfn-template/ecs') );
 
   }
 
