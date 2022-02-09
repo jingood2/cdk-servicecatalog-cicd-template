@@ -17,7 +17,7 @@ export const envVars = {
   SC_PRODUCT_NAME: 'product-factory',
   SC_PRODUCT_OWNER: 'SK CnC AWS TF Team',
   SC_ACCESS_GROUP_NAME: '',
-  SC_ACCESS_ROLE_ARN: 'https://signin.aws.amazon.com/switchrole?roleName=AssumableAdminRole&account=jingood0604',
+  SC_ACCESS_ROLE_ARN: 'arn:aws:iam::037729278610:role/AssumableAdminRole',
 };
 
 export function validateEnvVariables() {
