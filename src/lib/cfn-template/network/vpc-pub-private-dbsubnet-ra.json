@@ -1087,6 +1087,82 @@
             }
         }
       },
+      "SubnetAPublic": {
+        "Description": "Public subnet A",
+        "Value": {
+            "Ref": "SubnetAPublic"
+        },
+        "Export": {
+            "Name": {
+                "Fn::Join": [
+                    ":",
+                    [
+                        {
+                            "Ref": "AWS::StackName"
+                        },
+                        "SubnetAPublic"
+                    ]
+                ]
+            }
+        }
+      },
+      "SubnetBPublic": {
+        "Description": "Public subnet B",
+        "Value": {
+            "Ref": "SubnetBPublic"
+        },
+        "Export": {
+            "Name": {
+                "Fn::Join": [
+                    ":",
+                    [
+                        {
+                            "Ref": "AWS::StackName"
+                        },
+                        "SubnetBPublic"
+                    ]
+                ]
+            }
+        }
+      },
+      "SubnetAPrivate": {
+        "Description": "Private subnet A",
+        "Value": {
+            "Ref": "SubnetAPrivate"
+        },
+        "Export": {
+            "Name": {
+                "Fn::Join": [
+                    ":",
+                    [
+                        {
+                            "Ref": "AWS::StackName"
+                        },
+                        "SubnetAPrivate"
+                    ]
+                ]
+            }
+        }
+      },
+      "SubnetBPrivate": {
+        "Description": "Private subnet B",
+        "Value": {
+            "Ref": "SubnetBPrivate"
+        },
+        "Export": {
+            "Name": {
+                "Fn::Join": [
+                    ":",
+                    [
+                        {
+                            "Ref": "AWS::StackName"
+                        },
+                        "SubnetBPrivate"
+                    ]
+                ]
+            }
+        }
+      },
       "AWSRegionName": {
           "Value": {
               "Ref": "AWS::Region"
