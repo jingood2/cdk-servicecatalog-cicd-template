@@ -1,11 +1,11 @@
 {
   "version": "16.0.0",
   "artifacts": {
-    "assembly-servicecatalog-pipelines-Portfolio": {
+    "assembly-sc-portfolio-cf-product-pipelines-Portfolio": {
       "type": "cdk:cloud-assembly",
       "properties": {
-        "directoryName": "assembly-servicecatalog-pipelines-Portfolio",
-        "displayName": "servicecatalog-pipelines/Portfolio"
+        "directoryName": "assembly-sc-portfolio-cf-product-pipelines-Portfolio",
+        "displayName": "sc-portfolio-cf-product-pipelines/Portfolio"
       }
     },
     "Tree": {
@@ -14,44 +14,44 @@
         "file": "tree.json"
       }
     },
-    "servicecatalog-pipelines.assets": {
+    "sc-portfolio-cf-product-pipelines.assets": {
       "type": "cdk:asset-manifest",
       "properties": {
-        "file": "servicecatalog-pipelines.assets.json",
+        "file": "sc-portfolio-cf-product-pipelines.assets.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
       }
     },
-    "servicecatalog-pipelines": {
+    "sc-portfolio-cf-product-pipelines": {
       "type": "aws:cloudformation:stack",
-      "environment": "aws://790830340641/ap-northeast-2",
+      "environment": "aws://037729278610/ap-northeast-2",
       "properties": {
-        "templateFile": "servicecatalog-pipelines.template.json",
+        "templateFile": "sc-portfolio-cf-product-pipelines.template.json",
         "validateOnSynth": false,
-        "assumeRoleArn": "arn:${AWS::Partition}:iam::790830340641:role/cdk-hnb659fds-deploy-role-790830340641-ap-northeast-2",
-        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::790830340641:role/cdk-hnb659fds-cfn-exec-role-790830340641-ap-northeast-2",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-790830340641-ap-northeast-2/1b246d75f03c2f42ea884424d0f61510e2a0affc84d25b28e71c4b5fa9abc19d.json",
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::037729278610:role/cdk-hnb659fds-deploy-role-037729278610-ap-northeast-2",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::037729278610:role/cdk-hnb659fds-cfn-exec-role-037729278610-ap-northeast-2",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-037729278610-ap-northeast-2/1b13e5633effa392e378442e0d7ba0853582b90fdc6e50a574e9026774c93eab.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
-          "servicecatalog-pipelines.assets"
+          "sc-portfolio-cf-product-pipelines.assets"
         ],
         "lookupRole": {
-          "arn": "arn:${AWS::Partition}:iam::790830340641:role/cdk-hnb659fds-lookup-role-790830340641-ap-northeast-2",
+          "arn": "arn:${AWS::Partition}:iam::037729278610:role/cdk-hnb659fds-lookup-role-037729278610-ap-northeast-2",
           "requiresBootstrapStackVersion": 8,
           "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
         }
       },
       "dependencies": [
-        "servicecatalog-pipelines.assets"
+        "sc-portfolio-cf-product-pipelines.assets"
       ],
       "metadata": {
-        "/servicecatalog-pipelines/git-provider": [
+        "/sc-portfolio-cf-product-pipelines/git-provider": [
           {
             "type": "aws:cdk:logicalId",
             "data": "gitprovider",
             "trace": [
-              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:25:23)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:23:23)",
               "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
@@ -71,12 +71,12 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/repository": [
+        "/sc-portfolio-cf-product-pipelines/repository": [
           {
             "type": "aws:cdk:logicalId",
             "data": "repository",
             "trace": [
-              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:35:20)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:33:20)",
               "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
@@ -96,12 +96,12 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/branch": [
+        "/sc-portfolio-cf-product-pipelines/branch": [
           {
             "type": "aws:cdk:logicalId",
             "data": "branch",
             "trace": [
-              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:43:22)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:41:22)",
               "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
@@ -121,12 +121,12 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/UseGithub": [
+        "/sc-portfolio-cf-product-pipelines/UseGithub": [
           {
             "type": "aws:cdk:logicalId",
             "data": "UseGithub",
             "trace": [
-              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:51:5)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:49:5)",
               "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
@@ -146,12 +146,12 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/githubToken": [
+        "/sc-portfolio-cf-product-pipelines/githubToken": [
           {
             "type": "aws:cdk:logicalId",
             "data": "githubToken",
             "trace": [
-              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:55:23)",
+              "new CdkPipelinesStack (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/lib/cdk-pipelines.ts:53:23)",
               "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:12:1)",
               "Module._compile (node:internal/modules/cjs/loader:1101:14)",
               "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
@@ -171,7 +171,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/ArtifactsBucket/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/ArtifactsBucket/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineArtifactsBucketAEA9A052",
@@ -207,7 +207,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/ArtifactsBucket/Policy/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/ArtifactsBucket/Policy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineArtifactsBucketPolicyF53CCC52",
@@ -246,7 +246,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Role/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Role/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineRoleB27FAA37",
@@ -282,7 +282,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Role/DefaultPolicy/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Role/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineRoleDefaultPolicy7BDC1ABB",
@@ -323,7 +323,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "Pipeline9850B417",
@@ -358,7 +358,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Source/jingood2_cdk-servicecatalog-cicd-template/WebhookResource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Source/jingood2_cdk-servicecatalog-cicd-template/WebhookResource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineSourcejingood2cdkservicecatalogcicdtemplateWebhookResource0B8DAC33",
@@ -400,7 +400,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Build/Synth/CdkBuildProject/Role/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Build/Synth/CdkBuildProject/Role/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineBuildSynthCdkBuildProjectRole231EEA2A",
@@ -439,7 +439,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Build/Synth/CdkBuildProject/Role/DefaultPolicy/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Build/Synth/CdkBuildProject/Role/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineBuildSynthCdkBuildProjectRoleDefaultPolicyFB6C941C",
@@ -480,7 +480,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Build/Synth/CdkBuildProject/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Build/Synth/CdkBuildProject/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineBuildSynthCdkBuildProject6BEFA8E6",
@@ -518,7 +518,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Build/Synth/CodePipelineActionRole/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Build/Synth/CodePipelineActionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineBuildSynthCodePipelineActionRole4E7A6C97",
@@ -559,7 +559,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Build/Synth/CodePipelineActionRole/DefaultPolicy/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Build/Synth/CodePipelineActionRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineBuildSynthCodePipelineActionRoleDefaultPolicy92C90290",
@@ -604,7 +604,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/UpdatePipeline/SelfMutate/CodePipelineActionRole/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/UpdatePipeline/SelfMutate/CodePipelineActionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineUpdatePipelineSelfMutateCodePipelineActionRoleD6D4E5CF",
@@ -646,7 +646,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/UpdatePipeline/SelfMutate/CodePipelineActionRole/DefaultPolicy/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/UpdatePipeline/SelfMutate/CodePipelineActionRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineUpdatePipelineSelfMutateCodePipelineActionRoleDefaultPolicyE626265B",
@@ -692,7 +692,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset1/CodePipelineActionRole/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset1/CodePipelineActionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset1CodePipelineActionRoleC0EC649A",
@@ -734,7 +734,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset1/CodePipelineActionRole/DefaultPolicy/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset1/CodePipelineActionRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset1CodePipelineActionRoleDefaultPolicy5F0BE7E8",
@@ -780,7 +780,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset10/CodePipelineActionRole/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset10/CodePipelineActionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset10CodePipelineActionRoleB24B3624",
@@ -822,7 +822,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset10/CodePipelineActionRole/DefaultPolicy/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset10/CodePipelineActionRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset10CodePipelineActionRoleDefaultPolicy7CAEFC31",
@@ -868,7 +868,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset11/CodePipelineActionRole/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset11/CodePipelineActionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset11CodePipelineActionRole04CE262F",
@@ -910,7 +910,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset11/CodePipelineActionRole/DefaultPolicy/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset11/CodePipelineActionRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset11CodePipelineActionRoleDefaultPolicy1782672E",
@@ -956,7 +956,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset12/CodePipelineActionRole/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset12/CodePipelineActionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset12CodePipelineActionRole730F6C32",
@@ -998,7 +998,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset12/CodePipelineActionRole/DefaultPolicy/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset12/CodePipelineActionRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset12CodePipelineActionRoleDefaultPolicy35448543",
@@ -1044,7 +1044,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset13/CodePipelineActionRole/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset13/CodePipelineActionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset13CodePipelineActionRoleE484468C",
@@ -1086,7 +1086,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset13/CodePipelineActionRole/DefaultPolicy/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset13/CodePipelineActionRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset13CodePipelineActionRoleDefaultPolicyD5D6DCD7",
@@ -1132,7 +1132,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset14/CodePipelineActionRole/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset14/CodePipelineActionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset14CodePipelineActionRole7A3DD16D",
@@ -1174,7 +1174,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset14/CodePipelineActionRole/DefaultPolicy/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset14/CodePipelineActionRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset14CodePipelineActionRoleDefaultPolicy3538F6EC",
@@ -1220,7 +1220,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset15/CodePipelineActionRole/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset15/CodePipelineActionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset15CodePipelineActionRole5F288A98",
@@ -1262,7 +1262,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset15/CodePipelineActionRole/DefaultPolicy/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset15/CodePipelineActionRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset15CodePipelineActionRoleDefaultPolicyEAC2905B",
@@ -1308,7 +1308,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset16/CodePipelineActionRole/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset16/CodePipelineActionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset16CodePipelineActionRoleD06936B3",
@@ -1350,7 +1350,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset16/CodePipelineActionRole/DefaultPolicy/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset16/CodePipelineActionRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset16CodePipelineActionRoleDefaultPolicyA28BF32E",
@@ -1396,7 +1396,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset17/CodePipelineActionRole/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset17/CodePipelineActionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset17CodePipelineActionRoleC144A88B",
@@ -1438,7 +1438,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset17/CodePipelineActionRole/DefaultPolicy/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset17/CodePipelineActionRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset17CodePipelineActionRoleDefaultPolicyD9A19069",
@@ -1484,7 +1484,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset18/CodePipelineActionRole/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset18/CodePipelineActionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset18CodePipelineActionRole8EB5B430",
@@ -1526,7 +1526,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset18/CodePipelineActionRole/DefaultPolicy/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset18/CodePipelineActionRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset18CodePipelineActionRoleDefaultPolicyDCD64F7A",
@@ -1572,7 +1572,95 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset2/CodePipelineActionRole/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset19/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileAsset19CodePipelineActionRoleA8DBAC87",
+            "trace": [
+              "new Role (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-iam/lib/role.ts:201:18)",
+              "Pipeline.getRoleForAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:550:20)",
+              "Pipeline._attachActionToPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:383:29)",
+              "Stage.attachActionToPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:155:27)",
+              "Stage.addAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:93:29)",
+              "CodeBuildFactory.produceAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.ts:310:11)",
+              "Object.produceAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.ts:154:32)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.ts:234:36)",
+              "CodePipeline.doBuildPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.ts:188:10)",
+              "CodePipeline.buildPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:70:10)",
+              "CodePipeline.buildJustInTime (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:82:12)",
+              "Object.visit (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:43:46)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:110:14)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:125:9)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:125:9)",
+              "invokeAspects (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:95:3)",
+              "Object.synthesize (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:16:3)",
+              "App.synth (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:13:5)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset19/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileAsset19CodePipelineActionRoleDefaultPolicyB1DC8E60",
+            "trace": [
+              "new Policy (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-iam/lib/policy.ts:89:22)",
+              "Role.addToPrincipalPolicy (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-iam/lib/role.ts:238:28)",
+              "Role.addToPolicy (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-iam/lib/role.ts:246:17)",
+              "CodeBuildAction.bound (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codebuild/build-action.ts:90:18)",
+              "CodeBuildAction.bind (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/action.ts:234:17)",
+              "RichAction.bind (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.ts:30:24)",
+              "Pipeline._attachActionToPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:389:37)",
+              "Stage.attachActionToPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:155:27)",
+              "Stage.addAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:93:29)",
+              "CodeBuildFactory.produceAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.ts:310:11)",
+              "Object.produceAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.ts:154:32)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.ts:234:36)",
+              "CodePipeline.doBuildPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.ts:188:10)",
+              "CodePipeline.buildPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:70:10)",
+              "CodePipeline.buildJustInTime (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:82:12)",
+              "Object.visit (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:43:46)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:110:14)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:125:9)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:125:9)",
+              "invokeAspects (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:95:3)",
+              "Object.synthesize (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:16:3)",
+              "App.synth (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:13:5)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset2/CodePipelineActionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset2CodePipelineActionRole06965A59",
@@ -1614,7 +1702,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset2/CodePipelineActionRole/DefaultPolicy/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset2/CodePipelineActionRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset2CodePipelineActionRoleDefaultPolicy2399F4BC",
@@ -1660,7 +1748,359 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset3/CodePipelineActionRole/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset20/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileAsset20CodePipelineActionRoleF1ACA0A4",
+            "trace": [
+              "new Role (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-iam/lib/role.ts:201:18)",
+              "Pipeline.getRoleForAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:550:20)",
+              "Pipeline._attachActionToPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:383:29)",
+              "Stage.attachActionToPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:155:27)",
+              "Stage.addAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:93:29)",
+              "CodeBuildFactory.produceAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.ts:310:11)",
+              "Object.produceAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.ts:154:32)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.ts:234:36)",
+              "CodePipeline.doBuildPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.ts:188:10)",
+              "CodePipeline.buildPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:70:10)",
+              "CodePipeline.buildJustInTime (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:82:12)",
+              "Object.visit (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:43:46)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:110:14)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:125:9)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:125:9)",
+              "invokeAspects (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:95:3)",
+              "Object.synthesize (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:16:3)",
+              "App.synth (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:13:5)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset20/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileAsset20CodePipelineActionRoleDefaultPolicy49CD938D",
+            "trace": [
+              "new Policy (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-iam/lib/policy.ts:89:22)",
+              "Role.addToPrincipalPolicy (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-iam/lib/role.ts:238:28)",
+              "Role.addToPolicy (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-iam/lib/role.ts:246:17)",
+              "CodeBuildAction.bound (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codebuild/build-action.ts:90:18)",
+              "CodeBuildAction.bind (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/action.ts:234:17)",
+              "RichAction.bind (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.ts:30:24)",
+              "Pipeline._attachActionToPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:389:37)",
+              "Stage.attachActionToPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:155:27)",
+              "Stage.addAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:93:29)",
+              "CodeBuildFactory.produceAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.ts:310:11)",
+              "Object.produceAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.ts:154:32)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.ts:234:36)",
+              "CodePipeline.doBuildPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.ts:188:10)",
+              "CodePipeline.buildPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:70:10)",
+              "CodePipeline.buildJustInTime (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:82:12)",
+              "Object.visit (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:43:46)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:110:14)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:125:9)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:125:9)",
+              "invokeAspects (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:95:3)",
+              "Object.synthesize (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:16:3)",
+              "App.synth (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:13:5)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset21/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileAsset21CodePipelineActionRole667AA0CB",
+            "trace": [
+              "new Role (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-iam/lib/role.ts:201:18)",
+              "Pipeline.getRoleForAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:550:20)",
+              "Pipeline._attachActionToPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:383:29)",
+              "Stage.attachActionToPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:155:27)",
+              "Stage.addAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:93:29)",
+              "CodeBuildFactory.produceAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.ts:310:11)",
+              "Object.produceAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.ts:154:32)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.ts:234:36)",
+              "CodePipeline.doBuildPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.ts:188:10)",
+              "CodePipeline.buildPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:70:10)",
+              "CodePipeline.buildJustInTime (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:82:12)",
+              "Object.visit (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:43:46)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:110:14)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:125:9)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:125:9)",
+              "invokeAspects (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:95:3)",
+              "Object.synthesize (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:16:3)",
+              "App.synth (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:13:5)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset21/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileAsset21CodePipelineActionRoleDefaultPolicyAA1A5470",
+            "trace": [
+              "new Policy (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-iam/lib/policy.ts:89:22)",
+              "Role.addToPrincipalPolicy (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-iam/lib/role.ts:238:28)",
+              "Role.addToPolicy (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-iam/lib/role.ts:246:17)",
+              "CodeBuildAction.bound (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codebuild/build-action.ts:90:18)",
+              "CodeBuildAction.bind (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/action.ts:234:17)",
+              "RichAction.bind (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.ts:30:24)",
+              "Pipeline._attachActionToPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:389:37)",
+              "Stage.attachActionToPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:155:27)",
+              "Stage.addAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:93:29)",
+              "CodeBuildFactory.produceAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.ts:310:11)",
+              "Object.produceAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.ts:154:32)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.ts:234:36)",
+              "CodePipeline.doBuildPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.ts:188:10)",
+              "CodePipeline.buildPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:70:10)",
+              "CodePipeline.buildJustInTime (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:82:12)",
+              "Object.visit (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:43:46)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:110:14)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:125:9)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:125:9)",
+              "invokeAspects (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:95:3)",
+              "Object.synthesize (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:16:3)",
+              "App.synth (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:13:5)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset22/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileAsset22CodePipelineActionRole9167763C",
+            "trace": [
+              "new Role (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-iam/lib/role.ts:201:18)",
+              "Pipeline.getRoleForAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:550:20)",
+              "Pipeline._attachActionToPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:383:29)",
+              "Stage.attachActionToPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:155:27)",
+              "Stage.addAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:93:29)",
+              "CodeBuildFactory.produceAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.ts:310:11)",
+              "Object.produceAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.ts:154:32)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.ts:234:36)",
+              "CodePipeline.doBuildPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.ts:188:10)",
+              "CodePipeline.buildPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:70:10)",
+              "CodePipeline.buildJustInTime (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:82:12)",
+              "Object.visit (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:43:46)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:110:14)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:125:9)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:125:9)",
+              "invokeAspects (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:95:3)",
+              "Object.synthesize (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:16:3)",
+              "App.synth (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:13:5)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset22/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileAsset22CodePipelineActionRoleDefaultPolicy65686490",
+            "trace": [
+              "new Policy (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-iam/lib/policy.ts:89:22)",
+              "Role.addToPrincipalPolicy (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-iam/lib/role.ts:238:28)",
+              "Role.addToPolicy (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-iam/lib/role.ts:246:17)",
+              "CodeBuildAction.bound (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codebuild/build-action.ts:90:18)",
+              "CodeBuildAction.bind (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/action.ts:234:17)",
+              "RichAction.bind (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.ts:30:24)",
+              "Pipeline._attachActionToPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:389:37)",
+              "Stage.attachActionToPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:155:27)",
+              "Stage.addAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:93:29)",
+              "CodeBuildFactory.produceAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.ts:310:11)",
+              "Object.produceAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.ts:154:32)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.ts:234:36)",
+              "CodePipeline.doBuildPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.ts:188:10)",
+              "CodePipeline.buildPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:70:10)",
+              "CodePipeline.buildJustInTime (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:82:12)",
+              "Object.visit (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:43:46)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:110:14)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:125:9)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:125:9)",
+              "invokeAspects (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:95:3)",
+              "Object.synthesize (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:16:3)",
+              "App.synth (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:13:5)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset23/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileAsset23CodePipelineActionRole5BA913ED",
+            "trace": [
+              "new Role (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-iam/lib/role.ts:201:18)",
+              "Pipeline.getRoleForAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:550:20)",
+              "Pipeline._attachActionToPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:383:29)",
+              "Stage.attachActionToPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:155:27)",
+              "Stage.addAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:93:29)",
+              "CodeBuildFactory.produceAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.ts:310:11)",
+              "Object.produceAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.ts:154:32)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.ts:234:36)",
+              "CodePipeline.doBuildPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.ts:188:10)",
+              "CodePipeline.buildPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:70:10)",
+              "CodePipeline.buildJustInTime (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:82:12)",
+              "Object.visit (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:43:46)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:110:14)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:125:9)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:125:9)",
+              "invokeAspects (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:95:3)",
+              "Object.synthesize (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:16:3)",
+              "App.synth (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:13:5)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset23/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileAsset23CodePipelineActionRoleDefaultPolicyBE1EFC36",
+            "trace": [
+              "new Policy (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-iam/lib/policy.ts:89:22)",
+              "Role.addToPrincipalPolicy (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-iam/lib/role.ts:238:28)",
+              "Role.addToPolicy (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-iam/lib/role.ts:246:17)",
+              "CodeBuildAction.bound (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codebuild/build-action.ts:90:18)",
+              "CodeBuildAction.bind (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/action.ts:234:17)",
+              "RichAction.bind (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.ts:30:24)",
+              "Pipeline._attachActionToPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.ts:389:37)",
+              "Stage.attachActionToPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:155:27)",
+              "Stage.addAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.ts:93:29)",
+              "CodeBuildFactory.produceAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.ts:310:11)",
+              "Object.produceAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.ts:154:32)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.ts:234:36)",
+              "CodePipeline.doBuildPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.ts:188:10)",
+              "CodePipeline.buildPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:70:10)",
+              "CodePipeline.buildJustInTime (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:82:12)",
+              "Object.visit (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:43:46)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:110:14)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:125:9)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:125:9)",
+              "invokeAspects (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:95:3)",
+              "Object.synthesize (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:16:3)",
+              "App.synth (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:13:5)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset3/CodePipelineActionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset3CodePipelineActionRole99229BA9",
@@ -1702,7 +2142,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset3/CodePipelineActionRole/DefaultPolicy/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset3/CodePipelineActionRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset3CodePipelineActionRoleDefaultPolicy5C399808",
@@ -1748,7 +2188,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset4/CodePipelineActionRole/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset4/CodePipelineActionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset4CodePipelineActionRole492E1DB6",
@@ -1790,7 +2230,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset4/CodePipelineActionRole/DefaultPolicy/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset4/CodePipelineActionRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset4CodePipelineActionRoleDefaultPolicy7F51ED2C",
@@ -1836,7 +2276,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset5/CodePipelineActionRole/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset5/CodePipelineActionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset5CodePipelineActionRole7F5BE01A",
@@ -1878,7 +2318,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset5/CodePipelineActionRole/DefaultPolicy/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset5/CodePipelineActionRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset5CodePipelineActionRoleDefaultPolicy5FB4CDE8",
@@ -1924,7 +2364,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset6/CodePipelineActionRole/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset6/CodePipelineActionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset6CodePipelineActionRoleB00CC4C9",
@@ -1966,7 +2406,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset6/CodePipelineActionRole/DefaultPolicy/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset6/CodePipelineActionRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset6CodePipelineActionRoleDefaultPolicyD33137F9",
@@ -2012,7 +2452,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset7/CodePipelineActionRole/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset7/CodePipelineActionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset7CodePipelineActionRole0E00FBA5",
@@ -2054,7 +2494,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset7/CodePipelineActionRole/DefaultPolicy/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset7/CodePipelineActionRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset7CodePipelineActionRoleDefaultPolicy1B7E08D1",
@@ -2100,7 +2540,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset8/CodePipelineActionRole/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset8/CodePipelineActionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset8CodePipelineActionRole000E8EFE",
@@ -2142,7 +2582,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset8/CodePipelineActionRole/DefaultPolicy/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset8/CodePipelineActionRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset8CodePipelineActionRoleDefaultPolicy5F8E853D",
@@ -2188,7 +2628,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset9/CodePipelineActionRole/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset9/CodePipelineActionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset9CodePipelineActionRoleA080556B",
@@ -2230,7 +2670,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Pipeline/Assets/FileAsset9/CodePipelineActionRole/DefaultPolicy/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset9/CodePipelineActionRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset9CodePipelineActionRoleDefaultPolicy7B910225",
@@ -2276,7 +2716,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/UpdatePipeline/SelfMutation/Role/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/UpdatePipeline/SelfMutation/Role/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineUpdatePipelineSelfMutationRole57E559E8",
@@ -2316,7 +2756,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/UpdatePipeline/SelfMutation/Role/DefaultPolicy/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/UpdatePipeline/SelfMutation/Role/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineUpdatePipelineSelfMutationRoleDefaultPolicyA225DA4E",
@@ -2358,7 +2798,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/UpdatePipeline/SelfMutation/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/UpdatePipeline/SelfMutation/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineUpdatePipelineSelfMutationDAA41400",
@@ -2397,7 +2837,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Assets/FileRole/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileRole59943A77",
@@ -2437,7 +2877,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Assets/FileRole/DefaultPolicy/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileRoleDefaultPolicy14DB8755",
@@ -2480,7 +2920,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Assets/FileAsset1/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset1/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset185A67CB4",
@@ -2519,7 +2959,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Assets/FileAsset10/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset10/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset102484C317",
@@ -2558,7 +2998,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Assets/FileAsset11/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset11/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset11D534F05C",
@@ -2597,7 +3037,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Assets/FileAsset12/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset12/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset12E916E136",
@@ -2636,7 +3076,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Assets/FileAsset13/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset13/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset13BC3E73E7",
@@ -2675,7 +3115,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Assets/FileAsset14/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset14/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset14A3CA232F",
@@ -2714,7 +3154,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Assets/FileAsset15/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset15/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset15B22B8501",
@@ -2753,7 +3193,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Assets/FileAsset16/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset16/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset161A3A5D08",
@@ -2792,7 +3232,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Assets/FileAsset17/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset17/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset172B1ABD63",
@@ -2831,7 +3271,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Assets/FileAsset18/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset18/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset188630082E",
@@ -2870,7 +3310,46 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Assets/FileAsset2/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset19/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileAsset192EB5FBA6",
+            "trace": [
+              "new Project (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:692:22)",
+              "new PipelineProject (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.ts:12:5)",
+              "CodeBuildFactory.produceAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.ts:278:21)",
+              "Object.produceAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.ts:154:32)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.ts:234:36)",
+              "CodePipeline.doBuildPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.ts:188:10)",
+              "CodePipeline.buildPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:70:10)",
+              "CodePipeline.buildJustInTime (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:82:12)",
+              "Object.visit (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:43:46)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:110:14)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:125:9)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:125:9)",
+              "invokeAspects (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:95:3)",
+              "Object.synthesize (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:16:3)",
+              "App.synth (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:13:5)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset2/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset24D2D639B",
@@ -2909,7 +3388,163 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Assets/FileAsset3/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset20/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileAsset20029B3B78",
+            "trace": [
+              "new Project (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:692:22)",
+              "new PipelineProject (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.ts:12:5)",
+              "CodeBuildFactory.produceAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.ts:278:21)",
+              "Object.produceAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.ts:154:32)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.ts:234:36)",
+              "CodePipeline.doBuildPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.ts:188:10)",
+              "CodePipeline.buildPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:70:10)",
+              "CodePipeline.buildJustInTime (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:82:12)",
+              "Object.visit (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:43:46)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:110:14)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:125:9)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:125:9)",
+              "invokeAspects (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:95:3)",
+              "Object.synthesize (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:16:3)",
+              "App.synth (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:13:5)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset21/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileAsset21442424F4",
+            "trace": [
+              "new Project (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:692:22)",
+              "new PipelineProject (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.ts:12:5)",
+              "CodeBuildFactory.produceAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.ts:278:21)",
+              "Object.produceAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.ts:154:32)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.ts:234:36)",
+              "CodePipeline.doBuildPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.ts:188:10)",
+              "CodePipeline.buildPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:70:10)",
+              "CodePipeline.buildJustInTime (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:82:12)",
+              "Object.visit (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:43:46)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:110:14)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:125:9)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:125:9)",
+              "invokeAspects (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:95:3)",
+              "Object.synthesize (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:16:3)",
+              "App.synth (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:13:5)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset22/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileAsset22CDC8D936",
+            "trace": [
+              "new Project (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:692:22)",
+              "new PipelineProject (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.ts:12:5)",
+              "CodeBuildFactory.produceAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.ts:278:21)",
+              "Object.produceAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.ts:154:32)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.ts:234:36)",
+              "CodePipeline.doBuildPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.ts:188:10)",
+              "CodePipeline.buildPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:70:10)",
+              "CodePipeline.buildJustInTime (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:82:12)",
+              "Object.visit (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:43:46)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:110:14)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:125:9)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:125:9)",
+              "invokeAspects (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:95:3)",
+              "Object.synthesize (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:16:3)",
+              "App.synth (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:13:5)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset23/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileAsset23A5E4949B",
+            "trace": [
+              "new Project (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codebuild/lib/project.ts:692:22)",
+              "new PipelineProject (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.ts:12:5)",
+              "CodeBuildFactory.produceAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.ts:278:21)",
+              "Object.produceAction (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/_codebuild-factory.ts:154:32)",
+              "CodePipeline.pipelineStagesAndActionsFromGraph (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.ts:234:36)",
+              "CodePipeline.doBuildPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/codepipeline/codepipeline.ts:188:10)",
+              "CodePipeline.buildPipeline (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:70:10)",
+              "CodePipeline.buildJustInTime (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:82:12)",
+              "Object.visit (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/pipelines/lib/main/pipeline-base.ts:43:46)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:110:14)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:125:9)",
+              "recurse (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:125:9)",
+              "invokeAspects (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:95:3)",
+              "Object.synthesize (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/private/synthesis.ts:16:3)",
+              "App.synth (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/src/main.ts:13:5)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/jingood2/git/cdk-template-project/cdk-servicecatalog-template/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset3/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset3FE71B523",
@@ -2948,7 +3583,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Assets/FileAsset4/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset4/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset474303B7D",
@@ -2987,7 +3622,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Assets/FileAsset5/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset5/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset5184A5C2F",
@@ -3026,7 +3661,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Assets/FileAsset6/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset6/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset669C72F3C",
@@ -3065,7 +3700,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Assets/FileAsset7/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset7/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset7A51C54D0",
@@ -3104,7 +3739,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Assets/FileAsset8/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset8/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset81DAB433B",
@@ -3143,7 +3778,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/Pipeline/Assets/FileAsset9/Resource": [
+        "/sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset9/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "PipelineAssetsFileAsset9F08741A2",
@@ -3182,7 +3817,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/CDKMetadata/Default": [
+        "/sc-portfolio-cf-product-pipelines/CDKMetadata/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadata",
@@ -3213,7 +3848,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/BootstrapVersion": [
+        "/sc-portfolio-cf-product-pipelines/BootstrapVersion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "BootstrapVersion",
@@ -3245,7 +3880,7 @@
             ]
           }
         ],
-        "/servicecatalog-pipelines/CheckBootstrapVersion": [
+        "/sc-portfolio-cf-product-pipelines/CheckBootstrapVersion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CheckBootstrapVersion",
@@ -3278,7 +3913,7 @@
           }
         ]
       },
-      "displayName": "servicecatalog-pipelines"
+      "displayName": "sc-portfolio-cf-product-pipelines"
     }
   }
 }
