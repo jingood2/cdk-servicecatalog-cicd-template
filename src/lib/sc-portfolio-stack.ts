@@ -19,7 +19,7 @@ export class SCPortfolioStack extends cdk.Stack {
       this.portfolio = new servicecatalog.Portfolio(this, 'Portfolio', {
         displayName: envVars.SC_PORTFOLIO_NAME ?? 'DemoPortfolio',
         providerName: 'SK CT Group AWSTF',
-        description: 'Service Catalog: SKC&C Cloud Transformation Group AWSTF Well Architecture',
+        description: 'Service Catalog: SK Cloud Transformation Group AWSTF Well Architecture',
         messageLanguage: servicecatalog.MessageLanguage.EN,
       });
       if ( envVars.SC_ACCESS_GROUP_NAME != '') {

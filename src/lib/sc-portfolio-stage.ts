@@ -9,7 +9,7 @@ export class SCPortfolioStage extends cdk.Stage {
   constructor(scope: cdk.Construct, id: string, props: ISCPortfolioStageProps) {
     super(scope, id, props);
 
-    new SCPortfolioStack(this, 'sc-product', {
+    new SCPortfolioStack(this, 'sc-portfolio', {
       env: {
         account: process.env.CDK_DEPLOY_ACCOUNT,
         region: process.env.CDK_DEPLOY_REGION, // or whatever region you use

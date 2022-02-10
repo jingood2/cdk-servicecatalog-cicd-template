@@ -1376,7 +1376,7 @@
                             "Ref": "PipelineArtifactsBucketAEA9A052"
                           }
                         },
-                        "name": "marketcaster-product-factory-pipeline",
+                        "name": "sk-product-factory-pipeline",
                         "restartExecutionOnUpdate": true
                       }
                     },
@@ -4584,7 +4584,7 @@
                             },
                             "description": "Pipeline step sc-portfolio-cf-product-pipelines/Pipeline/UpdatePipeline/SelfMutate",
                             "encryptionKey": "alias/aws/s3",
-                            "name": "marketcaster-product-factory-pipeline-selfupdate"
+                            "name": "sk-product-factory-pipeline-selfupdate"
                           }
                         },
                         "constructInfo": {
@@ -5919,7 +5919,7 @@
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::Portfolio",
                           "aws:cdk:cloudformation:props": {
-                            "displayName": "SKC&C_CTGROUP_PORTFOLIO",
+                            "displayName": "SK_CTGROUP_PORTFOLIO",
                             "providerName": "SK CT Group AWSTF",
                             "acceptLanguage": "en",
                             "description": "Service Catalog: SKC&C Cloud Transformation Group AWSTF Well Architecture"

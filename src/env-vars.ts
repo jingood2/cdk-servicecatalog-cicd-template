@@ -7,13 +7,13 @@ export enum SCProductType {
 
 export const envVars = {
   REGION: process.env.REGION || 'ap-northeast-2',
-  COMPANY_NAME: 'skc&c',
+  COMPANY_NAME: 'sk',
   SOURCE_PROVIDER: 'GITHUB',
   REPO: 'jingood2/cdk-servicecatalog-cicd-template',
   BRANCH: 'main',
   GITHUB_TOKEN: 'atcl/jingood2/github-token',
   SC_PORTFOLIO_ARN: '',
-  SC_PORTFOLIO_NAME: 'SKC&C_CTGROUP_PORTFOLIO',
+  SC_PORTFOLIO_NAME: 'SK_CTGROUP_PORTFOLIO',
   SC_PRODUCT_NAME: 'product-factory',
   SC_PRODUCT_OWNER: 'SK CnC AWS TF Team',
   SC_ACCESS_GROUP_NAME: '',

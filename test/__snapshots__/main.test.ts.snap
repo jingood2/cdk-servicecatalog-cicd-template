@@ -317,7 +317,7 @@ Object {
       "Properties": Object {
         "AcceptLanguage": "en",
         "Description": "Service Catalog: SKC&C Cloud Transformation Group AWSTF Well Architecture",
-        "DisplayName": "SKC&C_CTGROUP_PORTFOLIO",
+        "DisplayName": "SK_CTGROUP_PORTFOLIO",
         "ProviderName": "SK CT Group AWSTF",
       },
       "Type": "AWS::ServiceCatalog::Portfolio",
