@@ -9,6 +9,7 @@
                       "default": "Region Configuration"
                   },
                   "Parameters": [
+                      "Environment",
                       "RegionAZ1Name",
                       "RegionAZ2Name"
                   ]
@@ -64,6 +65,12 @@
       }
   },
   "Parameters": {
+      "Environment": {
+          "Description": "Environment",
+          "Type": "String",
+          "Default": "dev",
+          "AllowedValues": ["dev", "shared", "qa", "prod"]
+      },
       "RegionAZ1Name": {
           "Description": "Availability Zone 1 Name in Region",
           "Type": "AWS::EC2::AvailabilityZone::Name"
@@ -217,7 +224,7 @@
                   {
                       "Key": "Name",
                       "Value": {
-                          "Fn::Sub": "SC-VPC-RA-${VPCCIDR}"
+                          "Fn::Sub": "${Environment}-vpc"
                       }
                   },
                   {
@@ -339,7 +346,9 @@
               "Tags": [
                   {
                       "Key": "Name",
-                      "Value": "A public - sc-vpc-ra"
+                      "Value": {
+                        "Fn::Sub": "${Environment}-pub-${RegionAZ1Name}"
+                      }
                   },
                   {
                       "Key": "Reach",
@@ -368,7 +377,9 @@
               "Tags": [
                   {
                       "Key": "Name",
-                      "Value": "B public - sc-vpc-ra"
+                      "Value": {
+                        "Fn::Sub": "${Environment}-pub-${RegionAZ2Name}"
+                      }
                   },
                   {
                       "Key": "Reach",
@@ -396,7 +407,9 @@
               "Tags": [
                   {
                       "Key": "Name",
-                      "Value": "A private - sc-vpc-ra"
+                      "Value": {
+                        "Fn::Sub": "${Environment}-pri-${RegionAZ1Name}"
+                      }
                   },
                   {
                       "Key": "Reach",
@@ -424,7 +437,9 @@
               "Tags": [
                   {
                       "Key": "Name",
-                      "Value": "B private - sc-vpc-ra"
+                      "Value": {
+                        "Fn::Sub": "${Environment}-pri-${RegionAZ2Name}"
+                      }
                   },
                   {
                       "Key": "Reach",
@@ -452,7 +467,9 @@
                 "Tags": [
                     {
                         "Key": "Name",
-                        "Value": "A db - sc-vpc-ra"
+                        "Value": {
+                            "Fn::Sub": "${Environment}-db-${RegionAZ1Name}"
+                        }
                     },
                     {
                         "Key": "Reach",
@@ -480,7 +497,9 @@
                 "Tags": [
                     {
                         "Key": "Name",
-                        "Value": "B db - sc-vpc-ra"
+                        "Value": {
+                            "Fn::Sub": "${Environment}-db-${RegionAZ2Name}"
+                        }
                     },
                     {
                         "Key": "Reach",
@@ -502,7 +521,9 @@
               "Tags": [
                   {
                       "Key": "Name",
-                      "Value": "A Public - sc-vpc-ra"
+                      "Value": {
+                        "Fn::Sub": "${Environment}-pub-${RegionAZ1Name}-rt"
+                      }
                   },
                   {
                       "Key": "Description",
@@ -520,7 +541,9 @@
               "Tags": [
                   {
                       "Key": "Name",
-                      "Value": "B Public - sc-vpc-ra"
+                      "Value": {
+                        "Fn::Sub": "${Environment}-pub-${RegionAZ2Name}-rt"
+                      }
                   },
                   {
                       "Key": "Description",
@@ -538,7 +561,9 @@
               "Tags": [
                   {
                       "Key": "Name",
-                      "Value": "A Private - sc-vpc-ra"
+                      "Value": {
+                        "Fn::Sub": "${Environment}-pri-${RegionAZ1Name}-rt"
+                      }
                   },
                   {
                       "Key": "Description",
@@ -556,7 +581,9 @@
               "Tags": [
                   {
                       "Key": "Name",
-                      "Value": "B Private - sc-vpc-ra"
+                      "Value": {
+                        "Fn::Sub": "${Environment}-pri-${RegionAZ2Name}-rt"
+                      }
                   },
                   {
                       "Key": "Description",
@@ -574,7 +601,9 @@
                 "Tags": [
                     {
                         "Key": "Name",
-                        "Value": "db-rt-a"
+                        "Value": {
+                            "Fn::Sub": "${Environment}-db-${RegionAZ1Name}-rt"
+                        }
                     },
                     {
                         "Key": "Description",
@@ -592,7 +621,9 @@
                 "Tags": [
                     {
                         "Key": "Name",
-                        "Value": "db-rt-b - sc-vpc-ra"
+                        "Value": {
+                            "Fn::Sub": "${Environment}-db-${RegionAZ2Name}-rt"
+                        }
                     },
                     {
                         "Key": "Description",
@@ -702,7 +733,9 @@
               "Tags": [
                   {
                       "Key": "Name",
-                      "Value": "Public - sc-vpc-ra"
+                      "Value": {
+                        "Fn::Sub": "${Environment}-pub-acl"
+                      }
                   },
                   {
                       "Key": "Description",
@@ -720,7 +753,9 @@
               "Tags": [
                   {
                       "Key": "Name",
-                      "Value": "Private - sc-vpc-ra"
+                      "Value": {
+                        "Fn::Sub": "${Environment}-pri-acl"
+                      }
                   },
                   {
                       "Key": "Description",
@@ -738,7 +773,9 @@
             "Tags": [
                 {
                     "Key": "Name",
-                    "Value": "Db - sc-vpc-ra"
+                    "Value": {
+                        "Fn::Sub": "${Environment}-db-acl"
+                    }
                 },
                 {
                     "Key": "Description",
@@ -1038,6 +1075,17 @@
   "Outputs": {
       "TemplateID": {
           "Value": "service-catalog-reference-architectures/sc-vpc-ra"
+      },
+      "VPCId": {
+        "Description": "The ID of the VPC that this stack is deployed in",
+        "Value": {
+            "Ref": "VPC"
+        },
+        "Export": {
+            "Name": {
+                "Fn::Sub": "${Environment}-vpc"
+            }
+        }
       },
       "AWSRegionName": {
           "Value": {
