@@ -1093,17 +1093,7 @@
             "Ref": "SubnetAPublic"
         },
         "Export": {
-            "Name": {
-                "Fn::Join": [
-                    ":",
-                    [
-                        {
-                            "Ref": "AWS::StackName"
-                        },
-                        "SubnetAPublic"
-                    ]
-                ]
-            }
+            "Name": "SubnetAPublic" 
         }
       },
       "SubnetBPublic": {
@@ -1112,17 +1102,7 @@
             "Ref": "SubnetBPublic"
         },
         "Export": {
-            "Name": {
-                "Fn::Join": [
-                    ":",
-                    [
-                        {
-                            "Ref": "AWS::StackName"
-                        },
-                        "SubnetBPublic"
-                    ]
-                ]
-            }
+            "Name": "SubnetBPublic" 
         }
       },
       "SubnetAPrivate": {
@@ -1131,17 +1111,7 @@
             "Ref": "SubnetAPrivate"
         },
         "Export": {
-            "Name": {
-                "Fn::Join": [
-                    ":",
-                    [
-                        {
-                            "Ref": "AWS::StackName"
-                        },
-                        "SubnetAPrivate"
-                    ]
-                ]
-            }
+            "Name": "SubnetAPrivate" 
         }
       },
       "SubnetBPrivate": {
@@ -1150,17 +1120,7 @@
             "Ref": "SubnetBPrivate"
         },
         "Export": {
-            "Name": {
-                "Fn::Join": [
-                    ":",
-                    [
-                        {
-                            "Ref": "AWS::StackName"
-                        },
-                        "SubnetBPrivate"
-                    ]
-                ]
-            }
+            "Name": "SubnetBPrivate" 
         }
       },
       "AWSRegionName": {
