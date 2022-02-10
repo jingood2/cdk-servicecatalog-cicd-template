@@ -1090,7 +1090,7 @@
                 "Ref": "FargateContainerSecurityGroup"
             }
         }
-    },
+      },
     "PublicLoadBalancerSG": {
         "Type": "AWS::EC2::SecurityGroup",
         "Properties": {
