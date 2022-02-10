@@ -4,8 +4,6 @@ import { SecretValue } from '@aws-cdk/core';
 import { CodePipeline, CodePipelineSource, ShellStep } from '@aws-cdk/pipelines';
 import { envVars } from '../env-vars';
 import { SCPortfolioStage } from './sc-portfolio-stage';
-//import { S3ProductStage } from './s3-product-stage';
-//import { DynamoDbCustomLoaderStack } from './infra/ddb-custom-loader-stack';
 
 export interface CodepipelineSourceProps {
   gitType: string;
@@ -79,11 +77,6 @@ export class CdkPipelinesStack extends cdk.Stack {
       }),
     });
 
-    //const scProductWave = pipeline.addWave('SCProduct');
-
-    // ToDo: Add ApplicationStage
-    //pipeline.addStage(new MyStack(this, 'Dev'));
-    //scProductWave.addStage(new EC2ProductStage(this, 'EC2', {
     pipeline.addStage(new SCPortfolioStage(this, 'Portfolio', {
       env: {
         account: process.env.CDK_DEPLOY_ACCOUNT,
@@ -111,12 +104,3 @@ export class CdkPipelinesStack extends cdk.Stack {
     }
   }
 }
-
-/* class MyApplication extends cdk.Stage {
-  constructor(scope: cdk.Construct, id: string, props?: cdk.StageProps) {
-    super(scope, id, props);
-
-    new DynamoDbCustomLoaderStack(this, 'Database', { });
-  }
- }
- */

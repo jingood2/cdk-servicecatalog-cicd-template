@@ -18,8 +18,8 @@ export class SCPortfolioStack extends cdk.Stack {
     } else {
       this.portfolio = new servicecatalog.Portfolio(this, 'Portfolio', {
         displayName: envVars.SC_PORTFOLIO_NAME ?? 'DemoPortfolio',
-        providerName: 'AWS TF',
-        description: 'Service Catalog: SKC&C AWS TF Reference Architecture',
+        providerName: 'SK CT Group AWSTF',
+        description: 'Service Catalog: SKC&C Cloud Transformation Group AWSTF Well Architecture',
         messageLanguage: servicecatalog.MessageLanguage.EN,
       });
       if ( envVars.SC_ACCESS_GROUP_NAME != '') {
@@ -63,11 +63,6 @@ export class SCPortfolioStack extends cdk.Stack {
       // builds full path of file
       const fPath = path.resolve(dir, file);
 
-      /* if (fPath.endsWith('json') === false) {
-        console.log('fPath:', fPath);
-        return;
-      } */
-
       product = new servicecatalog.CloudFormationProduct(this, file, {
         productName: file,
         owner: envVars.SC_PRODUCT_OWNER,
@@ -80,14 +75,6 @@ export class SCPortfolioStack extends cdk.Stack {
       });
 
       this.portfolio.addProduct(product);
-
-      /*  this.portfolio.deployWithStackSets(product, {
-        accounts: ['856556794427'],
-        regions: ['ap-northeast-2'],
-        adminRole: adminRole,
-        executionRoleName: 'AWSCloudFormationStackSetExecutionRole', // Name of role deployed in end users accounts.
-        allowStackSetInstanceOperations: true,
-      }); */
 
     });
 

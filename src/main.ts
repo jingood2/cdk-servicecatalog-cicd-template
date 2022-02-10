@@ -9,5 +9,5 @@ const devEnv = {
 
 const app = new App();
 
-new CdkPipelinesStack(app, 'servicecatalog-pipelines', { env: devEnv } );
+new CdkPipelinesStack(app, 'sc-portfolio-cf-product-pipelines', { env: devEnv } );
 app.synth();

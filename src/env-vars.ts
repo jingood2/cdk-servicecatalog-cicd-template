@@ -13,7 +13,7 @@ export const envVars = {
   BRANCH: 'main',
   GITHUB_TOKEN: 'atcl/jingood2/github-token',
   SC_PORTFOLIO_ARN: '',
-  SC_PORTFOLIO_NAME: 'SKCnC-MarketCaster',
+  SC_PORTFOLIO_NAME: 'SKC&C_CTGROUP_PORTFOLIO',
   SC_PRODUCT_NAME: 'product-factory',
   SC_PRODUCT_OWNER: 'SK CnC AWS TF Team',
   SC_ACCESS_GROUP_NAME: '',
