@@ -1,0 +1,377 @@
+{
+    "AWSTemplateFormatVersion":"2010-09-09",
+    "Description":"For ECS Environment, External and Internal ALB with ACM, SG and Security Group",
+    "Metadata":{
+        "AWS::CloudFormation::Interface":{
+            "ParameterGroups":[
+                {
+                    "Label":{
+                        "default":"Target VPC Environment"
+                    },
+                    "Parameters":[
+                        "Environment"
+                    ]
+                }
+            ]
+        }
+    },
+    "Parameters":{
+        "Environment":{
+            "Type":"String",
+            "Description":"Environment of Target VPC",
+            "Default":"dev",
+            "AllowedValues":[
+                "dev",
+                "shared",
+                "qa",
+                "prod"
+            ]
+        },
+        "PublicSubnets": {
+            "Type": "List<AWS::EC2::Subnet::Id>",
+            "Description": "Select Public Subnet Id"
+        },
+        "PrivateSubnets": {
+            "Type": "List<AWS::EC2::Subnet::Id>",
+            "Description": "Select Private Subnet Id"
+        },
+        "CertificateArn": {
+            "Type": "String",
+            "Description": "ACM CertificateArn"
+        }
+    },
+    "Resources":{
+        "FargateContainerSecurityGroup":{
+            "Type":"AWS::EC2::SecurityGroup",
+            "Properties":{
+                "GroupDescription":"Fargate container security group. Use this for all tasks and services.",
+                "VpcId":{
+                    "Fn::ImportValue":{
+                        "Fn::Sub":"${Environment}-vpc"
+                    }
+                },
+                "Tags":[
+                    {
+                        "Key":"Name",
+                        "Value":"FargateContainerSecurityGroup"
+                    }
+                ]
+            }
+        },
+        "EcsSecurityGroupIngressFromPublicALB":{
+            "Type":"AWS::EC2::SecurityGroupIngress",
+            "Properties":{
+                "Description":"Ingress from the public ALB",
+                "GroupId":{
+                    "Ref":"FargateContainerSecurityGroup"
+                },
+                "IpProtocol":-1,
+                "SourceSecurityGroupId":{
+                "Ref":"PublicLoadBalancerSG"
+                }
+            }
+        },
+        "EcsSecurityGroupIngressFromPrivateALB":{
+            "Type":"AWS::EC2::SecurityGroupIngress",
+            "Properties":{
+                "Description":"Ingress from the private ALB",
+                "GroupId":{
+                    "Ref":"FargateContainerSecurityGroup"
+                },
+                "IpProtocol":-1,
+                "SourceSecurityGroupId":{
+                    "Ref":"PrivateLoadBalancerSG"
+                }
+            }
+        },
+        "EcsSecurityGroupIngressFromSelf":{
+            "Type":"AWS::EC2::SecurityGroupIngress",
+            "Properties":{
+                "Description":"Ingress from other containers in the same security group",
+                "GroupId":{
+                    "Ref":"FargateContainerSecurityGroup"
+                },
+                "IpProtocol":-1,
+                "SourceSecurityGroupId":{
+                "Ref":"FargateContainerSecurityGroup"
+                }
+            }
+        },
+        "PublicLoadBalancerSG":{
+            "Type":"AWS::EC2::SecurityGroup",
+            "Properties":{
+                "GroupDescription":"Public facing load balancer Security Group",
+                "VpcId":{
+                    "Fn::ImportValue":{
+                        "Fn::Sub":"${Environment}-vpc"
+                    }
+                },
+                "SecurityGroupIngress":[
+                    {
+                        "CidrIp":"0.0.0.0/0",
+                        "IpProtocol":-1
+                    }
+                ]
+            }
+        },
+        "PublicLoadBalancer":{
+            "Type":"AWS::ElasticLoadBalancingV2::LoadBalancer",
+            "Properties":{
+                "Scheme":"internet-facing",
+                "LoadBalancerAttributes":[
+                    {
+                        "Key":"idle_timeout.timeout_seconds",
+                        "Value":"30"
+                    }
+                ],
+                "Subnets": { "Ref": "PublicSubnets" },
+                "SecurityGroups":[
+                    {
+                        "Ref":"PublicLoadBalancerSG"
+                    }
+                ]
+            }
+        },
+        "PrivateLoadBalancerSG":{
+            "Type":"AWS::EC2::SecurityGroup",
+            "Properties":{
+                "GroupDescription":"Internal load balancer security group",
+                "VpcId":{
+                    "Fn::ImportValue":{ "Fn::Sub":"${Environment}-vpc" }
+                }
+            }
+        },
+        "PrivateLoadBalancerIngressFromECS":{
+            "Type":"AWS::EC2::SecurityGroupIngress",
+            "Properties":{
+                "Description":"Only accept traffic from a container in the fargate container security group",
+                "GroupId":{
+                    "Ref":"PrivateLoadBalancerSG"
+                },
+                "IpProtocol":-1,
+                "SourceSecurityGroupId":{
+                    "Ref":"FargateContainerSecurityGroup"
+                }
+            }
+        },
+        "PrivateLoadBalancer":{
+            "Type":"AWS::ElasticLoadBalancingV2::LoadBalancer",
+            "Properties":{
+                "Scheme":"internal",
+                "LoadBalancerAttributes":[
+                    {
+                        "Key":"idle_timeout.timeout_seconds",
+                        "Value":"30"
+                    }
+                ],
+                "Subnets": { "Ref": "PrivateSubnets"},
+                "SecurityGroups":[
+                    {
+                        "Ref":"PrivateLoadBalancerSG"
+                    }
+                ]
+            }
+        },
+        "ECSRole":{
+            "Type":"AWS::IAM::Role",
+            "Properties":{
+                "AssumeRolePolicyDocument":{
+                    "Statement":[
+                        {
+                            "Effect":"Allow",
+                            "Principal":{
+                                "Service":[
+                                    "ecs.amazonaws.com"
+                                ]
+                            },
+                            "Action":[
+                                "sts:AssumeRole"
+                            ]
+                        }
+                    ]
+                },
+                "Path":"/",
+                "Policies":[
+                    {
+                        "PolicyName":"ecs-service",
+                        "PolicyDocument":{
+                            "Statement":[
+                                {
+                                    "Effect":"Allow",
+                                    "Action":[
+                                        "ec2:AttachNetworkInterface",
+                                        "ec2:CreateNetworkInterface",
+                                        "ec2:CreateNetworkInterfacePermission",
+                                        "ec2:DeleteNetworkInterface",
+                                        "ec2:DeleteNetworkInterfacePermission",
+                                        "ec2:Describe*",
+                                        "ec2:DetachNetworkInterface",
+                                        "elasticloadbalancing:DeregisterInstancesFromLoadBalancer",
+                                        "elasticloadbalancing:DeregisterTargets",
+                                        "elasticloadbalancing:Describe*",
+                                        "elasticloadbalancing:RegisterInstancesWithLoadBalancer",
+                                        "elasticloadbalancing:RegisterTargets"
+                                    ],
+                                    "Resource":"*"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "ECSTaskExecutionRole":{
+            "Type":"AWS::IAM::Role",
+            "Properties":{
+                "AssumeRolePolicyDocument":{
+                    "Statement":[
+                        {
+                            "Effect":"Allow",
+                            "Principal":{
+                                "Service":[
+                                    "ecs-tasks.amazonaws.com"
+                                ]
+                            },
+                            "Action":[
+                                "sts:AssumeRole"
+                            ]
+                        }
+                    ]
+                },
+                "Path":"/",
+                "Policies":[
+                    {
+                        "PolicyName":"AmazonECSTaskExecutionRolePolicy",
+                        "PolicyDocument":{
+                            "Statement":[
+                                {
+                                    "Effect":"Allow",
+                                    "Action":[
+                                        "ecr:GetAuthorizationToken",
+                                        "ecr:BatchCheckLayerAvailability",
+                                        "ecr:GetDownloadUrlForLayer",
+                                        "ecr:BatchGetImage",
+                                        "logs:CreateLogStream",
+                                        "logs:PutLogEvents",
+                                        "logs:CreateLogGroup",
+                                        "logs:DescribeLogStreams"
+                                    ],
+                                    "Resource":"*"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "PublicLoadBalancerHttpsListener" : {
+            "Type" : "AWS::ElasticLoadBalancingV2::Listener",			
+            "Properties" : {
+              "DefaultActions" : [
+                {
+                    "FixedResponseConfig": {
+                      "ContentType": "application/json",
+                      "MessageBody": "{ message : 403 not found}",
+                      "StatusCode": "403"
+                    },
+                    "Type": "fixed-response"
+                }
+              ],
+              "LoadBalancerArn" : { "Ref" :"PublicLoadBalancer"},
+              "Port" : 443,
+              "Certificates": [
+                {
+                  "CertificateArn": {"Ref": "CertificateArn"}
+                }
+              ],
+              "Protocol" : "HTTPS"
+            }
+          },
+          "PublicLoadBalancerRedirectHttpToHttpsListener": {
+            "Type": "AWS::ElasticLoadBalancingV2::Listener",
+            "Properties": {
+              "DefaultActions": [
+                {
+                  "RedirectConfig": {
+                    "Port": "443",
+                    "Protocol": "HTTPS",
+                    "StatusCode": "HTTP_301"
+                  },
+                  "Type": "redirect"
+                }
+              ],
+              "LoadBalancerArn" : { "Ref" :"PublicLoadBalancer"},
+              "Port": 80,
+              "Protocol": "HTTP"
+            }
+          }	
+    },
+    "Outputs":{
+        "TemplateID":{
+            "Value":"service-catalog-reference-architectures/sc-vpc-ra"
+        },
+        "ExternalUrl":{
+            "Description":"The url of the external load balancer",
+            "Value":{
+                "Fn::Join":[
+                    "",
+                    [
+                        "http://",
+                        {
+                            "Fn::GetAtt":[
+                                "PublicLoadBalancer",
+                                "DNSName"
+                            ]
+                        }
+                    ]
+                ]
+            },
+            "Export":{
+                "Name":{
+                    "Fn::Join":[
+                        ":",
+                        [
+                            { "Ref":"AWS::StackName" },
+                            "ExternalUrl"
+                        ]
+                    ]
+                }
+            }
+        },
+        "PublicLoadBalancer":{
+            "Description":"The ARN of the Public LoadBalancer",
+            "Value":{ "Ref":"PublicLoadBalancer" }, 
+            "Export":{
+                "Name":"PublicLoadBalancer"
+            }
+        },
+        "PublicLoadBalancerHttpsListener": {
+            "Description":"The ARN of the Public LoadBalancer HTTPS Listener",
+            "Value":{ "Ref":"PublicLoadBalancerHttpsListener" }, 
+            "Export":{
+                "Name":"PublicLoadBalancerHttpsListener"
+            }
+        },
+        "ECSTaskExecutionRole":{
+            "Description":"The ARN of the ECS role",
+            "Value":{
+                "Fn::GetAtt":[
+                    "ECSTaskExecutionRole",
+                    "Arn"
+                ]
+            },
+            "Export":{
+                "Name":"ECSTaskExecutionRole"
+            }
+        },
+        "FargateContainerSecurityGroup":{
+            "Description":"A security group for Fargate containers, tasks, and services",
+            "Value":{
+                "Ref":"FargateContainerSecurityGroup"
+            },
+            "Export":{
+                "Name":"ECSFargateContainerSecurityGroup"
+            }
+        }
+    }
+}

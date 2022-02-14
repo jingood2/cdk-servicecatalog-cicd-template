@@ -4,9 +4,8 @@
       "Type": "String",
       "Description": "Target ALB ARN"
     },
-    "Route53HostedZone": {
+    "Route53HostedZoneId": {
       "Type": "String",
-      "Default": "skcnctf.tk",
       "Description": "Route53 Hosted Zone Name"
     },
     "HostDomainName": {
@@ -22,10 +21,10 @@
         "Name": { "Fn::Sub": "${HostDomainName}."},
         "Type": "A",
         "AliasTarget": {
-          "DNSName": "dualstack.integ-keycl-8pxgsabin7q5-1760377975.ap-northeast-2.elb.amazonaws.com",
-          "HostedZoneId": "Z10008191COSSLORKT6ZO"
+          "DNSName": { "Fn::Sub": "dualstack.${ALBArn}" },
+          "HostedZoneId": {"Ref": "Route53HostedZoneId" }
         },
-        "HostedZoneId": "Z10008191COSSLORKT6ZO"
+        "HostedZoneId": {"Ref": "Route53HostedZoneId"}
       },
       "Metadata": {
         "aws:cdk:path": "route53-alb-target/Route53AliasAlbTarget/AliasRecord/Resource"
