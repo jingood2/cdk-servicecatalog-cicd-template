@@ -470,6 +470,46 @@
                                       "Effect": "Allow",
                                       "Resource": {
                                         "Fn::GetAtt": [
+                                          "PipelineAssetsFileAsset24CodePipelineActionRoleC5F984AD",
+                                          "Arn"
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "Action": "sts:AssumeRole",
+                                      "Effect": "Allow",
+                                      "Resource": {
+                                        "Fn::GetAtt": [
+                                          "PipelineAssetsFileAsset25CodePipelineActionRole07E4CE4F",
+                                          "Arn"
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "Action": "sts:AssumeRole",
+                                      "Effect": "Allow",
+                                      "Resource": {
+                                        "Fn::GetAtt": [
+                                          "PipelineAssetsFileAsset26CodePipelineActionRoleD667C5F4",
+                                          "Arn"
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "Action": "sts:AssumeRole",
+                                      "Effect": "Allow",
+                                      "Resource": {
+                                        "Fn::GetAtt": [
+                                          "PipelineAssetsFileAsset27CodePipelineActionRole47C731F8",
+                                          "Arn"
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "Action": "sts:AssumeRole",
+                                      "Effect": "Allow",
+                                      "Resource": {
+                                        "Fn::GetAtt": [
                                           "PipelineAssetsFileAsset3CodePipelineActionRole99229BA9",
                                           "Arn"
                                         ]
@@ -1108,6 +1148,110 @@
                                 }
                               },
                               {
+                                "name": "FileAsset24",
+                                "inputArtifacts": [
+                                  {
+                                    "name": "Synth_Output"
+                                  }
+                                ],
+                                "actionTypeId": {
+                                  "category": "Build",
+                                  "version": "1",
+                                  "owner": "AWS",
+                                  "provider": "CodeBuild"
+                                },
+                                "configuration": {
+                                  "ProjectName": {
+                                    "Ref": "PipelineAssetsFileAsset240D3F5D3D"
+                                  }
+                                },
+                                "runOrder": 1,
+                                "roleArn": {
+                                  "Fn::GetAtt": [
+                                    "PipelineAssetsFileAsset24CodePipelineActionRoleC5F984AD",
+                                    "Arn"
+                                  ]
+                                }
+                              },
+                              {
+                                "name": "FileAsset25",
+                                "inputArtifacts": [
+                                  {
+                                    "name": "Synth_Output"
+                                  }
+                                ],
+                                "actionTypeId": {
+                                  "category": "Build",
+                                  "version": "1",
+                                  "owner": "AWS",
+                                  "provider": "CodeBuild"
+                                },
+                                "configuration": {
+                                  "ProjectName": {
+                                    "Ref": "PipelineAssetsFileAsset25C2F636DD"
+                                  }
+                                },
+                                "runOrder": 1,
+                                "roleArn": {
+                                  "Fn::GetAtt": [
+                                    "PipelineAssetsFileAsset25CodePipelineActionRole07E4CE4F",
+                                    "Arn"
+                                  ]
+                                }
+                              },
+                              {
+                                "name": "FileAsset26",
+                                "inputArtifacts": [
+                                  {
+                                    "name": "Synth_Output"
+                                  }
+                                ],
+                                "actionTypeId": {
+                                  "category": "Build",
+                                  "version": "1",
+                                  "owner": "AWS",
+                                  "provider": "CodeBuild"
+                                },
+                                "configuration": {
+                                  "ProjectName": {
+                                    "Ref": "PipelineAssetsFileAsset26CD3C46ED"
+                                  }
+                                },
+                                "runOrder": 1,
+                                "roleArn": {
+                                  "Fn::GetAtt": [
+                                    "PipelineAssetsFileAsset26CodePipelineActionRoleD667C5F4",
+                                    "Arn"
+                                  ]
+                                }
+                              },
+                              {
+                                "name": "FileAsset27",
+                                "inputArtifacts": [
+                                  {
+                                    "name": "Synth_Output"
+                                  }
+                                ],
+                                "actionTypeId": {
+                                  "category": "Build",
+                                  "version": "1",
+                                  "owner": "AWS",
+                                  "provider": "CodeBuild"
+                                },
+                                "configuration": {
+                                  "ProjectName": {
+                                    "Ref": "PipelineAssetsFileAsset278581B380"
+                                  }
+                                },
+                                "runOrder": 1,
+                                "roleArn": {
+                                  "Fn::GetAtt": [
+                                    "PipelineAssetsFileAsset27CodePipelineActionRole47C731F8",
+                                    "Arn"
+                                  ]
+                                }
+                              },
+                              {
                                 "name": "FileAsset3",
                                 "inputArtifacts": [
                                   {
@@ -1308,7 +1452,7 @@
                                   "provider": "CloudFormation"
                                 },
                                 "configuration": {
-                                  "StackName": "Portfolio-sc-product",
+                                  "StackName": "Portfolio-sc-portfolio",
                                   "Capabilities": "CAPABILITY_NAMED_IAM,CAPABILITY_AUTO_EXPAND",
                                   "RoleArn": {
                                     "Fn::Join": [
@@ -1324,7 +1468,7 @@
                                   },
                                   "ActionMode": "CHANGE_SET_REPLACE",
                                   "ChangeSetName": "PipelineChange",
-                                  "TemplatePath": "Synth_Output::assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscproduct0DCD552B.template.json"
+                                  "TemplatePath": "Synth_Output::assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscportfolioD6AA3180.template.json"
                                 },
                                 "runOrder": 1,
                                 "roleArn": {
@@ -1349,7 +1493,7 @@
                                   "provider": "CloudFormation"
                                 },
                                 "configuration": {
-                                  "StackName": "Portfolio-sc-product",
+                                  "StackName": "Portfolio-sc-portfolio",
                                   "ActionMode": "CHANGE_SET_EXECUTE",
                                   "ChangeSetName": "PipelineChange"
                                 },
@@ -3547,6 +3691,422 @@
                           "version": "1.142.0"
                         }
                       },
+                      "FileAsset24": {
+                        "id": "FileAsset24",
+                        "path": "sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset24",
+                        "children": {
+                          "CodePipelineActionRole": {
+                            "id": "CodePipelineActionRole",
+                            "path": "sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset24/CodePipelineActionRole",
+                            "children": {
+                              "Resource": {
+                                "id": "Resource",
+                                "path": "sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset24/CodePipelineActionRole/Resource",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                                  "aws:cdk:cloudformation:props": {
+                                    "assumeRolePolicyDocument": {
+                                      "Statement": [
+                                        {
+                                          "Action": "sts:AssumeRole",
+                                          "Effect": "Allow",
+                                          "Principal": {
+                                            "AWS": {
+                                              "Fn::Join": [
+                                                "",
+                                                [
+                                                  "arn:",
+                                                  {
+                                                    "Ref": "AWS::Partition"
+                                                  },
+                                                  ":iam::037729278610:root"
+                                                ]
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      ],
+                                      "Version": "2012-10-17"
+                                    }
+                                  }
+                                },
+                                "constructInfo": {
+                                  "fqn": "@aws-cdk/aws-iam.CfnRole",
+                                  "version": "1.142.0"
+                                }
+                              },
+                              "DefaultPolicy": {
+                                "id": "DefaultPolicy",
+                                "path": "sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset24/CodePipelineActionRole/DefaultPolicy",
+                                "children": {
+                                  "Resource": {
+                                    "id": "Resource",
+                                    "path": "sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset24/CodePipelineActionRole/DefaultPolicy/Resource",
+                                    "attributes": {
+                                      "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                                      "aws:cdk:cloudformation:props": {
+                                        "policyDocument": {
+                                          "Statement": [
+                                            {
+                                              "Action": [
+                                                "codebuild:BatchGetBuilds",
+                                                "codebuild:StartBuild",
+                                                "codebuild:StopBuild"
+                                              ],
+                                              "Effect": "Allow",
+                                              "Resource": {
+                                                "Fn::GetAtt": [
+                                                  "PipelineAssetsFileAsset240D3F5D3D",
+                                                  "Arn"
+                                                ]
+                                              }
+                                            }
+                                          ],
+                                          "Version": "2012-10-17"
+                                        },
+                                        "policyName": "PipelineAssetsFileAsset24CodePipelineActionRoleDefaultPolicyE456E3EE",
+                                        "roles": [
+                                          {
+                                            "Ref": "PipelineAssetsFileAsset24CodePipelineActionRoleC5F984AD"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "constructInfo": {
+                                      "fqn": "@aws-cdk/aws-iam.CfnPolicy",
+                                      "version": "1.142.0"
+                                    }
+                                  }
+                                },
+                                "constructInfo": {
+                                  "fqn": "@aws-cdk/aws-iam.Policy",
+                                  "version": "1.142.0"
+                                }
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/aws-iam.Role",
+                              "version": "1.142.0"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.Construct",
+                          "version": "1.142.0"
+                        }
+                      },
+                      "FileAsset25": {
+                        "id": "FileAsset25",
+                        "path": "sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset25",
+                        "children": {
+                          "CodePipelineActionRole": {
+                            "id": "CodePipelineActionRole",
+                            "path": "sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset25/CodePipelineActionRole",
+                            "children": {
+                              "Resource": {
+                                "id": "Resource",
+                                "path": "sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset25/CodePipelineActionRole/Resource",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                                  "aws:cdk:cloudformation:props": {
+                                    "assumeRolePolicyDocument": {
+                                      "Statement": [
+                                        {
+                                          "Action": "sts:AssumeRole",
+                                          "Effect": "Allow",
+                                          "Principal": {
+                                            "AWS": {
+                                              "Fn::Join": [
+                                                "",
+                                                [
+                                                  "arn:",
+                                                  {
+                                                    "Ref": "AWS::Partition"
+                                                  },
+                                                  ":iam::037729278610:root"
+                                                ]
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      ],
+                                      "Version": "2012-10-17"
+                                    }
+                                  }
+                                },
+                                "constructInfo": {
+                                  "fqn": "@aws-cdk/aws-iam.CfnRole",
+                                  "version": "1.142.0"
+                                }
+                              },
+                              "DefaultPolicy": {
+                                "id": "DefaultPolicy",
+                                "path": "sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset25/CodePipelineActionRole/DefaultPolicy",
+                                "children": {
+                                  "Resource": {
+                                    "id": "Resource",
+                                    "path": "sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset25/CodePipelineActionRole/DefaultPolicy/Resource",
+                                    "attributes": {
+                                      "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                                      "aws:cdk:cloudformation:props": {
+                                        "policyDocument": {
+                                          "Statement": [
+                                            {
+                                              "Action": [
+                                                "codebuild:BatchGetBuilds",
+                                                "codebuild:StartBuild",
+                                                "codebuild:StopBuild"
+                                              ],
+                                              "Effect": "Allow",
+                                              "Resource": {
+                                                "Fn::GetAtt": [
+                                                  "PipelineAssetsFileAsset25C2F636DD",
+                                                  "Arn"
+                                                ]
+                                              }
+                                            }
+                                          ],
+                                          "Version": "2012-10-17"
+                                        },
+                                        "policyName": "PipelineAssetsFileAsset25CodePipelineActionRoleDefaultPolicyB5D4505C",
+                                        "roles": [
+                                          {
+                                            "Ref": "PipelineAssetsFileAsset25CodePipelineActionRole07E4CE4F"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "constructInfo": {
+                                      "fqn": "@aws-cdk/aws-iam.CfnPolicy",
+                                      "version": "1.142.0"
+                                    }
+                                  }
+                                },
+                                "constructInfo": {
+                                  "fqn": "@aws-cdk/aws-iam.Policy",
+                                  "version": "1.142.0"
+                                }
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/aws-iam.Role",
+                              "version": "1.142.0"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.Construct",
+                          "version": "1.142.0"
+                        }
+                      },
+                      "FileAsset26": {
+                        "id": "FileAsset26",
+                        "path": "sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset26",
+                        "children": {
+                          "CodePipelineActionRole": {
+                            "id": "CodePipelineActionRole",
+                            "path": "sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset26/CodePipelineActionRole",
+                            "children": {
+                              "Resource": {
+                                "id": "Resource",
+                                "path": "sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset26/CodePipelineActionRole/Resource",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                                  "aws:cdk:cloudformation:props": {
+                                    "assumeRolePolicyDocument": {
+                                      "Statement": [
+                                        {
+                                          "Action": "sts:AssumeRole",
+                                          "Effect": "Allow",
+                                          "Principal": {
+                                            "AWS": {
+                                              "Fn::Join": [
+                                                "",
+                                                [
+                                                  "arn:",
+                                                  {
+                                                    "Ref": "AWS::Partition"
+                                                  },
+                                                  ":iam::037729278610:root"
+                                                ]
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      ],
+                                      "Version": "2012-10-17"
+                                    }
+                                  }
+                                },
+                                "constructInfo": {
+                                  "fqn": "@aws-cdk/aws-iam.CfnRole",
+                                  "version": "1.142.0"
+                                }
+                              },
+                              "DefaultPolicy": {
+                                "id": "DefaultPolicy",
+                                "path": "sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset26/CodePipelineActionRole/DefaultPolicy",
+                                "children": {
+                                  "Resource": {
+                                    "id": "Resource",
+                                    "path": "sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset26/CodePipelineActionRole/DefaultPolicy/Resource",
+                                    "attributes": {
+                                      "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                                      "aws:cdk:cloudformation:props": {
+                                        "policyDocument": {
+                                          "Statement": [
+                                            {
+                                              "Action": [
+                                                "codebuild:BatchGetBuilds",
+                                                "codebuild:StartBuild",
+                                                "codebuild:StopBuild"
+                                              ],
+                                              "Effect": "Allow",
+                                              "Resource": {
+                                                "Fn::GetAtt": [
+                                                  "PipelineAssetsFileAsset26CD3C46ED",
+                                                  "Arn"
+                                                ]
+                                              }
+                                            }
+                                          ],
+                                          "Version": "2012-10-17"
+                                        },
+                                        "policyName": "PipelineAssetsFileAsset26CodePipelineActionRoleDefaultPolicy674A9275",
+                                        "roles": [
+                                          {
+                                            "Ref": "PipelineAssetsFileAsset26CodePipelineActionRoleD667C5F4"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "constructInfo": {
+                                      "fqn": "@aws-cdk/aws-iam.CfnPolicy",
+                                      "version": "1.142.0"
+                                    }
+                                  }
+                                },
+                                "constructInfo": {
+                                  "fqn": "@aws-cdk/aws-iam.Policy",
+                                  "version": "1.142.0"
+                                }
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/aws-iam.Role",
+                              "version": "1.142.0"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.Construct",
+                          "version": "1.142.0"
+                        }
+                      },
+                      "FileAsset27": {
+                        "id": "FileAsset27",
+                        "path": "sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset27",
+                        "children": {
+                          "CodePipelineActionRole": {
+                            "id": "CodePipelineActionRole",
+                            "path": "sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset27/CodePipelineActionRole",
+                            "children": {
+                              "Resource": {
+                                "id": "Resource",
+                                "path": "sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset27/CodePipelineActionRole/Resource",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                                  "aws:cdk:cloudformation:props": {
+                                    "assumeRolePolicyDocument": {
+                                      "Statement": [
+                                        {
+                                          "Action": "sts:AssumeRole",
+                                          "Effect": "Allow",
+                                          "Principal": {
+                                            "AWS": {
+                                              "Fn::Join": [
+                                                "",
+                                                [
+                                                  "arn:",
+                                                  {
+                                                    "Ref": "AWS::Partition"
+                                                  },
+                                                  ":iam::037729278610:root"
+                                                ]
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      ],
+                                      "Version": "2012-10-17"
+                                    }
+                                  }
+                                },
+                                "constructInfo": {
+                                  "fqn": "@aws-cdk/aws-iam.CfnRole",
+                                  "version": "1.142.0"
+                                }
+                              },
+                              "DefaultPolicy": {
+                                "id": "DefaultPolicy",
+                                "path": "sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset27/CodePipelineActionRole/DefaultPolicy",
+                                "children": {
+                                  "Resource": {
+                                    "id": "Resource",
+                                    "path": "sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset27/CodePipelineActionRole/DefaultPolicy/Resource",
+                                    "attributes": {
+                                      "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                                      "aws:cdk:cloudformation:props": {
+                                        "policyDocument": {
+                                          "Statement": [
+                                            {
+                                              "Action": [
+                                                "codebuild:BatchGetBuilds",
+                                                "codebuild:StartBuild",
+                                                "codebuild:StopBuild"
+                                              ],
+                                              "Effect": "Allow",
+                                              "Resource": {
+                                                "Fn::GetAtt": [
+                                                  "PipelineAssetsFileAsset278581B380",
+                                                  "Arn"
+                                                ]
+                                              }
+                                            }
+                                          ],
+                                          "Version": "2012-10-17"
+                                        },
+                                        "policyName": "PipelineAssetsFileAsset27CodePipelineActionRoleDefaultPolicyA07B97F0",
+                                        "roles": [
+                                          {
+                                            "Ref": "PipelineAssetsFileAsset27CodePipelineActionRole47C731F8"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "constructInfo": {
+                                      "fqn": "@aws-cdk/aws-iam.CfnPolicy",
+                                      "version": "1.142.0"
+                                    }
+                                  }
+                                },
+                                "constructInfo": {
+                                  "fqn": "@aws-cdk/aws-iam.Policy",
+                                  "version": "1.142.0"
+                                }
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/aws-iam.Role",
+                              "version": "1.142.0"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.Construct",
+                          "version": "1.142.0"
+                        }
+                      },
                       "FileAsset3": {
                         "id": "FileAsset3",
                         "path": "sc-portfolio-cf-product-pipelines/Pipeline/Pipeline/Assets/FileAsset3",
@@ -4813,7 +5373,7 @@
                             },
                             "source": {
                               "type": "CODEPIPELINE",
-                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscproduct0DCD552B.assets.json\\\" --verbose publish \\\"c8edf8a7a81602c54713a11c442204989f10a35bf6441bcfaa96fc2ccd746683:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
+                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscportfolioD6AA3180.assets.json\\\" --verbose publish \\\"c8edf8a7a81602c54713a11c442204989f10a35bf6441bcfaa96fc2ccd746683:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
                             },
                             "cache": {
                               "type": "NO_CACHE"
@@ -4861,7 +5421,7 @@
                             },
                             "source": {
                               "type": "CODEPIPELINE",
-                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscproduct0DCD552B.assets.json\\\" --verbose publish \\\"ce9cbc60636ce11c4542831fe4c2462d6c30e76ce6e7abef1d8f194d17d2b0d6:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
+                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscportfolioD6AA3180.assets.json\\\" --verbose publish \\\"ce9cbc60636ce11c4542831fe4c2462d6c30e76ce6e7abef1d8f194d17d2b0d6:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
                             },
                             "cache": {
                               "type": "NO_CACHE"
@@ -4909,7 +5469,7 @@
                             },
                             "source": {
                               "type": "CODEPIPELINE",
-                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscproduct0DCD552B.assets.json\\\" --verbose publish \\\"49943e4875784121cd960be459372f34cfd943727bd0995570471a406bca7d54:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
+                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscportfolioD6AA3180.assets.json\\\" --verbose publish \\\"49943e4875784121cd960be459372f34cfd943727bd0995570471a406bca7d54:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
                             },
                             "cache": {
                               "type": "NO_CACHE"
@@ -4957,7 +5517,7 @@
                             },
                             "source": {
                               "type": "CODEPIPELINE",
-                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscproduct0DCD552B.assets.json\\\" --verbose publish \\\"b1d4150fddd8db53277cc6bb08fa66aabf6e85a840746a3511c95197f90f925e:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
+                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscportfolioD6AA3180.assets.json\\\" --verbose publish \\\"b1d4150fddd8db53277cc6bb08fa66aabf6e85a840746a3511c95197f90f925e:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
                             },
                             "cache": {
                               "type": "NO_CACHE"
@@ -5005,7 +5565,7 @@
                             },
                             "source": {
                               "type": "CODEPIPELINE",
-                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscproduct0DCD552B.assets.json\\\" --verbose publish \\\"378d96fc6f5756c072a44d959147bb3e758196ac1c9c5e8359b753d613e53396:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
+                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscportfolioD6AA3180.assets.json\\\" --verbose publish \\\"378d96fc6f5756c072a44d959147bb3e758196ac1c9c5e8359b753d613e53396:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
                             },
                             "cache": {
                               "type": "NO_CACHE"
@@ -5053,7 +5613,7 @@
                             },
                             "source": {
                               "type": "CODEPIPELINE",
-                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscproduct0DCD552B.assets.json\\\" --verbose publish \\\"7801ef72a480d9230d9b1c0af135e383eacf491872954619d5156f8dfffdf447:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
+                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscportfolioD6AA3180.assets.json\\\" --verbose publish \\\"c4d9c6d183a719f1f6cbd2905fb737d80ba3a5dfe0a99cafdc9fabc1a06b937b:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
                             },
                             "cache": {
                               "type": "NO_CACHE"
@@ -5101,7 +5661,7 @@
                             },
                             "source": {
                               "type": "CODEPIPELINE",
-                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscproduct0DCD552B.assets.json\\\" --verbose publish \\\"14060343cc726c3607b2f4d12cff44da4a091d3f1a4689c968bea58310077a96:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
+                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscportfolioD6AA3180.assets.json\\\" --verbose publish \\\"f2ecedace4db030db6d41c37002449df7933f08d161c50e807816a3b33d19a57:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
                             },
                             "cache": {
                               "type": "NO_CACHE"
@@ -5149,7 +5709,7 @@
                             },
                             "source": {
                               "type": "CODEPIPELINE",
-                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscproduct0DCD552B.assets.json\\\" --verbose publish \\\"9446008da88c5d194fa251b0c282fe6bdfff4a4ab65022f25bff502aad0d5001:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
+                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscportfolioD6AA3180.assets.json\\\" --verbose publish \\\"71d34ce6efadccb507710f76ff57db109823095389c3566e3d66e58205c93449:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
                             },
                             "cache": {
                               "type": "NO_CACHE"
@@ -5197,7 +5757,7 @@
                             },
                             "source": {
                               "type": "CODEPIPELINE",
-                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscproduct0DCD552B.assets.json\\\" --verbose publish \\\"4823a71962cf1d1a6bd0daf5d650f9ffaf1de8fe9eeb1692bd24f6757b24c8de:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
+                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscportfolioD6AA3180.assets.json\\\" --verbose publish \\\"35bcefe875717626273e914386b47df2179a800b40e6cdb492396c3af1374455:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
                             },
                             "cache": {
                               "type": "NO_CACHE"
@@ -5245,7 +5805,7 @@
                             },
                             "source": {
                               "type": "CODEPIPELINE",
-                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscproduct0DCD552B.assets.json\\\" --verbose publish \\\"75bd6b78d6b473215303c0295e31518e809c2862217c1ad25e5bc3dc7cae0724:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
+                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscportfolioD6AA3180.assets.json\\\" --verbose publish \\\"866514a5648b7bdebda60bf04abe9f9c12842e0ac17e8a7243f42262345a4b3b:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
                             },
                             "cache": {
                               "type": "NO_CACHE"
@@ -5293,7 +5853,7 @@
                             },
                             "source": {
                               "type": "CODEPIPELINE",
-                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscproduct0DCD552B.assets.json\\\" --verbose publish \\\"7b1d07fe983bf79f96a399f19edfa95cbfd064fd8e72b584a080e4bc23768219:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
+                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscportfolioD6AA3180.assets.json\\\" --verbose publish \\\"e912c3690ff98e88b70f270e8b3da4f99aea6a23a2f5ed00fcbbb5ef20bd852e:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
                             },
                             "cache": {
                               "type": "NO_CACHE"
@@ -5341,7 +5901,7 @@
                             },
                             "source": {
                               "type": "CODEPIPELINE",
-                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscproduct0DCD552B.assets.json\\\" --verbose publish \\\"ab8df2bfd25a65a1c13205a6c67600ae4f3e9eeebfc5ce75628ebadf08141735:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
+                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscportfolioD6AA3180.assets.json\\\" --verbose publish \\\"ab8df2bfd25a65a1c13205a6c67600ae4f3e9eeebfc5ce75628ebadf08141735:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
                             },
                             "cache": {
                               "type": "NO_CACHE"
@@ -5389,7 +5949,7 @@
                             },
                             "source": {
                               "type": "CODEPIPELINE",
-                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscproduct0DCD552B.assets.json\\\" --verbose publish \\\"a246d5bf8ec8c013933f351d1bd55fad2f11d3841daf6ac749508ffb8ae181c6:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
+                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscportfolioD6AA3180.assets.json\\\" --verbose publish \\\"7b1d07fe983bf79f96a399f19edfa95cbfd064fd8e72b584a080e4bc23768219:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
                             },
                             "cache": {
                               "type": "NO_CACHE"
@@ -5437,7 +5997,7 @@
                             },
                             "source": {
                               "type": "CODEPIPELINE",
-                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscproduct0DCD552B.assets.json\\\" --verbose publish \\\"45a2b0088753d1f419ae39a707fe2ac251e8317db28653905999d0ceb510eddd:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
+                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscportfolioD6AA3180.assets.json\\\" --verbose publish \\\"a246d5bf8ec8c013933f351d1bd55fad2f11d3841daf6ac749508ffb8ae181c6:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
                             },
                             "cache": {
                               "type": "NO_CACHE"
@@ -5485,7 +6045,7 @@
                             },
                             "source": {
                               "type": "CODEPIPELINE",
-                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscproduct0DCD552B.assets.json\\\" --verbose publish \\\"a5bfd914064ab3d30385d9d247a7cd15d29afee7cba7638feed104520f732915:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
+                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscportfolioD6AA3180.assets.json\\\" --verbose publish \\\"ef46ed15fd2bfda3484426a8541307461c28e80088e4d8fbd69f876f0f73cc9c:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
                             },
                             "cache": {
                               "type": "NO_CACHE"
@@ -5533,12 +6093,204 @@
                             },
                             "source": {
                               "type": "CODEPIPELINE",
-                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscproduct0DCD552B.assets.json\\\" --verbose publish \\\"2eda8cd2a83e2b41f57d51ce9b0531608fd87afc28acd1bedcf2bf81f2c89344:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
+                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscportfolioD6AA3180.assets.json\\\" --verbose publish \\\"175c47745bc188ba7ffd67e709def2089e1f25e30b195038ae7371fbb2f8d388:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
                             },
                             "cache": {
                               "type": "NO_CACHE"
                             },
                             "description": "Pipeline step sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset23",
+                            "encryptionKey": "alias/aws/s3"
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-codebuild.CfnProject",
+                          "version": "1.142.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-codebuild.PipelineProject",
+                      "version": "1.142.0"
+                    }
+                  },
+                  "FileAsset24": {
+                    "id": "FileAsset24",
+                    "path": "sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset24",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset24/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::CodeBuild::Project",
+                          "aws:cdk:cloudformation:props": {
+                            "artifacts": {
+                              "type": "CODEPIPELINE"
+                            },
+                            "environment": {
+                              "type": "LINUX_CONTAINER",
+                              "image": "aws/codebuild/standard:5.0",
+                              "imagePullCredentialsType": "CODEBUILD",
+                              "privilegedMode": false,
+                              "computeType": "BUILD_GENERAL1_SMALL"
+                            },
+                            "serviceRole": {
+                              "Fn::GetAtt": [
+                                "PipelineAssetsFileRole59943A77",
+                                "Arn"
+                              ]
+                            },
+                            "source": {
+                              "type": "CODEPIPELINE",
+                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscportfolioD6AA3180.assets.json\\\" --verbose publish \\\"a5bfd914064ab3d30385d9d247a7cd15d29afee7cba7638feed104520f732915:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
+                            },
+                            "cache": {
+                              "type": "NO_CACHE"
+                            },
+                            "description": "Pipeline step sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset24",
+                            "encryptionKey": "alias/aws/s3"
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-codebuild.CfnProject",
+                          "version": "1.142.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-codebuild.PipelineProject",
+                      "version": "1.142.0"
+                    }
+                  },
+                  "FileAsset25": {
+                    "id": "FileAsset25",
+                    "path": "sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset25",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset25/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::CodeBuild::Project",
+                          "aws:cdk:cloudformation:props": {
+                            "artifacts": {
+                              "type": "CODEPIPELINE"
+                            },
+                            "environment": {
+                              "type": "LINUX_CONTAINER",
+                              "image": "aws/codebuild/standard:5.0",
+                              "imagePullCredentialsType": "CODEBUILD",
+                              "privilegedMode": false,
+                              "computeType": "BUILD_GENERAL1_SMALL"
+                            },
+                            "serviceRole": {
+                              "Fn::GetAtt": [
+                                "PipelineAssetsFileRole59943A77",
+                                "Arn"
+                              ]
+                            },
+                            "source": {
+                              "type": "CODEPIPELINE",
+                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscportfolioD6AA3180.assets.json\\\" --verbose publish \\\"2eda8cd2a83e2b41f57d51ce9b0531608fd87afc28acd1bedcf2bf81f2c89344:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
+                            },
+                            "cache": {
+                              "type": "NO_CACHE"
+                            },
+                            "description": "Pipeline step sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset25",
+                            "encryptionKey": "alias/aws/s3"
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-codebuild.CfnProject",
+                          "version": "1.142.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-codebuild.PipelineProject",
+                      "version": "1.142.0"
+                    }
+                  },
+                  "FileAsset26": {
+                    "id": "FileAsset26",
+                    "path": "sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset26",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset26/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::CodeBuild::Project",
+                          "aws:cdk:cloudformation:props": {
+                            "artifacts": {
+                              "type": "CODEPIPELINE"
+                            },
+                            "environment": {
+                              "type": "LINUX_CONTAINER",
+                              "image": "aws/codebuild/standard:5.0",
+                              "imagePullCredentialsType": "CODEBUILD",
+                              "privilegedMode": false,
+                              "computeType": "BUILD_GENERAL1_SMALL"
+                            },
+                            "serviceRole": {
+                              "Fn::GetAtt": [
+                                "PipelineAssetsFileRole59943A77",
+                                "Arn"
+                              ]
+                            },
+                            "source": {
+                              "type": "CODEPIPELINE",
+                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscportfolioD6AA3180.assets.json\\\" --verbose publish \\\"3d309cdedd7802cdf10863f39ed245cc44356b6f1e21265a8e6c9be5bcbccc2a:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
+                            },
+                            "cache": {
+                              "type": "NO_CACHE"
+                            },
+                            "description": "Pipeline step sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset26",
+                            "encryptionKey": "alias/aws/s3"
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-codebuild.CfnProject",
+                          "version": "1.142.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-codebuild.PipelineProject",
+                      "version": "1.142.0"
+                    }
+                  },
+                  "FileAsset27": {
+                    "id": "FileAsset27",
+                    "path": "sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset27",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset27/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::CodeBuild::Project",
+                          "aws:cdk:cloudformation:props": {
+                            "artifacts": {
+                              "type": "CODEPIPELINE"
+                            },
+                            "environment": {
+                              "type": "LINUX_CONTAINER",
+                              "image": "aws/codebuild/standard:5.0",
+                              "imagePullCredentialsType": "CODEBUILD",
+                              "privilegedMode": false,
+                              "computeType": "BUILD_GENERAL1_SMALL"
+                            },
+                            "serviceRole": {
+                              "Fn::GetAtt": [
+                                "PipelineAssetsFileRole59943A77",
+                                "Arn"
+                              ]
+                            },
+                            "source": {
+                              "type": "CODEPIPELINE",
+                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscportfolioD6AA3180.assets.json\\\" --verbose publish \\\"45a2b0088753d1f419ae39a707fe2ac251e8317db28653905999d0ceb510eddd:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
+                            },
+                            "cache": {
+                              "type": "NO_CACHE"
+                            },
+                            "description": "Pipeline step sc-portfolio-cf-product-pipelines/Pipeline/Assets/FileAsset27",
                             "encryptionKey": "alias/aws/s3"
                           }
                         },
@@ -5581,7 +6333,7 @@
                             },
                             "source": {
                               "type": "CODEPIPELINE",
-                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscproduct0DCD552B.assets.json\\\" --verbose publish \\\"c2d6db4776d53a66510ef7ff276e287dbb1bdd0e4fc794d19225c24735eee693:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
+                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscportfolioD6AA3180.assets.json\\\" --verbose publish \\\"c2d6db4776d53a66510ef7ff276e287dbb1bdd0e4fc794d19225c24735eee693:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
                             },
                             "cache": {
                               "type": "NO_CACHE"
@@ -5629,7 +6381,7 @@
                             },
                             "source": {
                               "type": "CODEPIPELINE",
-                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscproduct0DCD552B.assets.json\\\" --verbose publish \\\"8f3bc81e9754aa133ee6a383cdf0ab792045207af8bcd4478b75a17504e40f2b:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
+                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscportfolioD6AA3180.assets.json\\\" --verbose publish \\\"8f3bc81e9754aa133ee6a383cdf0ab792045207af8bcd4478b75a17504e40f2b:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
                             },
                             "cache": {
                               "type": "NO_CACHE"
@@ -5677,7 +6429,7 @@
                             },
                             "source": {
                               "type": "CODEPIPELINE",
-                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscproduct0DCD552B.assets.json\\\" --verbose publish \\\"d9c93ee501f05dbcf2020bde7e6f9cb6e91ef59e608acedc291e6befb547d32a:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
+                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscportfolioD6AA3180.assets.json\\\" --verbose publish \\\"d9c93ee501f05dbcf2020bde7e6f9cb6e91ef59e608acedc291e6befb547d32a:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
                             },
                             "cache": {
                               "type": "NO_CACHE"
@@ -5725,7 +6477,7 @@
                             },
                             "source": {
                               "type": "CODEPIPELINE",
-                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscproduct0DCD552B.assets.json\\\" --verbose publish \\\"9f406b57456defd1a4ab968abd0810c888d44617034c275d64735f1633faa472:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
+                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscportfolioD6AA3180.assets.json\\\" --verbose publish \\\"9f406b57456defd1a4ab968abd0810c888d44617034c275d64735f1633faa472:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
                             },
                             "cache": {
                               "type": "NO_CACHE"
@@ -5773,7 +6525,7 @@
                             },
                             "source": {
                               "type": "CODEPIPELINE",
-                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscproduct0DCD552B.assets.json\\\" --verbose publish \\\"ee7f9b43cae4bce07e7ec5900e5d25ec09ffbba7cd896bcbaae2df99da60b56c:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
+                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscportfolioD6AA3180.assets.json\\\" --verbose publish \\\"ee7f9b43cae4bce07e7ec5900e5d25ec09ffbba7cd896bcbaae2df99da60b56c:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
                             },
                             "cache": {
                               "type": "NO_CACHE"
@@ -5821,7 +6573,7 @@
                             },
                             "source": {
                               "type": "CODEPIPELINE",
-                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscproduct0DCD552B.assets.json\\\" --verbose publish \\\"51cd6728090f5c89a0c52158c77e5c7f2c39956bc8506e34cbad49650febe497:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
+                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscportfolioD6AA3180.assets.json\\\" --verbose publish \\\"51cd6728090f5c89a0c52158c77e5c7f2c39956bc8506e34cbad49650febe497:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
                             },
                             "cache": {
                               "type": "NO_CACHE"
@@ -5869,7 +6621,7 @@
                             },
                             "source": {
                               "type": "CODEPIPELINE",
-                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscproduct0DCD552B.assets.json\\\" --verbose publish \\\"11de8458368f792e1c7a31140fdab726134ddb2ffc55b504e47d36e4dd2273ef:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
+                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscportfolioD6AA3180.assets.json\\\" --verbose publish \\\"11de8458368f792e1c7a31140fdab726134ddb2ffc55b504e47d36e4dd2273ef:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
                             },
                             "cache": {
                               "type": "NO_CACHE"
@@ -5905,24 +6657,24 @@
             "id": "Portfolio",
             "path": "sc-portfolio-cf-product-pipelines/Portfolio",
             "children": {
-              "sc-product": {
-                "id": "sc-product",
-                "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product",
+              "sc-portfolio": {
+                "id": "sc-portfolio",
+                "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio",
                 "children": {
                   "Portfolio": {
                     "id": "Portfolio",
-                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/Portfolio",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio",
                     "children": {
                       "Resource": {
                         "id": "Resource",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/Portfolio/Resource",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::Portfolio",
                           "aws:cdk:cloudformation:props": {
                             "displayName": "SK_CTGROUP_PORTFOLIO",
                             "providerName": "SK CT Group AWSTF",
                             "acceptLanguage": "en",
-                            "description": "Service Catalog: SKC&C Cloud Transformation Group AWSTF Well Architecture"
+                            "description": "Service Catalog: SK Cloud Transformation Group AWSTF Well Architecture"
                           }
                         },
                         "constructInfo": {
@@ -5930,9 +6682,9 @@
                           "version": "1.142.0"
                         }
                       },
-                      "PortolioPrincipalAssociation51fb387bb7d6": {
-                        "id": "PortolioPrincipalAssociation51fb387bb7d6",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/Portfolio/PortolioPrincipalAssociation51fb387bb7d6",
+                      "PortolioPrincipalAssociationc32a3db84e29": {
+                        "id": "PortolioPrincipalAssociationc32a3db84e29",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/PortolioPrincipalAssociationc32a3db84e29",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::PortfolioPrincipalAssociation",
                           "aws:cdk:cloudformation:props": {
@@ -5948,9 +6700,9 @@
                           "version": "1.142.0"
                         }
                       },
-                      "TagOptionAssociationc97039e32d65": {
-                        "id": "TagOptionAssociationc97039e32d65",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/Portfolio/TagOptionAssociationc97039e32d65",
+                      "TagOptionAssociation16df0715c787": {
+                        "id": "TagOptionAssociation16df0715c787",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/TagOptionAssociation16df0715c787",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::TagOptionAssociation",
                           "aws:cdk:cloudformation:props": {
@@ -5967,9 +6719,9 @@
                           "version": "1.142.0"
                         }
                       },
-                      "TagOptionAssociation5545769b2f11": {
-                        "id": "TagOptionAssociation5545769b2f11",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/Portfolio/TagOptionAssociation5545769b2f11",
+                      "TagOptionAssociation0af9a1b4c726": {
+                        "id": "TagOptionAssociation0af9a1b4c726",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/TagOptionAssociation0af9a1b4c726",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::TagOptionAssociation",
                           "aws:cdk:cloudformation:props": {
@@ -5986,9 +6738,9 @@
                           "version": "1.142.0"
                         }
                       },
-                      "TagOptionAssociation2680e106be5b": {
-                        "id": "TagOptionAssociation2680e106be5b",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/Portfolio/TagOptionAssociation2680e106be5b",
+                      "TagOptionAssociation6b472cf801f7": {
+                        "id": "TagOptionAssociation6b472cf801f7",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/TagOptionAssociation6b472cf801f7",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::TagOptionAssociation",
                           "aws:cdk:cloudformation:props": {
@@ -6005,9 +6757,9 @@
                           "version": "1.142.0"
                         }
                       },
-                      "TagOptionAssociation8b2b61c1988d": {
-                        "id": "TagOptionAssociation8b2b61c1988d",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/Portfolio/TagOptionAssociation8b2b61c1988d",
+                      "TagOptionAssociation9c8bc37aa508": {
+                        "id": "TagOptionAssociation9c8bc37aa508",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/TagOptionAssociation9c8bc37aa508",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::TagOptionAssociation",
                           "aws:cdk:cloudformation:props": {
@@ -6024,9 +6776,9 @@
                           "version": "1.142.0"
                         }
                       },
-                      "PortfolioProductAssociation2e980283b21a": {
-                        "id": "PortfolioProductAssociation2e980283b21a",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/Portfolio/PortfolioProductAssociation2e980283b21a",
+                      "PortfolioProductAssociation25dd4c155234": {
+                        "id": "PortfolioProductAssociation25dd4c155234",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/PortfolioProductAssociation25dd4c155234",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::PortfolioProductAssociation",
                           "aws:cdk:cloudformation:props": {
@@ -6043,9 +6795,9 @@
                           "version": "1.142.0"
                         }
                       },
-                      "PortfolioProductAssociation223faac21e2e": {
-                        "id": "PortfolioProductAssociation223faac21e2e",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/Portfolio/PortfolioProductAssociation223faac21e2e",
+                      "PortfolioProductAssociation47adfbb04e59": {
+                        "id": "PortfolioProductAssociation47adfbb04e59",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/PortfolioProductAssociation47adfbb04e59",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::PortfolioProductAssociation",
                           "aws:cdk:cloudformation:props": {
@@ -6062,9 +6814,9 @@
                           "version": "1.142.0"
                         }
                       },
-                      "PortfolioProductAssociationc17113983624": {
-                        "id": "PortfolioProductAssociationc17113983624",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/Portfolio/PortfolioProductAssociationc17113983624",
+                      "PortfolioProductAssociation8432ff1bd559": {
+                        "id": "PortfolioProductAssociation8432ff1bd559",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/PortfolioProductAssociation8432ff1bd559",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::PortfolioProductAssociation",
                           "aws:cdk:cloudformation:props": {
@@ -6081,9 +6833,9 @@
                           "version": "1.142.0"
                         }
                       },
-                      "PortfolioProductAssociationafaa80c05fa2": {
-                        "id": "PortfolioProductAssociationafaa80c05fa2",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/Portfolio/PortfolioProductAssociationafaa80c05fa2",
+                      "PortfolioProductAssociationd93b94010a7d": {
+                        "id": "PortfolioProductAssociationd93b94010a7d",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/PortfolioProductAssociationd93b94010a7d",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::PortfolioProductAssociation",
                           "aws:cdk:cloudformation:props": {
@@ -6100,9 +6852,9 @@
                           "version": "1.142.0"
                         }
                       },
-                      "PortfolioProductAssociation21f5e4dbed29": {
-                        "id": "PortfolioProductAssociation21f5e4dbed29",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/Portfolio/PortfolioProductAssociation21f5e4dbed29",
+                      "PortfolioProductAssociationde71f5f95e74": {
+                        "id": "PortfolioProductAssociationde71f5f95e74",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/PortfolioProductAssociationde71f5f95e74",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::PortfolioProductAssociation",
                           "aws:cdk:cloudformation:props": {
@@ -6119,9 +6871,9 @@
                           "version": "1.142.0"
                         }
                       },
-                      "PortfolioProductAssociationd93e04c4f837": {
-                        "id": "PortfolioProductAssociationd93e04c4f837",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/Portfolio/PortfolioProductAssociationd93e04c4f837",
+                      "PortfolioProductAssociation7df9d5b5e820": {
+                        "id": "PortfolioProductAssociation7df9d5b5e820",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/PortfolioProductAssociation7df9d5b5e820",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::PortfolioProductAssociation",
                           "aws:cdk:cloudformation:props": {
@@ -6138,9 +6890,9 @@
                           "version": "1.142.0"
                         }
                       },
-                      "PortfolioProductAssociation2a30e964abbb": {
-                        "id": "PortfolioProductAssociation2a30e964abbb",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/Portfolio/PortfolioProductAssociation2a30e964abbb",
+                      "PortfolioProductAssociation2fa0eea89014": {
+                        "id": "PortfolioProductAssociation2fa0eea89014",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/PortfolioProductAssociation2fa0eea89014",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::PortfolioProductAssociation",
                           "aws:cdk:cloudformation:props": {
@@ -6157,9 +6909,9 @@
                           "version": "1.142.0"
                         }
                       },
-                      "PortfolioProductAssociatione013e53dba3f": {
-                        "id": "PortfolioProductAssociatione013e53dba3f",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/Portfolio/PortfolioProductAssociatione013e53dba3f",
+                      "PortfolioProductAssociationfe27c118d452": {
+                        "id": "PortfolioProductAssociationfe27c118d452",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/PortfolioProductAssociationfe27c118d452",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::PortfolioProductAssociation",
                           "aws:cdk:cloudformation:props": {
@@ -6176,9 +6928,9 @@
                           "version": "1.142.0"
                         }
                       },
-                      "PortfolioProductAssociationda3b64d589f9": {
-                        "id": "PortfolioProductAssociationda3b64d589f9",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/Portfolio/PortfolioProductAssociationda3b64d589f9",
+                      "PortfolioProductAssociationab1b23e72cac": {
+                        "id": "PortfolioProductAssociationab1b23e72cac",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/PortfolioProductAssociationab1b23e72cac",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::PortfolioProductAssociation",
                           "aws:cdk:cloudformation:props": {
@@ -6195,9 +6947,9 @@
                           "version": "1.142.0"
                         }
                       },
-                      "PortfolioProductAssociationc4aac4ccddc3": {
-                        "id": "PortfolioProductAssociationc4aac4ccddc3",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/Portfolio/PortfolioProductAssociationc4aac4ccddc3",
+                      "PortfolioProductAssociatione0fea7140ea9": {
+                        "id": "PortfolioProductAssociatione0fea7140ea9",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/PortfolioProductAssociatione0fea7140ea9",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::PortfolioProductAssociation",
                           "aws:cdk:cloudformation:props": {
@@ -6214,9 +6966,9 @@
                           "version": "1.142.0"
                         }
                       },
-                      "PortfolioProductAssociationa00e3960e078": {
-                        "id": "PortfolioProductAssociationa00e3960e078",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/Portfolio/PortfolioProductAssociationa00e3960e078",
+                      "PortfolioProductAssociationc9e183a3579c": {
+                        "id": "PortfolioProductAssociationc9e183a3579c",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/PortfolioProductAssociationc9e183a3579c",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::PortfolioProductAssociation",
                           "aws:cdk:cloudformation:props": {
@@ -6233,9 +6985,9 @@
                           "version": "1.142.0"
                         }
                       },
-                      "PortfolioProductAssociation5f5cea608774": {
-                        "id": "PortfolioProductAssociation5f5cea608774",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/Portfolio/PortfolioProductAssociation5f5cea608774",
+                      "PortfolioProductAssociation89f832318244": {
+                        "id": "PortfolioProductAssociation89f832318244",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/PortfolioProductAssociation89f832318244",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::PortfolioProductAssociation",
                           "aws:cdk:cloudformation:props": {
@@ -6252,9 +7004,9 @@
                           "version": "1.142.0"
                         }
                       },
-                      "PortfolioProductAssociation046e70bd472e": {
-                        "id": "PortfolioProductAssociation046e70bd472e",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/Portfolio/PortfolioProductAssociation046e70bd472e",
+                      "PortfolioProductAssociation865dd77aacd1": {
+                        "id": "PortfolioProductAssociation865dd77aacd1",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/PortfolioProductAssociation865dd77aacd1",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::PortfolioProductAssociation",
                           "aws:cdk:cloudformation:props": {
@@ -6271,9 +7023,9 @@
                           "version": "1.142.0"
                         }
                       },
-                      "PortfolioProductAssociationdccc7d2ab3d9": {
-                        "id": "PortfolioProductAssociationdccc7d2ab3d9",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/Portfolio/PortfolioProductAssociationdccc7d2ab3d9",
+                      "PortfolioProductAssociation31bc6c8941a4": {
+                        "id": "PortfolioProductAssociation31bc6c8941a4",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/PortfolioProductAssociation31bc6c8941a4",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::PortfolioProductAssociation",
                           "aws:cdk:cloudformation:props": {
@@ -6281,7 +7033,7 @@
                               "Ref": "Portfolio856A4190"
                             },
                             "productId": {
-                              "Ref": "vpcpubprivatedbsubnetrajson8CA9C54C"
+                              "Ref": "tier3vpcwithbastionhostjson5ADFBAAB"
                             }
                           }
                         },
@@ -6290,9 +7042,9 @@
                           "version": "1.142.0"
                         }
                       },
-                      "PortfolioProductAssociation3fcf801a8ce5": {
-                        "id": "PortfolioProductAssociation3fcf801a8ce5",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/Portfolio/PortfolioProductAssociation3fcf801a8ce5",
+                      "PortfolioProductAssociation604c19a69d5c": {
+                        "id": "PortfolioProductAssociation604c19a69d5c",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/PortfolioProductAssociation604c19a69d5c",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::PortfolioProductAssociation",
                           "aws:cdk:cloudformation:props": {
@@ -6309,9 +7061,9 @@
                           "version": "1.142.0"
                         }
                       },
-                      "PortfolioProductAssociation1883ffbc7cf7": {
-                        "id": "PortfolioProductAssociation1883ffbc7cf7",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/Portfolio/PortfolioProductAssociation1883ffbc7cf7",
+                      "PortfolioProductAssociationcee098a1baae": {
+                        "id": "PortfolioProductAssociationcee098a1baae",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/PortfolioProductAssociationcee098a1baae",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::PortfolioProductAssociation",
                           "aws:cdk:cloudformation:props": {
@@ -6328,9 +7080,9 @@
                           "version": "1.142.0"
                         }
                       },
-                      "PortfolioProductAssociation6a3b3bda3d66": {
-                        "id": "PortfolioProductAssociation6a3b3bda3d66",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/Portfolio/PortfolioProductAssociation6a3b3bda3d66",
+                      "PortfolioProductAssociation72c5c836ab14": {
+                        "id": "PortfolioProductAssociation72c5c836ab14",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/PortfolioProductAssociation72c5c836ab14",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::PortfolioProductAssociation",
                           "aws:cdk:cloudformation:props": {
@@ -6347,9 +7099,28 @@
                           "version": "1.142.0"
                         }
                       },
-                      "PortfolioProductAssociationf6fe78842a80": {
-                        "id": "PortfolioProductAssociationf6fe78842a80",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/Portfolio/PortfolioProductAssociationf6fe78842a80",
+                      "PortfolioProductAssociation2d564a2d7d48": {
+                        "id": "PortfolioProductAssociation2d564a2d7d48",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/PortfolioProductAssociation2d564a2d7d48",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::PortfolioProductAssociation",
+                          "aws:cdk:cloudformation:props": {
+                            "portfolioId": {
+                              "Ref": "Portfolio856A4190"
+                            },
+                            "productId": {
+                              "Ref": "externalinternalalbforecswithacmandsgtemplatejson01706212"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-servicecatalog.CfnPortfolioProductAssociation",
+                          "version": "1.142.0"
+                        }
+                      },
+                      "PortfolioProductAssociation22bbdde284dc": {
+                        "id": "PortfolioProductAssociation22bbdde284dc",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/PortfolioProductAssociation22bbdde284dc",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::PortfolioProductAssociation",
                           "aws:cdk:cloudformation:props": {
@@ -6366,9 +7137,9 @@
                           "version": "1.142.0"
                         }
                       },
-                      "PortfolioProductAssociation45f5ad700d87": {
-                        "id": "PortfolioProductAssociation45f5ad700d87",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/Portfolio/PortfolioProductAssociation45f5ad700d87",
+                      "PortfolioProductAssociation58c8bc50c4a2": {
+                        "id": "PortfolioProductAssociation58c8bc50c4a2",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/PortfolioProductAssociation58c8bc50c4a2",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::PortfolioProductAssociation",
                           "aws:cdk:cloudformation:props": {
@@ -6385,9 +7156,9 @@
                           "version": "1.142.0"
                         }
                       },
-                      "PortfolioProductAssociationd91c3e46b2c8": {
-                        "id": "PortfolioProductAssociationd91c3e46b2c8",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/Portfolio/PortfolioProductAssociationd91c3e46b2c8",
+                      "PortfolioProductAssociation09a42de18416": {
+                        "id": "PortfolioProductAssociation09a42de18416",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/PortfolioProductAssociation09a42de18416",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::PortfolioProductAssociation",
                           "aws:cdk:cloudformation:props": {
@@ -6404,9 +7175,9 @@
                           "version": "1.142.0"
                         }
                       },
-                      "PortfolioProductAssociation30a90c4587be": {
-                        "id": "PortfolioProductAssociation30a90c4587be",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/Portfolio/PortfolioProductAssociation30a90c4587be",
+                      "PortfolioProductAssociation032ca75f78ba": {
+                        "id": "PortfolioProductAssociation032ca75f78ba",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/PortfolioProductAssociation032ca75f78ba",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::PortfolioProductAssociation",
                           "aws:cdk:cloudformation:props": {
@@ -6414,7 +7185,7 @@
                               "Ref": "Portfolio856A4190"
                             },
                             "productId": {
-                              "Ref": "ecsclustertemplatejsonE02891F1"
+                              "Ref": "ecsclusteralbwithacmtemplatejsonF34D1CDA"
                             }
                           }
                         },
@@ -6423,9 +7194,28 @@
                           "version": "1.142.0"
                         }
                       },
-                      "PortfolioProductAssociation236828a57c63": {
-                        "id": "PortfolioProductAssociation236828a57c63",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/Portfolio/PortfolioProductAssociation236828a57c63",
+                      "PortfolioProductAssociation862b21131a9c": {
+                        "id": "PortfolioProductAssociation862b21131a9c",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/PortfolioProductAssociation862b21131a9c",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::PortfolioProductAssociation",
+                          "aws:cdk:cloudformation:props": {
+                            "portfolioId": {
+                              "Ref": "Portfolio856A4190"
+                            },
+                            "productId": {
+                              "Ref": "ecsservicehttpTohttpsv2templatejson3CFF253B"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-servicecatalog.CfnPortfolioProductAssociation",
+                          "version": "1.142.0"
+                        }
+                      },
+                      "PortfolioProductAssociation57125667d606": {
+                        "id": "PortfolioProductAssociation57125667d606",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/PortfolioProductAssociation57125667d606",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::PortfolioProductAssociation",
                           "aws:cdk:cloudformation:props": {
@@ -6442,9 +7232,9 @@
                           "version": "1.142.0"
                         }
                       },
-                      "PortfolioProductAssociationffd3bff1b3c5": {
-                        "id": "PortfolioProductAssociationffd3bff1b3c5",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/Portfolio/PortfolioProductAssociationffd3bff1b3c5",
+                      "PortfolioProductAssociation7e9180378124": {
+                        "id": "PortfolioProductAssociation7e9180378124",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/PortfolioProductAssociation7e9180378124",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::PortfolioProductAssociation",
                           "aws:cdk:cloudformation:props": {
@@ -6453,6 +7243,44 @@
                             },
                             "productId": {
                               "Ref": "ecsservicetemplatejson9F5C043C"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-servicecatalog.CfnPortfolioProductAssociation",
+                          "version": "1.142.0"
+                        }
+                      },
+                      "PortfolioProductAssociation445b5c1204ce": {
+                        "id": "PortfolioProductAssociation445b5c1204ce",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/PortfolioProductAssociation445b5c1204ce",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::PortfolioProductAssociation",
+                          "aws:cdk:cloudformation:props": {
+                            "portfolioId": {
+                              "Ref": "Portfolio856A4190"
+                            },
+                            "productId": {
+                              "Ref": "infraforvpcalbandecsclustertemplatejson7D08D67D"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-servicecatalog.CfnPortfolioProductAssociation",
+                          "version": "1.142.0"
+                        }
+                      },
+                      "PortfolioProductAssociationff2e3e27d59e": {
+                        "id": "PortfolioProductAssociationff2e3e27d59e",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/Portfolio/PortfolioProductAssociationff2e3e27d59e",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::PortfolioProductAssociation",
+                          "aws:cdk:cloudformation:props": {
+                            "portfolioId": {
+                              "Ref": "Portfolio856A4190"
+                            },
+                            "productId": {
+                              "Ref": "vpcandecsclustertemplatejson9B5D2809"
                             }
                           }
                         },
@@ -6469,7 +7297,7 @@
                   },
                   "SCAdminRole": {
                     "id": "SCAdminRole",
-                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/SCAdminRole",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/SCAdminRole",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.Resource",
                       "version": "1.142.0"
@@ -6477,11 +7305,11 @@
                   },
                   "OrgTagOptions": {
                     "id": "OrgTagOptions",
-                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/OrgTagOptions",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/OrgTagOptions",
                     "children": {
                       "6cf948a80db4": {
                         "id": "6cf948a80db4",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/OrgTagOptions/6cf948a80db4",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/OrgTagOptions/6cf948a80db4",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::TagOption",
                           "aws:cdk:cloudformation:props": {
@@ -6497,7 +7325,7 @@
                       },
                       "a72190c3dc65": {
                         "id": "a72190c3dc65",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/OrgTagOptions/a72190c3dc65",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/OrgTagOptions/a72190c3dc65",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::TagOption",
                           "aws:cdk:cloudformation:props": {
@@ -6513,7 +7341,7 @@
                       },
                       "6dc16e3cebc6": {
                         "id": "6dc16e3cebc6",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/OrgTagOptions/6dc16e3cebc6",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/OrgTagOptions/6dc16e3cebc6",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::TagOption",
                           "aws:cdk:cloudformation:props": {
@@ -6529,7 +7357,7 @@
                       },
                       "feef446aa485": {
                         "id": "feef446aa485",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/OrgTagOptions/feef446aa485",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/OrgTagOptions/feef446aa485",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::TagOption",
                           "aws:cdk:cloudformation:props": {
@@ -6551,15 +7379,15 @@
                   },
                   "linux-nginx-nokeypair.json": {
                     "id": "linux-nginx-nokeypair.json",
-                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/linux-nginx-nokeypair.json",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/linux-nginx-nokeypair.json",
                     "children": {
                       "Template814fdd785f36": {
                         "id": "Template814fdd785f36",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/linux-nginx-nokeypair.json/Template814fdd785f36",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/linux-nginx-nokeypair.json/Template814fdd785f36",
                         "children": {
                           "Stage": {
                             "id": "Stage",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/linux-nginx-nokeypair.json/Template814fdd785f36/Stage",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/linux-nginx-nokeypair.json/Template814fdd785f36/Stage",
                             "constructInfo": {
                               "fqn": "@aws-cdk/core.AssetStaging",
                               "version": "1.142.0"
@@ -6567,7 +7395,7 @@
                           },
                           "AssetBucket": {
                             "id": "AssetBucket",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/linux-nginx-nokeypair.json/Template814fdd785f36/AssetBucket",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/linux-nginx-nokeypair.json/Template814fdd785f36/AssetBucket",
                             "constructInfo": {
                               "fqn": "@aws-cdk/aws-s3.BucketBase",
                               "version": "1.142.0"
@@ -6581,7 +7409,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/linux-nginx-nokeypair.json/Resource",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/linux-nginx-nokeypair.json/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::CloudFormationProduct",
                           "aws:cdk:cloudformation:props": {
@@ -6613,15 +7441,15 @@
                   },
                   "linux-nginx.json": {
                     "id": "linux-nginx.json",
-                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/linux-nginx.json",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/linux-nginx.json",
                     "children": {
                       "Template4d9add1ab7d3": {
                         "id": "Template4d9add1ab7d3",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/linux-nginx.json/Template4d9add1ab7d3",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/linux-nginx.json/Template4d9add1ab7d3",
                         "children": {
                           "Stage": {
                             "id": "Stage",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/linux-nginx.json/Template4d9add1ab7d3/Stage",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/linux-nginx.json/Template4d9add1ab7d3/Stage",
                             "constructInfo": {
                               "fqn": "@aws-cdk/core.AssetStaging",
                               "version": "1.142.0"
@@ -6629,7 +7457,7 @@
                           },
                           "AssetBucket": {
                             "id": "AssetBucket",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/linux-nginx.json/Template4d9add1ab7d3/AssetBucket",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/linux-nginx.json/Template4d9add1ab7d3/AssetBucket",
                             "constructInfo": {
                               "fqn": "@aws-cdk/aws-s3.BucketBase",
                               "version": "1.142.0"
@@ -6643,7 +7471,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/linux-nginx.json/Resource",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/linux-nginx.json/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::CloudFormationProduct",
                           "aws:cdk:cloudformation:props": {
@@ -6675,15 +7503,15 @@
                   },
                   "window-remote-accsss.json": {
                     "id": "window-remote-accsss.json",
-                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/window-remote-accsss.json",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/window-remote-accsss.json",
                     "children": {
                       "Template589eed0b23bc": {
                         "id": "Template589eed0b23bc",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/window-remote-accsss.json/Template589eed0b23bc",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/window-remote-accsss.json/Template589eed0b23bc",
                         "children": {
                           "Stage": {
                             "id": "Stage",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/window-remote-accsss.json/Template589eed0b23bc/Stage",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/window-remote-accsss.json/Template589eed0b23bc/Stage",
                             "constructInfo": {
                               "fqn": "@aws-cdk/core.AssetStaging",
                               "version": "1.142.0"
@@ -6691,7 +7519,7 @@
                           },
                           "AssetBucket": {
                             "id": "AssetBucket",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/window-remote-accsss.json/Template589eed0b23bc/AssetBucket",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/window-remote-accsss.json/Template589eed0b23bc/AssetBucket",
                             "constructInfo": {
                               "fqn": "@aws-cdk/aws-s3.BucketBase",
                               "version": "1.142.0"
@@ -6705,7 +7533,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/window-remote-accsss.json/Resource",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/window-remote-accsss.json/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::CloudFormationProduct",
                           "aws:cdk:cloudformation:props": {
@@ -6737,15 +7565,15 @@
                   },
                   "s3-bucket-and-policy-for-caa-sse-v1.json": {
                     "id": "s3-bucket-and-policy-for-caa-sse-v1.json",
-                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/s3-bucket-and-policy-for-caa-sse-v1.json",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/s3-bucket-and-policy-for-caa-sse-v1.json",
                     "children": {
                       "Templatebf8ea88a40da": {
                         "id": "Templatebf8ea88a40da",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/s3-bucket-and-policy-for-caa-sse-v1.json/Templatebf8ea88a40da",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/s3-bucket-and-policy-for-caa-sse-v1.json/Templatebf8ea88a40da",
                         "children": {
                           "Stage": {
                             "id": "Stage",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/s3-bucket-and-policy-for-caa-sse-v1.json/Templatebf8ea88a40da/Stage",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/s3-bucket-and-policy-for-caa-sse-v1.json/Templatebf8ea88a40da/Stage",
                             "constructInfo": {
                               "fqn": "@aws-cdk/core.AssetStaging",
                               "version": "1.142.0"
@@ -6753,7 +7581,7 @@
                           },
                           "AssetBucket": {
                             "id": "AssetBucket",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/s3-bucket-and-policy-for-caa-sse-v1.json/Templatebf8ea88a40da/AssetBucket",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/s3-bucket-and-policy-for-caa-sse-v1.json/Templatebf8ea88a40da/AssetBucket",
                             "constructInfo": {
                               "fqn": "@aws-cdk/aws-s3.BucketBase",
                               "version": "1.142.0"
@@ -6767,7 +7595,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/s3-bucket-and-policy-for-caa-sse-v1.json/Resource",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/s3-bucket-and-policy-for-caa-sse-v1.json/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::CloudFormationProduct",
                           "aws:cdk:cloudformation:props": {
@@ -6799,15 +7627,15 @@
                   },
                   "sc-s3-transition-ra.json": {
                     "id": "sc-s3-transition-ra.json",
-                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/sc-s3-transition-ra.json",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/sc-s3-transition-ra.json",
                     "children": {
                       "Template8ba91319bcce": {
                         "id": "Template8ba91319bcce",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/sc-s3-transition-ra.json/Template8ba91319bcce",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/sc-s3-transition-ra.json/Template8ba91319bcce",
                         "children": {
                           "Stage": {
                             "id": "Stage",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/sc-s3-transition-ra.json/Template8ba91319bcce/Stage",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/sc-s3-transition-ra.json/Template8ba91319bcce/Stage",
                             "constructInfo": {
                               "fqn": "@aws-cdk/core.AssetStaging",
                               "version": "1.142.0"
@@ -6815,7 +7643,7 @@
                           },
                           "AssetBucket": {
                             "id": "AssetBucket",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/sc-s3-transition-ra.json/Template8ba91319bcce/AssetBucket",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/sc-s3-transition-ra.json/Template8ba91319bcce/AssetBucket",
                             "constructInfo": {
                               "fqn": "@aws-cdk/aws-s3.BucketBase",
                               "version": "1.142.0"
@@ -6829,7 +7657,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/sc-s3-transition-ra.json/Resource",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/sc-s3-transition-ra.json/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::CloudFormationProduct",
                           "aws:cdk:cloudformation:props": {
@@ -6861,15 +7689,15 @@
                   },
                   "rds-aurora-ra.json": {
                     "id": "rds-aurora-ra.json",
-                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/rds-aurora-ra.json",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/rds-aurora-ra.json",
                     "children": {
                       "Template39e19c206d11": {
                         "id": "Template39e19c206d11",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/rds-aurora-ra.json/Template39e19c206d11",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/rds-aurora-ra.json/Template39e19c206d11",
                         "children": {
                           "Stage": {
                             "id": "Stage",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/rds-aurora-ra.json/Template39e19c206d11/Stage",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/rds-aurora-ra.json/Template39e19c206d11/Stage",
                             "constructInfo": {
                               "fqn": "@aws-cdk/core.AssetStaging",
                               "version": "1.142.0"
@@ -6877,7 +7705,7 @@
                           },
                           "AssetBucket": {
                             "id": "AssetBucket",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/rds-aurora-ra.json/Template39e19c206d11/AssetBucket",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/rds-aurora-ra.json/Template39e19c206d11/AssetBucket",
                             "constructInfo": {
                               "fqn": "@aws-cdk/aws-s3.BucketBase",
                               "version": "1.142.0"
@@ -6891,7 +7719,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/rds-aurora-ra.json/Resource",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/rds-aurora-ra.json/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::CloudFormationProduct",
                           "aws:cdk:cloudformation:props": {
@@ -6923,15 +7751,15 @@
                   },
                   "rds-maria-ra.json": {
                     "id": "rds-maria-ra.json",
-                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/rds-maria-ra.json",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/rds-maria-ra.json",
                     "children": {
                       "Template38755f03ee5b": {
                         "id": "Template38755f03ee5b",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/rds-maria-ra.json/Template38755f03ee5b",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/rds-maria-ra.json/Template38755f03ee5b",
                         "children": {
                           "Stage": {
                             "id": "Stage",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/rds-maria-ra.json/Template38755f03ee5b/Stage",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/rds-maria-ra.json/Template38755f03ee5b/Stage",
                             "constructInfo": {
                               "fqn": "@aws-cdk/core.AssetStaging",
                               "version": "1.142.0"
@@ -6939,7 +7767,7 @@
                           },
                           "AssetBucket": {
                             "id": "AssetBucket",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/rds-maria-ra.json/Template38755f03ee5b/AssetBucket",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/rds-maria-ra.json/Template38755f03ee5b/AssetBucket",
                             "constructInfo": {
                               "fqn": "@aws-cdk/aws-s3.BucketBase",
                               "version": "1.142.0"
@@ -6953,7 +7781,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/rds-maria-ra.json/Resource",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/rds-maria-ra.json/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::CloudFormationProduct",
                           "aws:cdk:cloudformation:props": {
@@ -6985,15 +7813,15 @@
                   },
                   "rds-mssql-ra.json": {
                     "id": "rds-mssql-ra.json",
-                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/rds-mssql-ra.json",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/rds-mssql-ra.json",
                     "children": {
                       "Templatedd4f72279f48": {
                         "id": "Templatedd4f72279f48",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/rds-mssql-ra.json/Templatedd4f72279f48",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/rds-mssql-ra.json/Templatedd4f72279f48",
                         "children": {
                           "Stage": {
                             "id": "Stage",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/rds-mssql-ra.json/Templatedd4f72279f48/Stage",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/rds-mssql-ra.json/Templatedd4f72279f48/Stage",
                             "constructInfo": {
                               "fqn": "@aws-cdk/core.AssetStaging",
                               "version": "1.142.0"
@@ -7001,7 +7829,7 @@
                           },
                           "AssetBucket": {
                             "id": "AssetBucket",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/rds-mssql-ra.json/Templatedd4f72279f48/AssetBucket",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/rds-mssql-ra.json/Templatedd4f72279f48/AssetBucket",
                             "constructInfo": {
                               "fqn": "@aws-cdk/aws-s3.BucketBase",
                               "version": "1.142.0"
@@ -7015,7 +7843,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/rds-mssql-ra.json/Resource",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/rds-mssql-ra.json/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::CloudFormationProduct",
                           "aws:cdk:cloudformation:props": {
@@ -7047,15 +7875,15 @@
                   },
                   "rds-mysql-ra.json": {
                     "id": "rds-mysql-ra.json",
-                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/rds-mysql-ra.json",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/rds-mysql-ra.json",
                     "children": {
                       "Template2f4e76b71e1d": {
                         "id": "Template2f4e76b71e1d",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/rds-mysql-ra.json/Template2f4e76b71e1d",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/rds-mysql-ra.json/Template2f4e76b71e1d",
                         "children": {
                           "Stage": {
                             "id": "Stage",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/rds-mysql-ra.json/Template2f4e76b71e1d/Stage",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/rds-mysql-ra.json/Template2f4e76b71e1d/Stage",
                             "constructInfo": {
                               "fqn": "@aws-cdk/core.AssetStaging",
                               "version": "1.142.0"
@@ -7063,7 +7891,7 @@
                           },
                           "AssetBucket": {
                             "id": "AssetBucket",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/rds-mysql-ra.json/Template2f4e76b71e1d/AssetBucket",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/rds-mysql-ra.json/Template2f4e76b71e1d/AssetBucket",
                             "constructInfo": {
                               "fqn": "@aws-cdk/aws-s3.BucketBase",
                               "version": "1.142.0"
@@ -7077,7 +7905,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/rds-mysql-ra.json/Resource",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/rds-mysql-ra.json/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::CloudFormationProduct",
                           "aws:cdk:cloudformation:props": {
@@ -7109,15 +7937,15 @@
                   },
                   "rds-postgresql-ra.json": {
                     "id": "rds-postgresql-ra.json",
-                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/rds-postgresql-ra.json",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/rds-postgresql-ra.json",
                     "children": {
                       "Templatef0d7bd9abd30": {
                         "id": "Templatef0d7bd9abd30",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/rds-postgresql-ra.json/Templatef0d7bd9abd30",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/rds-postgresql-ra.json/Templatef0d7bd9abd30",
                         "children": {
                           "Stage": {
                             "id": "Stage",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/rds-postgresql-ra.json/Templatef0d7bd9abd30/Stage",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/rds-postgresql-ra.json/Templatef0d7bd9abd30/Stage",
                             "constructInfo": {
                               "fqn": "@aws-cdk/core.AssetStaging",
                               "version": "1.142.0"
@@ -7125,7 +7953,7 @@
                           },
                           "AssetBucket": {
                             "id": "AssetBucket",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/rds-postgresql-ra.json/Templatef0d7bd9abd30/AssetBucket",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/rds-postgresql-ra.json/Templatef0d7bd9abd30/AssetBucket",
                             "constructInfo": {
                               "fqn": "@aws-cdk/aws-s3.BucketBase",
                               "version": "1.142.0"
@@ -7139,7 +7967,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/rds-postgresql-ra.json/Resource",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/rds-postgresql-ra.json/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::CloudFormationProduct",
                           "aws:cdk:cloudformation:props": {
@@ -7171,15 +7999,15 @@
                   },
                   "ec2-sg-ingress-with-ip-port.yaml": {
                     "id": "ec2-sg-ingress-with-ip-port.yaml",
-                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/ec2-sg-ingress-with-ip-port.yaml",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ec2-sg-ingress-with-ip-port.yaml",
                     "children": {
                       "Template27586daf37c6": {
                         "id": "Template27586daf37c6",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/ec2-sg-ingress-with-ip-port.yaml/Template27586daf37c6",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ec2-sg-ingress-with-ip-port.yaml/Template27586daf37c6",
                         "children": {
                           "Stage": {
                             "id": "Stage",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/ec2-sg-ingress-with-ip-port.yaml/Template27586daf37c6/Stage",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ec2-sg-ingress-with-ip-port.yaml/Template27586daf37c6/Stage",
                             "constructInfo": {
                               "fqn": "@aws-cdk/core.AssetStaging",
                               "version": "1.142.0"
@@ -7187,7 +8015,7 @@
                           },
                           "AssetBucket": {
                             "id": "AssetBucket",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/ec2-sg-ingress-with-ip-port.yaml/Template27586daf37c6/AssetBucket",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ec2-sg-ingress-with-ip-port.yaml/Template27586daf37c6/AssetBucket",
                             "constructInfo": {
                               "fqn": "@aws-cdk/aws-s3.BucketBase",
                               "version": "1.142.0"
@@ -7201,7 +8029,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/ec2-sg-ingress-with-ip-port.yaml/Resource",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ec2-sg-ingress-with-ip-port.yaml/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::CloudFormationProduct",
                           "aws:cdk:cloudformation:props": {
@@ -7233,15 +8061,15 @@
                   },
                   "ec2-sg-ingressrule-with-sourceSg.json": {
                     "id": "ec2-sg-ingressrule-with-sourceSg.json",
-                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/ec2-sg-ingressrule-with-sourceSg.json",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ec2-sg-ingressrule-with-sourceSg.json",
                     "children": {
                       "Template312caabf359e": {
                         "id": "Template312caabf359e",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/ec2-sg-ingressrule-with-sourceSg.json/Template312caabf359e",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ec2-sg-ingressrule-with-sourceSg.json/Template312caabf359e",
                         "children": {
                           "Stage": {
                             "id": "Stage",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/ec2-sg-ingressrule-with-sourceSg.json/Template312caabf359e/Stage",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ec2-sg-ingressrule-with-sourceSg.json/Template312caabf359e/Stage",
                             "constructInfo": {
                               "fqn": "@aws-cdk/core.AssetStaging",
                               "version": "1.142.0"
@@ -7249,7 +8077,7 @@
                           },
                           "AssetBucket": {
                             "id": "AssetBucket",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/ec2-sg-ingressrule-with-sourceSg.json/Template312caabf359e/AssetBucket",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ec2-sg-ingressrule-with-sourceSg.json/Template312caabf359e/AssetBucket",
                             "constructInfo": {
                               "fqn": "@aws-cdk/aws-s3.BucketBase",
                               "version": "1.142.0"
@@ -7263,7 +8091,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/ec2-sg-ingressrule-with-sourceSg.json/Resource",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ec2-sg-ingressrule-with-sourceSg.json/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::CloudFormationProduct",
                           "aws:cdk:cloudformation:props": {
@@ -7295,15 +8123,15 @@
                   },
                   "linux-remote-access.json": {
                     "id": "linux-remote-access.json",
-                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/linux-remote-access.json",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/linux-remote-access.json",
                     "children": {
                       "Templatead8390636dcd": {
                         "id": "Templatead8390636dcd",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/linux-remote-access.json/Templatead8390636dcd",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/linux-remote-access.json/Templatead8390636dcd",
                         "children": {
                           "Stage": {
                             "id": "Stage",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/linux-remote-access.json/Templatead8390636dcd/Stage",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/linux-remote-access.json/Templatead8390636dcd/Stage",
                             "constructInfo": {
                               "fqn": "@aws-cdk/core.AssetStaging",
                               "version": "1.142.0"
@@ -7311,7 +8139,7 @@
                           },
                           "AssetBucket": {
                             "id": "AssetBucket",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/linux-remote-access.json/Templatead8390636dcd/AssetBucket",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/linux-remote-access.json/Templatead8390636dcd/AssetBucket",
                             "constructInfo": {
                               "fqn": "@aws-cdk/aws-s3.BucketBase",
                               "version": "1.142.0"
@@ -7325,7 +8153,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/linux-remote-access.json/Resource",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/linux-remote-access.json/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::CloudFormationProduct",
                           "aws:cdk:cloudformation:props": {
@@ -7355,17 +8183,17 @@
                       "version": "1.142.0"
                     }
                   },
-                  "vpc-pub-private-dbsubnet-ra.json": {
-                    "id": "vpc-pub-private-dbsubnet-ra.json",
-                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/vpc-pub-private-dbsubnet-ra.json",
+                  "tier3-vpc-with-bastionhost.json": {
+                    "id": "tier3-vpc-with-bastionhost.json",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/tier3-vpc-with-bastionhost.json",
                     "children": {
-                      "Templatea6ec5ddb0320": {
-                        "id": "Templatea6ec5ddb0320",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/vpc-pub-private-dbsubnet-ra.json/Templatea6ec5ddb0320",
+                      "Template3f85069e3e1e": {
+                        "id": "Template3f85069e3e1e",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/tier3-vpc-with-bastionhost.json/Template3f85069e3e1e",
                         "children": {
                           "Stage": {
                             "id": "Stage",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/vpc-pub-private-dbsubnet-ra.json/Templatea6ec5ddb0320/Stage",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/tier3-vpc-with-bastionhost.json/Template3f85069e3e1e/Stage",
                             "constructInfo": {
                               "fqn": "@aws-cdk/core.AssetStaging",
                               "version": "1.142.0"
@@ -7373,7 +8201,7 @@
                           },
                           "AssetBucket": {
                             "id": "AssetBucket",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/vpc-pub-private-dbsubnet-ra.json/Templatea6ec5ddb0320/AssetBucket",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/tier3-vpc-with-bastionhost.json/Template3f85069e3e1e/AssetBucket",
                             "constructInfo": {
                               "fqn": "@aws-cdk/aws-s3.BucketBase",
                               "version": "1.142.0"
@@ -7387,11 +8215,11 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/vpc-pub-private-dbsubnet-ra.json/Resource",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/tier3-vpc-with-bastionhost.json/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::CloudFormationProduct",
                           "aws:cdk:cloudformation:props": {
-                            "name": "vpc-pub-private-dbsubnet-ra.json",
+                            "name": "tier3-vpc-with-bastionhost.json",
                             "owner": "SK CnC AWS TF Team",
                             "provisioningArtifactParameters": [
                               {
@@ -7399,7 +8227,7 @@
                                 "disableTemplateValidation": false,
                                 "info": {
                                   "LoadTemplateFromURL": {
-                                    "Fn::Sub": "https://s3.ap-northeast-2.${AWS::URLSuffix}/cdk-hnb659fds-assets-037729278610-ap-northeast-2/7801ef72a480d9230d9b1c0af135e383eacf491872954619d5156f8dfffdf447.json"
+                                    "Fn::Sub": "https://s3.ap-northeast-2.${AWS::URLSuffix}/cdk-hnb659fds-assets-037729278610-ap-northeast-2/c4d9c6d183a719f1f6cbd2905fb737d80ba3a5dfe0a99cafdc9fabc1a06b937b.json"
                                   }
                                 }
                               }
@@ -7419,15 +8247,15 @@
                   },
                   "vpc-ra.json": {
                     "id": "vpc-ra.json",
-                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/vpc-ra.json",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/vpc-ra.json",
                     "children": {
                       "Templatecbb00ac661f8": {
                         "id": "Templatecbb00ac661f8",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/vpc-ra.json/Templatecbb00ac661f8",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/vpc-ra.json/Templatecbb00ac661f8",
                         "children": {
                           "Stage": {
                             "id": "Stage",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/vpc-ra.json/Templatecbb00ac661f8/Stage",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/vpc-ra.json/Templatecbb00ac661f8/Stage",
                             "constructInfo": {
                               "fqn": "@aws-cdk/core.AssetStaging",
                               "version": "1.142.0"
@@ -7435,7 +8263,7 @@
                           },
                           "AssetBucket": {
                             "id": "AssetBucket",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/vpc-ra.json/Templatecbb00ac661f8/AssetBucket",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/vpc-ra.json/Templatecbb00ac661f8/AssetBucket",
                             "constructInfo": {
                               "fqn": "@aws-cdk/aws-s3.BucketBase",
                               "version": "1.142.0"
@@ -7449,7 +8277,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/vpc-ra.json/Resource",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/vpc-ra.json/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::CloudFormationProduct",
                           "aws:cdk:cloudformation:props": {
@@ -7461,7 +8289,7 @@
                                 "disableTemplateValidation": false,
                                 "info": {
                                   "LoadTemplateFromURL": {
-                                    "Fn::Sub": "https://s3.ap-northeast-2.${AWS::URLSuffix}/cdk-hnb659fds-assets-037729278610-ap-northeast-2/14060343cc726c3607b2f4d12cff44da4a091d3f1a4689c968bea58310077a96.json"
+                                    "Fn::Sub": "https://s3.ap-northeast-2.${AWS::URLSuffix}/cdk-hnb659fds-assets-037729278610-ap-northeast-2/f2ecedace4db030db6d41c37002449df7933f08d161c50e807816a3b33d19a57.json"
                                   }
                                 }
                               }
@@ -7481,15 +8309,15 @@
                   },
                   "alb-with-acm-01.json": {
                     "id": "alb-with-acm-01.json",
-                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/alb-with-acm-01.json",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/alb-with-acm-01.json",
                     "children": {
                       "Template6b5ed09c8853": {
                         "id": "Template6b5ed09c8853",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/alb-with-acm-01.json/Template6b5ed09c8853",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/alb-with-acm-01.json/Template6b5ed09c8853",
                         "children": {
                           "Stage": {
                             "id": "Stage",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/alb-with-acm-01.json/Template6b5ed09c8853/Stage",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/alb-with-acm-01.json/Template6b5ed09c8853/Stage",
                             "constructInfo": {
                               "fqn": "@aws-cdk/core.AssetStaging",
                               "version": "1.142.0"
@@ -7497,7 +8325,7 @@
                           },
                           "AssetBucket": {
                             "id": "AssetBucket",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/alb-with-acm-01.json/Template6b5ed09c8853/AssetBucket",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/alb-with-acm-01.json/Template6b5ed09c8853/AssetBucket",
                             "constructInfo": {
                               "fqn": "@aws-cdk/aws-s3.BucketBase",
                               "version": "1.142.0"
@@ -7511,7 +8339,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/alb-with-acm-01.json/Resource",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/alb-with-acm-01.json/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::CloudFormationProduct",
                           "aws:cdk:cloudformation:props": {
@@ -7523,7 +8351,7 @@
                                 "disableTemplateValidation": false,
                                 "info": {
                                   "LoadTemplateFromURL": {
-                                    "Fn::Sub": "https://s3.ap-northeast-2.${AWS::URLSuffix}/cdk-hnb659fds-assets-037729278610-ap-northeast-2/9446008da88c5d194fa251b0c282fe6bdfff4a4ab65022f25bff502aad0d5001.json"
+                                    "Fn::Sub": "https://s3.ap-northeast-2.${AWS::URLSuffix}/cdk-hnb659fds-assets-037729278610-ap-northeast-2/71d34ce6efadccb507710f76ff57db109823095389c3566e3d66e58205c93449.json"
                                   }
                                 }
                               }
@@ -7543,15 +8371,15 @@
                   },
                   "ec2-with-asg-03.json": {
                     "id": "ec2-with-asg-03.json",
-                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/ec2-with-asg-03.json",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ec2-with-asg-03.json",
                     "children": {
                       "Template6e7b179e8931": {
                         "id": "Template6e7b179e8931",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/ec2-with-asg-03.json/Template6e7b179e8931",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ec2-with-asg-03.json/Template6e7b179e8931",
                         "children": {
                           "Stage": {
                             "id": "Stage",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/ec2-with-asg-03.json/Template6e7b179e8931/Stage",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ec2-with-asg-03.json/Template6e7b179e8931/Stage",
                             "constructInfo": {
                               "fqn": "@aws-cdk/core.AssetStaging",
                               "version": "1.142.0"
@@ -7559,7 +8387,7 @@
                           },
                           "AssetBucket": {
                             "id": "AssetBucket",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/ec2-with-asg-03.json/Template6e7b179e8931/AssetBucket",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ec2-with-asg-03.json/Template6e7b179e8931/AssetBucket",
                             "constructInfo": {
                               "fqn": "@aws-cdk/aws-s3.BucketBase",
                               "version": "1.142.0"
@@ -7573,7 +8401,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/ec2-with-asg-03.json/Resource",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ec2-with-asg-03.json/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::CloudFormationProduct",
                           "aws:cdk:cloudformation:props": {
@@ -7585,7 +8413,69 @@
                                 "disableTemplateValidation": false,
                                 "info": {
                                   "LoadTemplateFromURL": {
-                                    "Fn::Sub": "https://s3.ap-northeast-2.${AWS::URLSuffix}/cdk-hnb659fds-assets-037729278610-ap-northeast-2/4823a71962cf1d1a6bd0daf5d650f9ffaf1de8fe9eeb1692bd24f6757b24c8de.json"
+                                    "Fn::Sub": "https://s3.ap-northeast-2.${AWS::URLSuffix}/cdk-hnb659fds-assets-037729278610-ap-northeast-2/35bcefe875717626273e914386b47df2179a800b40e6cdb492396c3af1374455.json"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-servicecatalog.CfnCloudFormationProduct",
+                          "version": "1.142.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-servicecatalog.CloudFormationProduct",
+                      "version": "1.142.0"
+                    }
+                  },
+                  "external-internal-alb-for ecs-with-acm-and-sg.template.json": {
+                    "id": "external-internal-alb-for ecs-with-acm-and-sg.template.json",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/external-internal-alb-for ecs-with-acm-and-sg.template.json",
+                    "children": {
+                      "Template5517355ae8b9": {
+                        "id": "Template5517355ae8b9",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/external-internal-alb-for ecs-with-acm-and-sg.template.json/Template5517355ae8b9",
+                        "children": {
+                          "Stage": {
+                            "id": "Stage",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/external-internal-alb-for ecs-with-acm-and-sg.template.json/Template5517355ae8b9/Stage",
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/core.AssetStaging",
+                              "version": "1.142.0"
+                            }
+                          },
+                          "AssetBucket": {
+                            "id": "AssetBucket",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/external-internal-alb-for ecs-with-acm-and-sg.template.json/Template5517355ae8b9/AssetBucket",
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/aws-s3.BucketBase",
+                              "version": "1.142.0"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-s3-assets.Asset",
+                          "version": "1.142.0"
+                        }
+                      },
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/external-internal-alb-for ecs-with-acm-and-sg.template.json/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::CloudFormationProduct",
+                          "aws:cdk:cloudformation:props": {
+                            "name": "external-internal-alb-for ecs-with-acm-and-sg.template.json",
+                            "owner": "SK CnC AWS TF Team",
+                            "provisioningArtifactParameters": [
+                              {
+                                "name": "v1",
+                                "disableTemplateValidation": false,
+                                "info": {
+                                  "LoadTemplateFromURL": {
+                                    "Fn::Sub": "https://s3.ap-northeast-2.${AWS::URLSuffix}/cdk-hnb659fds-assets-037729278610-ap-northeast-2/866514a5648b7bdebda60bf04abe9f9c12842e0ac17e8a7243f42262345a4b3b.json"
                                   }
                                 }
                               }
@@ -7605,15 +8495,15 @@
                   },
                   "route53-alb-target-02.json": {
                     "id": "route53-alb-target-02.json",
-                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/route53-alb-target-02.json",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/route53-alb-target-02.json",
                     "children": {
                       "Template5a656199642d": {
                         "id": "Template5a656199642d",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/route53-alb-target-02.json/Template5a656199642d",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/route53-alb-target-02.json/Template5a656199642d",
                         "children": {
                           "Stage": {
                             "id": "Stage",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/route53-alb-target-02.json/Template5a656199642d/Stage",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/route53-alb-target-02.json/Template5a656199642d/Stage",
                             "constructInfo": {
                               "fqn": "@aws-cdk/core.AssetStaging",
                               "version": "1.142.0"
@@ -7621,7 +8511,7 @@
                           },
                           "AssetBucket": {
                             "id": "AssetBucket",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/route53-alb-target-02.json/Template5a656199642d/AssetBucket",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/route53-alb-target-02.json/Template5a656199642d/AssetBucket",
                             "constructInfo": {
                               "fqn": "@aws-cdk/aws-s3.BucketBase",
                               "version": "1.142.0"
@@ -7635,7 +8525,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/route53-alb-target-02.json/Resource",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/route53-alb-target-02.json/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::CloudFormationProduct",
                           "aws:cdk:cloudformation:props": {
@@ -7647,7 +8537,7 @@
                                 "disableTemplateValidation": false,
                                 "info": {
                                   "LoadTemplateFromURL": {
-                                    "Fn::Sub": "https://s3.ap-northeast-2.${AWS::URLSuffix}/cdk-hnb659fds-assets-037729278610-ap-northeast-2/75bd6b78d6b473215303c0295e31518e809c2862217c1ad25e5bc3dc7cae0724.json"
+                                    "Fn::Sub": "https://s3.ap-northeast-2.${AWS::URLSuffix}/cdk-hnb659fds-assets-037729278610-ap-northeast-2/e912c3690ff98e88b70f270e8b3da4f99aea6a23a2f5ed00fcbbb5ef20bd852e.json"
                                   }
                                 }
                               }
@@ -7667,15 +8557,15 @@
                   },
                   "sagemaker-studio.template.json": {
                     "id": "sagemaker-studio.template.json",
-                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/sagemaker-studio.template.json",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/sagemaker-studio.template.json",
                     "children": {
                       "Template94d6992fb77c": {
                         "id": "Template94d6992fb77c",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/sagemaker-studio.template.json/Template94d6992fb77c",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/sagemaker-studio.template.json/Template94d6992fb77c",
                         "children": {
                           "Stage": {
                             "id": "Stage",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/sagemaker-studio.template.json/Template94d6992fb77c/Stage",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/sagemaker-studio.template.json/Template94d6992fb77c/Stage",
                             "constructInfo": {
                               "fqn": "@aws-cdk/core.AssetStaging",
                               "version": "1.142.0"
@@ -7683,7 +8573,7 @@
                           },
                           "AssetBucket": {
                             "id": "AssetBucket",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/sagemaker-studio.template.json/Template94d6992fb77c/AssetBucket",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/sagemaker-studio.template.json/Template94d6992fb77c/AssetBucket",
                             "constructInfo": {
                               "fqn": "@aws-cdk/aws-s3.BucketBase",
                               "version": "1.142.0"
@@ -7697,7 +8587,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/sagemaker-studio.template.json/Resource",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/sagemaker-studio.template.json/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::CloudFormationProduct",
                           "aws:cdk:cloudformation:props": {
@@ -7729,15 +8619,15 @@
                   },
                   "sagemaker-user-template.yaml": {
                     "id": "sagemaker-user-template.yaml",
-                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/sagemaker-user-template.yaml",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/sagemaker-user-template.yaml",
                     "children": {
                       "Template8bea8906fc02": {
                         "id": "Template8bea8906fc02",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/sagemaker-user-template.yaml/Template8bea8906fc02",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/sagemaker-user-template.yaml/Template8bea8906fc02",
                         "children": {
                           "Stage": {
                             "id": "Stage",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/sagemaker-user-template.yaml/Template8bea8906fc02/Stage",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/sagemaker-user-template.yaml/Template8bea8906fc02/Stage",
                             "constructInfo": {
                               "fqn": "@aws-cdk/core.AssetStaging",
                               "version": "1.142.0"
@@ -7745,7 +8635,7 @@
                           },
                           "AssetBucket": {
                             "id": "AssetBucket",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/sagemaker-user-template.yaml/Template8bea8906fc02/AssetBucket",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/sagemaker-user-template.yaml/Template8bea8906fc02/AssetBucket",
                             "constructInfo": {
                               "fqn": "@aws-cdk/aws-s3.BucketBase",
                               "version": "1.142.0"
@@ -7759,7 +8649,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/sagemaker-user-template.yaml/Resource",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/sagemaker-user-template.yaml/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::CloudFormationProduct",
                           "aws:cdk:cloudformation:props": {
@@ -7789,17 +8679,17 @@
                       "version": "1.142.0"
                     }
                   },
-                  "ecs-cluster.template.json": {
-                    "id": "ecs-cluster.template.json",
-                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/ecs-cluster.template.json",
+                  "ecs-cluster-alb-with-acm.template.json": {
+                    "id": "ecs-cluster-alb-with-acm.template.json",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ecs-cluster-alb-with-acm.template.json",
                     "children": {
-                      "Templatec5c81de62fa7": {
-                        "id": "Templatec5c81de62fa7",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/ecs-cluster.template.json/Templatec5c81de62fa7",
+                      "Templateab6cbd690e37": {
+                        "id": "Templateab6cbd690e37",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ecs-cluster-alb-with-acm.template.json/Templateab6cbd690e37",
                         "children": {
                           "Stage": {
                             "id": "Stage",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/ecs-cluster.template.json/Templatec5c81de62fa7/Stage",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ecs-cluster-alb-with-acm.template.json/Templateab6cbd690e37/Stage",
                             "constructInfo": {
                               "fqn": "@aws-cdk/core.AssetStaging",
                               "version": "1.142.0"
@@ -7807,7 +8697,7 @@
                           },
                           "AssetBucket": {
                             "id": "AssetBucket",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/ecs-cluster.template.json/Templatec5c81de62fa7/AssetBucket",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ecs-cluster-alb-with-acm.template.json/Templateab6cbd690e37/AssetBucket",
                             "constructInfo": {
                               "fqn": "@aws-cdk/aws-s3.BucketBase",
                               "version": "1.142.0"
@@ -7821,11 +8711,11 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/ecs-cluster.template.json/Resource",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ecs-cluster-alb-with-acm.template.json/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::CloudFormationProduct",
                           "aws:cdk:cloudformation:props": {
-                            "name": "ecs-cluster.template.json",
+                            "name": "ecs-cluster-alb-with-acm.template.json",
                             "owner": "SK CnC AWS TF Team",
                             "provisioningArtifactParameters": [
                               {
@@ -7833,7 +8723,69 @@
                                 "disableTemplateValidation": false,
                                 "info": {
                                   "LoadTemplateFromURL": {
-                                    "Fn::Sub": "https://s3.ap-northeast-2.${AWS::URLSuffix}/cdk-hnb659fds-assets-037729278610-ap-northeast-2/45a2b0088753d1f419ae39a707fe2ac251e8317db28653905999d0ceb510eddd.json"
+                                    "Fn::Sub": "https://s3.ap-northeast-2.${AWS::URLSuffix}/cdk-hnb659fds-assets-037729278610-ap-northeast-2/ef46ed15fd2bfda3484426a8541307461c28e80088e4d8fbd69f876f0f73cc9c.json"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-servicecatalog.CfnCloudFormationProduct",
+                          "version": "1.142.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-servicecatalog.CloudFormationProduct",
+                      "version": "1.142.0"
+                    }
+                  },
+                  "ecs-service-httpTohttps-v2.template.json": {
+                    "id": "ecs-service-httpTohttps-v2.template.json",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ecs-service-httpTohttps-v2.template.json",
+                    "children": {
+                      "Template1b5ebbb029e1": {
+                        "id": "Template1b5ebbb029e1",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ecs-service-httpTohttps-v2.template.json/Template1b5ebbb029e1",
+                        "children": {
+                          "Stage": {
+                            "id": "Stage",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ecs-service-httpTohttps-v2.template.json/Template1b5ebbb029e1/Stage",
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/core.AssetStaging",
+                              "version": "1.142.0"
+                            }
+                          },
+                          "AssetBucket": {
+                            "id": "AssetBucket",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ecs-service-httpTohttps-v2.template.json/Template1b5ebbb029e1/AssetBucket",
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/aws-s3.BucketBase",
+                              "version": "1.142.0"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-s3-assets.Asset",
+                          "version": "1.142.0"
+                        }
+                      },
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ecs-service-httpTohttps-v2.template.json/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::CloudFormationProduct",
+                          "aws:cdk:cloudformation:props": {
+                            "name": "ecs-service-httpTohttps-v2.template.json",
+                            "owner": "SK CnC AWS TF Team",
+                            "provisioningArtifactParameters": [
+                              {
+                                "name": "v1",
+                                "disableTemplateValidation": false,
+                                "info": {
+                                  "LoadTemplateFromURL": {
+                                    "Fn::Sub": "https://s3.ap-northeast-2.${AWS::URLSuffix}/cdk-hnb659fds-assets-037729278610-ap-northeast-2/175c47745bc188ba7ffd67e709def2089e1f25e30b195038ae7371fbb2f8d388.json"
                                   }
                                 }
                               }
@@ -7853,15 +8805,15 @@
                   },
                   "ecs-service-httpTohttps.template.json": {
                     "id": "ecs-service-httpTohttps.template.json",
-                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/ecs-service-httpTohttps.template.json",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ecs-service-httpTohttps.template.json",
                     "children": {
                       "Template0003237f2233": {
                         "id": "Template0003237f2233",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/ecs-service-httpTohttps.template.json/Template0003237f2233",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ecs-service-httpTohttps.template.json/Template0003237f2233",
                         "children": {
                           "Stage": {
                             "id": "Stage",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/ecs-service-httpTohttps.template.json/Template0003237f2233/Stage",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ecs-service-httpTohttps.template.json/Template0003237f2233/Stage",
                             "constructInfo": {
                               "fqn": "@aws-cdk/core.AssetStaging",
                               "version": "1.142.0"
@@ -7869,7 +8821,7 @@
                           },
                           "AssetBucket": {
                             "id": "AssetBucket",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/ecs-service-httpTohttps.template.json/Template0003237f2233/AssetBucket",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ecs-service-httpTohttps.template.json/Template0003237f2233/AssetBucket",
                             "constructInfo": {
                               "fqn": "@aws-cdk/aws-s3.BucketBase",
                               "version": "1.142.0"
@@ -7883,7 +8835,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/ecs-service-httpTohttps.template.json/Resource",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ecs-service-httpTohttps.template.json/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::CloudFormationProduct",
                           "aws:cdk:cloudformation:props": {
@@ -7915,15 +8867,15 @@
                   },
                   "ecs-service.template.json": {
                     "id": "ecs-service.template.json",
-                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/ecs-service.template.json",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ecs-service.template.json",
                     "children": {
                       "Templatef70f4b577091": {
                         "id": "Templatef70f4b577091",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/ecs-service.template.json/Templatef70f4b577091",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ecs-service.template.json/Templatef70f4b577091",
                         "children": {
                           "Stage": {
                             "id": "Stage",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/ecs-service.template.json/Templatef70f4b577091/Stage",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ecs-service.template.json/Templatef70f4b577091/Stage",
                             "constructInfo": {
                               "fqn": "@aws-cdk/core.AssetStaging",
                               "version": "1.142.0"
@@ -7931,7 +8883,7 @@
                           },
                           "AssetBucket": {
                             "id": "AssetBucket",
-                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/ecs-service.template.json/Templatef70f4b577091/AssetBucket",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ecs-service.template.json/Templatef70f4b577091/AssetBucket",
                             "constructInfo": {
                               "fqn": "@aws-cdk/aws-s3.BucketBase",
                               "version": "1.142.0"
@@ -7945,7 +8897,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/ecs-service.template.json/Resource",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/ecs-service.template.json/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::CloudFormationProduct",
                           "aws:cdk:cloudformation:props": {
@@ -7975,13 +8927,137 @@
                       "version": "1.142.0"
                     }
                   },
+                  "infra-for-vpc-alb-and-ecs-cluster.template.json": {
+                    "id": "infra-for-vpc-alb-and-ecs-cluster.template.json",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/infra-for-vpc-alb-and-ecs-cluster.template.json",
+                    "children": {
+                      "Template1288c00d3838": {
+                        "id": "Template1288c00d3838",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/infra-for-vpc-alb-and-ecs-cluster.template.json/Template1288c00d3838",
+                        "children": {
+                          "Stage": {
+                            "id": "Stage",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/infra-for-vpc-alb-and-ecs-cluster.template.json/Template1288c00d3838/Stage",
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/core.AssetStaging",
+                              "version": "1.142.0"
+                            }
+                          },
+                          "AssetBucket": {
+                            "id": "AssetBucket",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/infra-for-vpc-alb-and-ecs-cluster.template.json/Template1288c00d3838/AssetBucket",
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/aws-s3.BucketBase",
+                              "version": "1.142.0"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-s3-assets.Asset",
+                          "version": "1.142.0"
+                        }
+                      },
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/infra-for-vpc-alb-and-ecs-cluster.template.json/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::CloudFormationProduct",
+                          "aws:cdk:cloudformation:props": {
+                            "name": "infra-for-vpc-alb-and-ecs-cluster.template.json",
+                            "owner": "SK CnC AWS TF Team",
+                            "provisioningArtifactParameters": [
+                              {
+                                "name": "v1",
+                                "disableTemplateValidation": false,
+                                "info": {
+                                  "LoadTemplateFromURL": {
+                                    "Fn::Sub": "https://s3.ap-northeast-2.${AWS::URLSuffix}/cdk-hnb659fds-assets-037729278610-ap-northeast-2/3d309cdedd7802cdf10863f39ed245cc44356b6f1e21265a8e6c9be5bcbccc2a.json"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-servicecatalog.CfnCloudFormationProduct",
+                          "version": "1.142.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-servicecatalog.CloudFormationProduct",
+                      "version": "1.142.0"
+                    }
+                  },
+                  "vpc-and-ecs-cluster.template.json": {
+                    "id": "vpc-and-ecs-cluster.template.json",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/vpc-and-ecs-cluster.template.json",
+                    "children": {
+                      "Template5a65c49d89b7": {
+                        "id": "Template5a65c49d89b7",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/vpc-and-ecs-cluster.template.json/Template5a65c49d89b7",
+                        "children": {
+                          "Stage": {
+                            "id": "Stage",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/vpc-and-ecs-cluster.template.json/Template5a65c49d89b7/Stage",
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/core.AssetStaging",
+                              "version": "1.142.0"
+                            }
+                          },
+                          "AssetBucket": {
+                            "id": "AssetBucket",
+                            "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/vpc-and-ecs-cluster.template.json/Template5a65c49d89b7/AssetBucket",
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/aws-s3.BucketBase",
+                              "version": "1.142.0"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-s3-assets.Asset",
+                          "version": "1.142.0"
+                        }
+                      },
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/vpc-and-ecs-cluster.template.json/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::ServiceCatalog::CloudFormationProduct",
+                          "aws:cdk:cloudformation:props": {
+                            "name": "vpc-and-ecs-cluster.template.json",
+                            "owner": "SK CnC AWS TF Team",
+                            "provisioningArtifactParameters": [
+                              {
+                                "name": "v1",
+                                "disableTemplateValidation": false,
+                                "info": {
+                                  "LoadTemplateFromURL": {
+                                    "Fn::Sub": "https://s3.ap-northeast-2.${AWS::URLSuffix}/cdk-hnb659fds-assets-037729278610-ap-northeast-2/45a2b0088753d1f419ae39a707fe2ac251e8317db28653905999d0ceb510eddd.json"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-servicecatalog.CfnCloudFormationProduct",
+                          "version": "1.142.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-servicecatalog.CloudFormationProduct",
+                      "version": "1.142.0"
+                    }
+                  },
                   "CDKMetadata": {
                     "id": "CDKMetadata",
-                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/CDKMetadata",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/CDKMetadata",
                     "children": {
                       "Default": {
                         "id": "Default",
-                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/CDKMetadata/Default",
+                        "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/CDKMetadata/Default",
                         "constructInfo": {
                           "fqn": "@aws-cdk/core.CfnResource",
                           "version": "1.142.0"
@@ -7995,7 +9071,7 @@
                   },
                   "BootstrapVersion": {
                     "id": "BootstrapVersion",
-                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/BootstrapVersion",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/BootstrapVersion",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.142.0"
@@ -8003,7 +9079,7 @@
                   },
                   "CheckBootstrapVersion": {
                     "id": "CheckBootstrapVersion",
-                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-product/CheckBootstrapVersion",
+                    "path": "sc-portfolio-cf-product-pipelines/Portfolio/sc-portfolio/CheckBootstrapVersion",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnRule",
                       "version": "1.142.0"

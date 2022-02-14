@@ -32,7 +32,7 @@
                   "default":"ECS Task Definition Info"
               },
               "Parameters":[
-                  "TaskDefinitionName",
+                  "ServiceName",
                   "HealthCheckPath",
                   "ContainerPort",
                   "ContainerSize"
@@ -73,7 +73,7 @@
         "Type": "String",
         "Description" : "URI for the container from Amazon Elastic Container Registry."
     },
-    "TaskDefinitionName": {
+    "ServiceName": {
         "Type": "String",
         "Description" : "This will set the Container, Task Definition, and Service name in Fargate."
     },
@@ -147,7 +147,7 @@
     "TaskLogGroup": {
         "Type" : "AWS::Logs::LogGroup",
         "Properties" : {
-            "LogGroupName" : {"Fn::Sub":"/ecs/${TaskDefinitionName}"},
+            "LogGroupName" : {"Fn::Sub":"/ecs/${ServiceName}"},
             "RetentionInDays" : 30
           }
       },    
@@ -159,7 +159,7 @@
                 "FARGATE"
               ],
               "Memory":  { "Fn::FindInMap" : [ "MapContainerSize", { "Ref" : "ContainerSize" }, "mem"]},
-              "Family": {"Ref":"TaskDefinitionName"},
+              "Family": {"Ref":"ServiceName"},
               "NetworkMode": "awsvpc",
               "Cpu": { "Fn::FindInMap" : [ "MapContainerSize", { "Ref" : "ContainerSize" }, "cpu"]},
               "ContainerDefinitions" : [
@@ -182,7 +182,7 @@
                           }
                     ],
                     "Image": {"Ref":"ECRImageURI"},
-                    "Name": {"Ref":"TaskDefinitionName"}
+                    "Name": {"Ref":"ServiceName"}
                   }
               ]
           }
@@ -196,11 +196,11 @@
         "LoadBalancers" : [{
           "TargetGroupArn" : { "Ref" : "TargetGroup" },
           "ContainerPort" : { "Ref" : "ContainerPort" },
-          "ContainerName" : {"Ref":"TaskDefinitionName"}
+          "ContainerName" : {"Ref":"ServiceName"}
         }],
         "Cluster" : { "Fn::ImportValue" : "FargateClusterName" },
         "LaunchType": "FARGATE",
-        "ServiceName": {"Ref":"TaskDefinitionName"},
+        "ServiceName": {"Ref":"ServiceName"},
         "NetworkConfiguration":{
           "AwsvpcConfiguration" : {
             "AssignPublicIp": "DISABLED",
@@ -223,7 +223,7 @@
        "HealthCheckTimeoutSeconds" : 5,
        "HealthyThresholdCount" : 2,
        "TargetType" : "ip",
-       "Name" : {"Fn::Sub":"${TaskDefinitionName}-TargetGroup" },
+       "Name" : {"Fn::Sub":"${ServiceName}-TargetGroup" },
        "Port" : { "Ref": "ContainerPort"},
        "Protocol" : "HTTP",
        "UnhealthyThresholdCount" : 2,
@@ -346,6 +346,13 @@
   }		
 },
 "Outputs": {
-      "FargateService":{"Value": { "Ref":"ecsservice" } }
+      "FargateService":{
+        "Value": { 
+          "Ref":"ecsservice" 
+        },
+        "Export":{
+          "Name": { "Fn::Sub": "${ServiceName}" }
+        }
+       }
   }
 }

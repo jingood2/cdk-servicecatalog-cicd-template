@@ -1495,7 +1495,7 @@
                       {
                           "Ref": "AWS::StackName"
                       },
-                      "PublicSubnetOne"
+                      "SubnetAPublic"
                   ]
               ]
           }
@@ -1514,7 +1514,7 @@
                       {
                           "Ref": "AWS::StackName"
                       },
-                      "PublicSubnetTwo"
+                      "SubnetBPublic"
                   ]
               ]
           }
@@ -1526,7 +1526,7 @@
           "Ref": "SubnetAPrivate"
       },
       "Export": {
-          "Name": "ECSPrivateSubnetOne"
+          "Name": "SubnetAPrivate"
       }
   },
   "PrivateSubnetTwo": {
@@ -1535,7 +1535,7 @@
           "Ref": "SubnetBPrivate"
       },
       "Export": {
-          "Name": "ECSPrivateSubnetTwo"
+          "Name": "SubnetBPrivate"
       }
   },
     "FargateContainerSecurityGroup": {
