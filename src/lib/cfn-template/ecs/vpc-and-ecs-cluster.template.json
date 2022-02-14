@@ -9,6 +9,7 @@
                       "default": "Region Configuration"
                   },
                   "Parameters": [
+                      "Environment",
                       "RegionAZ1Name",
                       "RegionAZ2Name"
                   ]
@@ -64,6 +65,12 @@
       }
   },
   "Parameters": {
+    "Environment": {
+        "Description": "Environment",
+        "Type": "String",
+        "Default": "dev",
+        "AllowedValues": ["dev", "shared", "qa", "prod"]
+    },
       "RegionAZ1Name": {
           "Description": "Availability Zone 1 Name in Region",
           "Type": "AWS::EC2::AvailabilityZone::Name"
@@ -1479,7 +1486,7 @@
             "Ref": "VPC"
         },
         "Export": {
-            "Name": "FargateClusterVPCId"
+            "Name": { "Fn::Sub": "${Environment}-vpc" }
         }
     },
     "PublicSubnetOne": {
