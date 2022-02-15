@@ -189,6 +189,7 @@
     },      
     "ecsservice" : {
       "Type" : "AWS::ECS::Service",
+      "DependsOn": [ "PublicLoadBalancerListener"],
       "Properties" : {			
         "TaskDefinition" : { "Ref" : "taskdefinition" },
         "DesiredCount" : "1",
@@ -211,6 +212,18 @@
               { "Fn::ImportValue": "SubnetBPrivate"}
             ]
         }}
+      }
+    },
+    "PublicLoadBalancerListener" : {
+      "Type" : "AWS::ElasticLoadBalancingV2::Listener",			
+      "Properties" : {
+        "DefaultActions" : [
+          { "TargetGroupArn" : {"Ref":"TargetGroup"} ,
+          "Type" : "forward" }
+          ],
+        "LoadBalancerArn" : { "Fn::ImportValue" :"ECSPublicLoadBalancer"},
+        "Port" : {"Ref": "ContainerPort"},
+        "Protocol" : "HTTP"
       }
     },
    "TargetGroup" : {
