@@ -100,7 +100,7 @@
     },
     "HostHeader": {
       "Type": "String",
-      "Description" : "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenerrule.html"
+      "Description" : "Host Header Condition"
     },
     "EnablePathPattern": {
       "Type": "String",
@@ -110,11 +110,11 @@
     },
     "PathPattern": {
       "Type": "String",
-      "Description" : "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenerrule.html"
+      "Description" : "Path Pattern Condition"
     },
     "Priority": {
       "Type": "Number",
-      "Description" : "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenerrule.html"
+      "Description" : "Priority"
     }
   },    
   "Conditions" : {
