@@ -5923,7 +5923,7 @@
                             },
                             "source": {
                               "type": "CODEPIPELINE",
-                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscportfolioD6AA3180.assets.json\\\" --verbose publish \\\"7f23252a0686338f47ebef6af59b7f10f27f7040bbff68f996aebaf85de98316:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
+                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@1\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-sc-portfolio-cf-product-pipelines-Portfolio/scportfoliocfproductpipelinesPortfolioscportfolioD6AA3180.assets.json\\\" --verbose publish \\\"207e30901c5d322c5a696d3f35ea2f4588a7650e56e335740bc56b90ce67b157:037729278610-ap-northeast-2\\\"\"\n      ]\n    }\n  }\n}"
                             },
                             "cache": {
                               "type": "NO_CACHE"
@@ -8710,7 +8710,7 @@
                                 "disableTemplateValidation": false,
                                 "info": {
                                   "LoadTemplateFromURL": {
-                                    "Fn::Sub": "https://s3.ap-northeast-2.${AWS::URLSuffix}/cdk-hnb659fds-assets-037729278610-ap-northeast-2/7f23252a0686338f47ebef6af59b7f10f27f7040bbff68f996aebaf85de98316.json"
+                                    "Fn::Sub": "https://s3.ap-northeast-2.${AWS::URLSuffix}/cdk-hnb659fds-assets-037729278610-ap-northeast-2/207e30901c5d322c5a696d3f35ea2f4588a7650e56e335740bc56b90ce67b157.json"
                                   }
                                 }
                               }
